@@ -5,8 +5,8 @@ using UnityEngine;
 public class AnimateButtonPrompt : MonoBehaviour
 {
     [SerializeField] private float duration;
+    [SerializeField] private Transform target;
     [SerializeField] private AnimationCurve animCurve;
-
     [SerializeField] private RectTransform rect;
 
     private float defaultSize;
@@ -27,6 +27,7 @@ public class AnimateButtonPrompt : MonoBehaviour
     public void Animate()
     {
         StopAllCoroutines();
+        if (target) transform.position = target.position;
         StartCoroutine(IAnimate());
     }
     
