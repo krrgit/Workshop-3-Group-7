@@ -18,17 +18,22 @@ public class AnimateButtonPrompt : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Animate();
-        }
+        if (target) transform.position = target.position;
     }
 
-    public void Animate()
+    public void Animate(Transform t)
     {
+        gameObject.SetActive(true);
+        target = t;
         StopAllCoroutines();
-        if (target) transform.position = target.position;
         StartCoroutine(IAnimate());
+    }
+
+    public void Stop()
+    {
+        gameObject.SetActive(false);
+        StopAllCoroutines();
+        rect.localScale = Vector2.zero;
     }
     
     // Open Text Bubble

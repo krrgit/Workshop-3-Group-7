@@ -46,16 +46,11 @@ public class TextBubbleAnimator : MonoBehaviour {
     // Camera Values
     private Vector2 screenBounds;
     
-
-    
-    
-
     private void Start()
     {
         defaultSize = rect.lossyScale.x;
         defBubbleSize = bubble.rectTransform.lossyScale.x / defaultSize;
         defTextSize = textMesh.rectTransform.lossyScale.x / defaultSize;
-        
         
         screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z));
     }
@@ -74,8 +69,12 @@ public class TextBubbleAnimator : MonoBehaviour {
         }
     }
 
-    public void Animate(string newText)
+    public void Animate(string newText, Transform target)
     {
+        tailTarget = target;
+
+        transform.position = tailTarget.position;
+        gameObject.SetActive(true);
         dialogue = newText;
         if (!isActive)
         {
@@ -86,6 +85,12 @@ public class TextBubbleAnimator : MonoBehaviour {
         {
             AnimateRefresh();
         }
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+        isActive = false;
     }
 
     void AnimateOpen()
