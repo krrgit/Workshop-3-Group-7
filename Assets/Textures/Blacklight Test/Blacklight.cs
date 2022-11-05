@@ -1,23 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Rendering.Universal;
 using UnityEngine;
 
 public class Blacklight : MonoBehaviour
 {
-    public Light light;
-    public Material[] mats;
+    public Light2D blacklight;
+    public int resolution;
 
-    public bool on;
+    Material material;
+    float outerRadius;
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        material = GetComponent<SpriteRenderer>().material;
+        outerRadius = blacklight.pointLightOuterRadius;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        material.SetTexture("_LightMask", GenerateLightMask());
+        Debug.Log("Ran");
+    }
+
+    Texture2D GenerateLightMask(){
+        Texture2D mask = new Texture2D(resolution, resolution);
+
+        for(int x = 0; x < resolution; x++) {
+            for(int y = 0; y < resolution; y++) {
+
+                mask.SetPixel(x, y, Color.white);
+            }
+        }
+
+        return mask;
     }
 }
