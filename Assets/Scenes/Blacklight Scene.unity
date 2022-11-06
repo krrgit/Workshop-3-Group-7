@@ -2640,7 +2640,6 @@ MonoBehaviour:
   resolution: 512
   on: 1
   blacklightCompute: {fileID: 7200000, guid: 3340b4fef9a14d848a01d5dacde8d3a6, type: 3}
-  renderTexture: {fileID: 0}
 --- !u!1 &552641554
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,7 +2800,7 @@ GameObject:
   m_Component:
   - component: {fileID: 709281339}
   - component: {fileID: 709281338}
-  - component: {fileID: 709281337}
+  - component: {fileID: 709281340}
   m_Layer: 0
   m_Name: read_me
   m_TagString: Untagged
@@ -2809,21 +2808,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &709281337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 709281336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22216f6d854578a4bae8cd5f5ffcd421, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blacklight: {fileID: 1207722766}
-  resolution: 128
-  on: 1
 --- !u!212 &709281338
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2891,6 +2875,22 @@ Transform:
   m_Father: {fileID: 1403038183}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &709281340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709281336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe100c6d10776146876637b397b5ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blacklight: {fileID: 1207722766}
+  resolution: 512
+  on: 1
+  blacklightCompute: {fileID: 7200000, guid: 3340b4fef9a14d848a01d5dacde8d3a6, type: 3}
 --- !u!1 &1207722765
 GameObject:
   m_ObjectHideFlags: 0
