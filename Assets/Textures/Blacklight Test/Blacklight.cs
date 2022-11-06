@@ -9,8 +9,8 @@ using UnityEngine;
 public class Blacklight : MonoBehaviour
 {
     public Light2D blacklight;
-    [Range(32, 512)]public int resolution;
-    public bool on;
+    [Range(32, 512)]public int resolution = 128;
+    public bool on = true;
 
     SpriteRenderer hiddenSprite;
     int width;
@@ -20,14 +20,14 @@ public class Blacklight : MonoBehaviour
     void Awake()
     {
         hiddenSprite = GetComponent<SpriteRenderer>();
-        setVars();
+        setWidthHeightRadius();
 
         hiddenSprite.material.SetTexture("_LightMask", GenerateLightMask());
     }
 
     void Update()
     {
-        setVars();
+        setWidthHeightRadius();
         if(on && checkRender()) hiddenSprite.material.SetTexture("_LightMask", GenerateLightMask());
     }
 
@@ -48,7 +48,7 @@ public class Blacklight : MonoBehaviour
 
     bool checkRender() {
         Vector3 deltaPos = blacklight.transform.position - this.transform.position;
-        return deltaPos.sqrMagnitude <= Math.Pow(outerRadius+0.5, 2);
+        return deltaPos.sqrMagnitude <= Math.Pow(outerRadius+0.6, 2);
     }
 
     double checkPos(int x, int y, Vector3 deltaPos) {
@@ -59,7 +59,7 @@ public class Blacklight : MonoBehaviour
         return Math.Max(0, Math.Min(1, pixelPos.sqrMagnitude/Math.Pow(outerRadius, 2)));
     }
 
-    void setVars() {
+    void setWidthHeightRadius() {
         outerRadius = blacklight.pointLightOuterRadius;
         width = Convert.ToInt32(hiddenSprite.size[0]*resolution);
         height = Convert.ToInt32(hiddenSprite.size[1]*resolution);
