@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine;
 
 
-public class BlacklightScript : MonoBehaviour
+public class BackupBlacklightCPU : MonoBehaviour
 {
     public Light2D blacklight;
     [Range(32, 512)]public int resolution = 128;
@@ -17,27 +17,27 @@ public class BlacklightScript : MonoBehaviour
     int height;
     float outerRadius;
 
+    Vector3 deltaPos;
+
     void Awake()
     {
         hiddenSprite = GetComponent<SpriteRenderer>();
-        setWidthHeightRadius();
-
+        updateWidthHeightRadiusDelta();
         hiddenSprite.material.SetTexture("_LightMask", GenerateLightMask());
     }
 
     void Update()
     {
-        setWidthHeightRadius();
+        updateWidthHeightRadiusDelta();
         if(on && checkRender()) hiddenSprite.material.SetTexture("_LightMask", GenerateLightMask());
     }
 
     Texture2D GenerateLightMask(){
         Texture2D mask = new Texture2D(width, height, TextureFormat.RGBA32, false);
-        Vector3 deltaPos = blacklight.transform.position - this.transform.position;
-
+        
         for(int x = 0; x < width; x++) {
             for(int y = 0; y < height; y++) {
-                float c = 1 - Convert.ToSingle(checkPos(x, y, deltaPos));
+                float c = Convert.ToSingle(getColor(x, y));
                 mask.SetPixel(x, y, new Color(c, c, c, 1));
             }
         }
@@ -47,21 +47,20 @@ public class BlacklightScript : MonoBehaviour
     }
 
     bool checkRender() {
-        Vector3 deltaPos = blacklight.transform.position - this.transform.position;
-        return deltaPos.sqrMagnitude <= Math.Pow(outerRadius+0.6, 2);
+        return deltaPos.sqrMagnitude <= Math.Pow(outerRadius+Math.Max(width, height)/2+0.1, 2);
     }
 
-    double checkPos(int x, int y, Vector3 deltaPos) {
+    double getColor(int x, int y) {
         Vector3 pixelPos = new Vector3(x-width/2, y-height/2, 0);
         pixelPos = new Vector3(pixelPos.x/width, pixelPos.y/height, 0);
         pixelPos -= deltaPos;
-
-        return Math.Clamp(pixelPos.sqrMagnitude/Math.Pow(outerRadius, 2), 0, 1);
+        return 1 - Math.Clamp(pixelPos.sqrMagnitude/Math.Pow(outerRadius, 2), 0, 1);
     }
 
-    void setWidthHeightRadius() {
+    void updateWidthHeightRadiusDelta() {
         outerRadius = blacklight.pointLightOuterRadius;
         width = Convert.ToInt32(hiddenSprite.size[0]*resolution);
         height = Convert.ToInt32(hiddenSprite.size[1]*resolution);
+        deltaPos = blacklight.transform.position - this.transform.position;
     }
 }
