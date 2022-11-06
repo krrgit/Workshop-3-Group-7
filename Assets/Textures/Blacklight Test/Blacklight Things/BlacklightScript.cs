@@ -6,7 +6,7 @@ using UnityEngine.Rendering.Universal;
 using UnityEngine;
 
 
-public class Blacklight : MonoBehaviour
+public class BlacklightScript : MonoBehaviour
 {
     public Light2D blacklight;
     [Range(32, 512)]public int resolution = 128;
@@ -56,7 +56,7 @@ public class Blacklight : MonoBehaviour
         pixelPos = new Vector3(pixelPos.x/width, pixelPos.y/height, 0);
         pixelPos -= deltaPos;
 
-        return Math.Max(0, Math.Min(1, pixelPos.sqrMagnitude/Math.Pow(outerRadius, 2)));
+        return Math.Clamp(pixelPos.sqrMagnitude/Math.Pow(outerRadius, 2), 0, 1);
     }
 
     void setWidthHeightRadius() {

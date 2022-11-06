@@ -1,0 +1,24 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> mask;
+float2 deltaPos;
+float width;
+float height;
+float radius;
+
+[numthreads(8,8,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    float x = id.x;
+    float y = id.y;
+
+    float2 pixelPos = float2((x-width/2)/width, (y-height/2)/height);
+    pixelPos = pixelPos - deltaPos;
+    float sqrMagnitude = pow(pixelPos.x, 2) + pow(pixelPos.y, 2);
+    float c = 1 - clamp(sqrMagnitude/pow(radius, 2), 0, 1);
+
+    mask[id.xy] = float4(c, c, c, 0);
+}
