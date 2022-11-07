@@ -45,7 +45,12 @@ public class TextBubbleAnimator : MonoBehaviour {
     
     // Camera Values
     private Vector2 screenBounds;
-    
+
+    private void OnDisable()
+    {
+        rect.localScale = Vector2.zero;
+    }
+
     private void Start()
     {
         defaultSize = rect.lossyScale.x;
