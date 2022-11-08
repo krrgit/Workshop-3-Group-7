@@ -38,13 +38,14 @@ public class ToolManager : MonoBehaviour {
     void Update()
     {
         CycleInput();
+        UseToolInput();
         UpdatePosition();
     }
 
     void UpdatePosition()
     {
         if (PlayerMovement.Instance.GetDir().magnitude == 0 || !PlayerMovement.Instance.canMove) return;
-
+        transform.up = PlayerMovement.Instance.GetDir();
         transform.localPosition = PlayerMovement.Instance.GetDir() * distance;
     }
 
@@ -58,7 +59,10 @@ public class ToolManager : MonoBehaviour {
             }
             
         }
+    }
 
+    void UseToolInput()
+    {
         if (Input.GetButtonDown("UseTool"))
         {
             if (toolIndex != ToolInUse.None)
@@ -82,7 +86,7 @@ public class ToolManager : MonoBehaviour {
         if (toolIndex != ToolInUse.None) Equipped.gameObject.SetActive(false);
         toolIndex = (ToolInUse)((int)toolIndex + 1 > 4 ? 0 : (int)toolIndex + 1);
         UpdateCurrentTool();
-        Equipped.gameObject.SetActive(true);
+        if (toolIndex != ToolInUse.None) Equipped.gameObject.SetActive(true);
         print("Current Tool: " + toolIndex);
     }
 
