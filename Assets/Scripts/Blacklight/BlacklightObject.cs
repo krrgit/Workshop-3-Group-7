@@ -9,7 +9,6 @@ public class BlacklightObject : MonoBehaviour
 {
     public Light2D blacklight;                      //Light Object
     [Range(128, 1024)]public int resolution = 512;  //Texture Resolution
-    public bool on = true;                          //Set to on if the flashlight is on
 
     SpriteRenderer hiddenSprite;                    //sprite to be hidden
     int width;                                      //width of texture to make
@@ -21,6 +20,7 @@ public class BlacklightObject : MonoBehaviour
 
     Vector3 lightDelta;                             //relative position of light to hiddenSprite
     private Vector3 previousDelta;                  //last coordinate that texture was rendered from
+    private bool on;
 
     void Awake() {
         hiddenSprite = GetComponent<SpriteRenderer>();  //set the sprite to the objects SpriteRenderer
@@ -29,10 +29,14 @@ public class BlacklightObject : MonoBehaviour
     }
 
     void Update() {
-        updateWidthHeightRadiusDelta();                             //set all necessary variables for mask generation
-        if(on && shouldRender() && lightDelta != previousDelta) {   //check if the mask should be rendered
-            GenerateMask();                                         //generate the mask
-            previousDelta = lightDelta;                             //store the coordinate of the last generated texture
+        updateWidthHeightRadiusDelta();                                                                 //set all necessary variables for mask generation
+        if(blacklight.gameObject.activeSelf && inRadius() && (lightDelta != previousDelta || !on)) {    //check if the mask should be rendered
+            GenerateMask();                                                                             //generate the mask
+            previousDelta = lightDelta;                                                                 //store the coordinate of the last generated texture
+            on = true;                                                                                  //set the texture bool to be on
+        } else if(!blacklight.gameObject.activeSelf && on) {                                            //if the blacklight object was disabled but the texture is on
+            hiddenSprite.material.SetTexture("_LightMask", Texture2D.blackTexture);                     //set the texture to be invisible
+            on = false;                                                                                 //set the texture bool to off
         }
     }
 
@@ -51,7 +55,7 @@ public class BlacklightObject : MonoBehaviour
         hiddenSprite.material.SetTexture("_LightMask", mask);                               //update the texture
     }
 
-    bool shouldRender() {
+    bool inRadius() {
         return lightDelta.sqrMagnitude <= Math.Pow(outerRadius+Math.Max(width, height)/2+0.1, 2);   //check if the light is within range to be rendered (using square magnitude because sqrt takes a long time)
     }
 
