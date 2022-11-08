@@ -252,7 +252,7 @@ public class TextBubbleAnimator : MonoBehaviour {
         var deltaX = screenBounds.x - (bubble.rectTransform.sizeDelta.x * (align==BubbleAlign.Center ?  0.5f: 1)) - camPadding;
         
         bubblePos.x = Mathf.Clamp(bubblePos.x,-deltaX,deltaX);
-        print("bounds: " + deltaX + " | pos: " + bubblePos.x);
+        //print("bounds: " + deltaX + " | pos: " + bubblePos.x);
 
         bubblePos -= rect.localPosition;
         bubble.rectTransform.localPosition = bubblePos;
@@ -262,7 +262,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     {
         var bubblePos = bubble.rectTransform.localPosition;
         var deltaX = (bubble.rectTransform.sizeDelta.x / 2f) - padding.x;
-        print("width: "  + bubble.rectTransform.sizeDelta.x);
+        //print("width: "  + bubble.rectTransform.sizeDelta.x);
 
         switch (align)
         {

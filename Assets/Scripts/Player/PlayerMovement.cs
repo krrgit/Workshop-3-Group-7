@@ -10,6 +10,20 @@ public class PlayerMovement : MonoBehaviour {
     
     private Vector2 dir;
 
+    public static PlayerMovement Instance;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     public void ToggleMove(bool toggle)
     {
         canMove = toggle;
