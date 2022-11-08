@@ -7,19 +7,19 @@ using UnityEngine;
 
 public class BlacklightObject : MonoBehaviour
 {
-    public Light2D blacklight;                      //Light Object
-    [Range(128, 1024)]public int resolution = 512;  //Texture Resolution
+    [SerializeField] private Light2D blacklight;                        //Light Object
+    [SerializeField] [Range(128, 1024)] public int resolution = 512;    //Texture Resolution
 
-    SpriteRenderer hiddenSprite;                    //sprite to be hidden
-    int width;                                      //width of texture to make
-    int height;                                     //height of texture to make
-    float outerRadius;                              //radius of blacklight
+    private SpriteRenderer hiddenSprite;                                //sprite to be hidden
+    private int width;                                                  //width of texture to make
+    private int height;                                                 //height of texture to make
+    private float outerRadius;                                          //radius of blacklight
 
-    public ComputeShader blacklightCompute;         //compute shader for texture
-    public RenderTexture mask;                      //texture mask generated to put over sprite
+    [SerializeField] private ComputeShader blacklightCompute;           //compute shader for texture
+    [SerializeField] private RenderTexture mask;                        //texture mask generated to put over sprite
 
-    Vector3 lightDelta;                             //relative position of light to hiddenSprite
-    private Vector3 previousDelta;                  //last coordinate that texture was rendered from
+    private Vector3 lightDelta;                                         //relative position of light to hiddenSprite
+    private Vector3 previousDelta;                                      //last coordinate that texture was rendered from
     private bool on;
 
     void Awake() {
