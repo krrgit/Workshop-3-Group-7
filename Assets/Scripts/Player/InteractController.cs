@@ -30,8 +30,7 @@ public class InteractController : MonoBehaviour {
         if (!interactableExists) return;
         if (Input.GetButtonDown("Interact"))
         {
-            currInteractable.Interact();
-            inInteraction = !inInteraction;
+            inInteraction = currInteractable.Interact();
             movement.canMove = !inInteraction;
         }
     }

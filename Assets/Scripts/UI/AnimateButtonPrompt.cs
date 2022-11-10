@@ -14,6 +14,7 @@ public class AnimateButtonPrompt : MonoBehaviour
     void Start()
     {
         defaultSize = rect.localScale.x;
+        gameObject.SetActive(false);
     }
 
     private void Update()

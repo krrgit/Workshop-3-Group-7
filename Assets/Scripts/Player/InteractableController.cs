@@ -13,25 +13,39 @@ using UnityEngine.Events;
 public class InteractableController : MonoBehaviour {
     public UnityEvent InteractEvent;
     public UnityEvent StopEvent;
+    [SerializeField] private int interactAmount = 1;
+    
 
     public bool canInteract = true;
+    private int interactCount;
 
-    public void Interact()
+    void Start()
     {
-        if (canInteract)
+        interactCount = interactAmount;
+    }
+    
+    
+    // Returns whether still in interaction or not
+    public bool Interact()
+    {
+        if (interactCount > 0) 
         {
             InteractEvent.Invoke();
             canInteract = false;
+            --interactCount;
+            return true;
         }
         else
         {
             StopEvent.Invoke();
             Reset();
+            return false;
         }
     }
 
     public void Reset()
     {
         canInteract = true;
+        interactCount = interactAmount;
     }
 }
