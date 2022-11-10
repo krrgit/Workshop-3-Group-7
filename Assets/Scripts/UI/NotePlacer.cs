@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,13 +16,17 @@ public class NotePlacer : MonoBehaviour {
     [SerializeField] private float lineDist = 0.4f;
     [SerializeField] private RectTransform rect;
     [SerializeField] private RectTransform[] notes;
-
-
+    
     private int maxNotes;
+
+    private void OnDisable()
+    {
+        Reset();
+    }
 
     private int setNotes = 0;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         maxNotes = transform.childCount;
         notes = new RectTransform[maxNotes];
@@ -40,23 +45,23 @@ public class NotePlacer : MonoBehaviour {
 
     void DebugInput()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             SetNextNote(FluteNote.loD);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             SetNextNote(FluteNote.F);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             SetNextNote(FluteNote.A);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             SetNextNote(FluteNote.B);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             SetNextNote(FluteNote.hiD);
         }
