@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum FluteNote {
-    loD,
-    F,
+    loC,
+    E,
+    G,
     A,
-    B,
-    hiD
+    hiC,
+    None
 }
 
 
@@ -36,39 +37,8 @@ public class NotePlacer : MonoBehaviour {
             notes[i].gameObject.SetActive(false);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        DebugInput();
-    }
-
-    void DebugInput()
-    {
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            SetNextNote(FluteNote.loD);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            SetNextNote(FluteNote.F);
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            SetNextNote(FluteNote.A);
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            SetNextNote(FluteNote.B);
-        }
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            SetNextNote(FluteNote.hiD);
-        }
-        
-    }
-
-    void Reset()
+    
+    public void Reset()
     {
         for (int i = 0; i < maxNotes; ++i)
         {
@@ -94,19 +64,19 @@ public class NotePlacer : MonoBehaviour {
         float ypos = 0;
         switch (note)
         {
-            case FluteNote.loD:
+            case FluteNote.loC:
                 ypos = 0;
                 break;
-            case FluteNote.F:
+            case FluteNote.E:
                 ypos = 2;
                 break;
-            case FluteNote.A:
+            case FluteNote.G:
                 ypos = 4;
                 break;
-            case FluteNote.B:
+            case FluteNote.A:
                  ypos = 5;
                  break;
-            case FluteNote.hiD:
+            case FluteNote.hiC:
                 ypos = 7;
                 break;
             default:
