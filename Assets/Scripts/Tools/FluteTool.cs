@@ -53,31 +53,39 @@ public class FluteTool : Tool {
         if (currentNote != maxNotes)
         {
             notePlacer.SetNextNote(note);
-            playSong = checker.SongCheck(note, currentNote);
+            playSong = checker.SongCheck(note);
             player.PlayNote(note);
         }
+        currentNote++;
 
         if (playSong)
         {
-            // play song
+            PlaySong();
         }
-        ++currentNote;
-        
+
         if (!playSong && currentNote == maxNotes)
         {
-            Reset();
+            Reset(1);
         }
     }
 
-    void Reset()
+    void PlaySong()
     {
-        StartCoroutine(HoldOnReset());
+        print("Play song!");
+        checker.PlaySong();
+        Reset(checker.GetSongLength);
+        player.DelayStopAllNotes(1f);
     }
 
-    IEnumerator HoldOnReset()
+    void Reset(float waitTime)
+    {
+        StartCoroutine(HoldOnReset(waitTime));
+    }
+
+    IEnumerator HoldOnReset(float waitTime)
     {
         isPlayable = false;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(waitTime);
         notePlacer.Reset();
         checker.Reset();
         currentNote = 0;
@@ -96,6 +104,7 @@ public class FluteTool : Tool {
         PlayerMovement.Instance.ToggleMove(false);
         musicUI.Animate(true);
         StartCoroutine(StartWait());
+        StartCoroutine(HoldOnReset(0));
         print("Use Flute!");
     }
     

@@ -4,13 +4,33 @@ using UnityEngine;
 
 public class SongChecker : MonoBehaviour {
     [SerializeField] private SongSO[] songs;
+    [SerializeField] private AudioSource source;
 
     private List<SongSO> possibleSongs = new List<SongSO>();
-    
-    public bool SongCheck(FluteNote note, int noteIndex)
+
+    private int noteIndex;
+
+    public float GetSongLength
     {
+        get { return songs[0].song.length; }
+    }
+
+    public void PlaySong()
+    {
+        StartCoroutine(WaitToPlaySong());
+    }
+
+    IEnumerator WaitToPlaySong()
+    {
+        source.clip = songs[0].song;
+        yield return new WaitForSeconds(1f);
+        source.Play();
+    }
+    public bool SongCheck(FluteNote note)
+    {
+        print("possible songs: " + possibleSongs.Count);
         if (possibleSongs.Count == 0) return false;
-        return RemoveWrongSongs(note, noteIndex);
+        return RemoveWrongSongs(note);
     }
 
     public void Reset()
@@ -20,19 +40,24 @@ public class SongChecker : MonoBehaviour {
         {
             possibleSongs.Add(songs[i]);
         }
+
+        noteIndex = 0;
     }
 
-    bool RemoveWrongSongs(FluteNote note, int noteIndex)
+    bool RemoveWrongSongs(FluteNote note)
     {
         if (possibleSongs.Count == 0) return false;
         for(int i=0;i<possibleSongs.Count;++i)
         {
-            if (possibleSongs[i].notes[noteIndex] != note)
+            print("note:" +note + " | checkedNote: " + possibleSongs[i].notes[noteIndex]);
+            if (noteIndex >= possibleSongs[i].notes.Length|| possibleSongs[i].notes[noteIndex] != note)
             {
                 possibleSongs.Remove(possibleSongs[i]);
             }
         }
 
-        return possibleSongs.Count == 1;
+        ++noteIndex;
+        // print("notes: " + possibleSongs[0].notes.Length + noteIndex);
+        return possibleSongs.Count == 1 && (noteIndex == possibleSongs[0].notes.Length);
     }
 }
