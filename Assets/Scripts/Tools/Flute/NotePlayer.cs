@@ -22,6 +22,17 @@ public class NotePlayer : MonoBehaviour {
         lastNote = FluteNote.None;
     }
 
+    public void DelayStopAllNotes(float delay)
+    {
+        StartCoroutine(IDelayStopAllNotes(delay));
+    }
+
+    IEnumerator IDelayStopAllNotes(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        StopAllNotes();
+    }
+
     void StopAllNotes()
     {
         StopAllCoroutines();
@@ -41,7 +52,7 @@ public class NotePlayer : MonoBehaviour {
         lastNote = note;
     }
     
-    void StopLastNote()
+    public void StopLastNote()
     {
         if (lastNote == FluteNote.None) return;
         
