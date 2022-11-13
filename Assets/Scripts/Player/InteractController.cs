@@ -14,9 +14,9 @@ public class InteractController : MonoBehaviour {
     [SerializeField] private float distance = 1;
 
     private InteractableController currInteractable;
-    private bool interactableExists;
-
     private bool inInteraction;
+    
+    public  bool interactableExists;
     
     // Update is called once per frame
     void Update()
