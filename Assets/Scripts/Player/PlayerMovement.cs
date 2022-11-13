@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     public bool canMove = true;
+    [SerializeField] private Vector2 startFacingDir = Vector2.down;
     [SerializeField] private float speed = 6;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Animator animator;
     
     private Vector2 dir;
 
@@ -37,22 +39,34 @@ public class PlayerMovement : MonoBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        
+        animator.SetFloat("Horizontal",startFacingDir.x);
+        animator.SetFloat("Vertical", startFacingDir.y);
     }
 
     // Update is called once per frame
     void Update()
     {
         GetInput();
+        SetAnimValues();
     }
-
-    private void FixedUpdate()
+    
+    void FixedUpdate()
     {
         Move();
     }
 
+
+    void SetAnimValues()
+    {
+        if(dir.magnitude >= 0.1f)
+        {
+            animator.SetFloat("Horizontal", dir.x);
+            animator.SetFloat("Vertical", dir.y);
+        }
+    }
     void GetInput()
     {
+        if (!canMove) return;
         dir.x = Input.GetAxisRaw("Horizontal");
         dir.y = Input.GetAxisRaw("Vertical");
         dir = Vector2.ClampMagnitude(dir,1);
