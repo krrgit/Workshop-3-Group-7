@@ -20,7 +20,7 @@ public class BlacklightObject : MonoBehaviour
 
     private Vector3 lightDelta;                                         //relative position of light to hiddenSprite
     private Vector3 previousDelta;                                      //last coordinate that texture was rendered from
-    private bool on;
+    private bool active;
 
     void Awake() {
         hiddenSprite = GetComponent<SpriteRenderer>();  //set the sprite to the objects SpriteRenderer
@@ -29,14 +29,14 @@ public class BlacklightObject : MonoBehaviour
     }
 
     void Update() {
-        updateWidthHeightRadiusDelta();                                                                 //set all necessary variables for mask generation
-        if(blacklight.gameObject.activeSelf && inRadius() && (lightDelta != previousDelta || !on)) {    //check if the mask should be rendered
-            GenerateMask();                                                                             //generate the mask
-            previousDelta = lightDelta;                                                                 //store the coordinate of the last generated texture
-            on = true;                                                                                  //set the texture bool to be on
-        } else if(!blacklight.gameObject.activeSelf && on) {                                            //if the blacklight object was disabled but the texture is on
-            hiddenSprite.material.SetTexture("_LightMask", Texture2D.blackTexture);                     //set the texture to be invisible
-            on = false;                                                                                 //set the texture bool to off
+        updateWidthHeightRadiusDelta();                                                                     //set all necessary variables for mask generation
+        if(blacklight.gameObject.activeSelf && inRadius() && (lightDelta != previousDelta || !active)) {    //check if the mask should be rendered
+            GenerateMask();                                                                                 //generate the mask
+            previousDelta = lightDelta;                                                                     //store the coordinate of the last generated texture
+            active = true;                                                                                  //set the texture bool to be on
+        } else if(!blacklight.gameObject.activeSelf && active) {                                            //if the blacklight object was disabled but the texture is on
+            hiddenSprite.material.SetTexture("_LightMask", Texture2D.blackTexture);                         //set the texture to be invisible
+            active = false;                                                                                 //set the texture bool to off
         }
     }
 

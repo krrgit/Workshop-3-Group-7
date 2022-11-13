@@ -44,12 +44,12 @@ TagManager:
   - name: Wall
     uniqueID: 1604540333
     locked: 0
-  - name: Stairs
-    uniqueID: 1000858423
-    locked: 0
   - name: Foreground
     uniqueID: 3258404307
     locked: 0
   - name: Player
     uniqueID: 2566393285
+    locked: 0
+  - name: Stairs
+    uniqueID: 1000858423
     locked: 0
