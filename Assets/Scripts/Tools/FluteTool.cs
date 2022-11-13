@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FluteTool : Tool {
     [SerializeField] private AnimateMusicUI musicUI;
@@ -9,6 +11,11 @@ public class FluteTool : Tool {
     [SerializeField] private NotePlayer player;
     [SerializeField] private bool inUse;
     [SerializeField] private int maxNotes = 8;
+<<<<<<< Updated upstream
+=======
+    [SerializeField] private UnityEvent ControlCatEvent;
+    
+>>>>>>> Stashed changes
     private int currentNote;
 
     private bool isPlayable;
@@ -73,7 +80,12 @@ public class FluteTool : Tool {
     {
         print("Play song!");
         checker.PlaySong();
+<<<<<<< Updated upstream
         Reset(checker.GetSongLength);
+=======
+        StartCoroutine(HoldOnReset(checker.GetSongLength));
+        StartCoroutine(WaitForFluteEvent(checker.GetSongLength));
+>>>>>>> Stashed changes
         player.DelayStopAllNotes(1f);
     }
 
@@ -99,6 +111,7 @@ public class FluteTool : Tool {
         currentNote = 0;
         isPlayable = true;
     }
+<<<<<<< Updated upstream
     public override void Use()
     {
         PlayerMovement.Instance.ToggleMove(false);
@@ -115,5 +128,12 @@ public class FluteTool : Tool {
         player.Reset();
         print("Stop using Flute");
         isPlayable = false;
+=======
+
+    IEnumerator WaitForFluteEvent(float waitTime)
+    {        
+        yield return new WaitForSeconds(waitTime);
+        ControlCatEvent.Invoke();
+>>>>>>> Stashed changes
     }
 }
