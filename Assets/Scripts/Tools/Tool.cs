@@ -4,6 +4,10 @@ using UnityEngine;
 
 public abstract class Tool : MonoBehaviour
 {
+    public virtual bool CanUnequip()
+    {
+        return true;
+    }
     public virtual void Use()
     {
         PlayerMovement.Instance.ToggleMove(false);

@@ -9,11 +9,34 @@ public class FluteTool : Tool {
     [SerializeField] private NotePlayer player;
     [SerializeField] private bool inUse;
     [SerializeField] private int maxNotes = 8;
+    
     private int currentNote;
-
     private bool isPlayable;
-
     private bool playSong;
+    private bool isResetting;
+
+    public override bool CanUnequip()
+    {
+        return isPlayable;
+    }
+    
+    public override void Use()
+    {
+        PlayerMovement.Instance.ToggleMove(false);
+        musicUI.Animate(true);
+        StartCoroutine(HoldOnReset(1));
+        print("Use Flute!");
+    }
+    
+    public override void Stop()
+    {
+        PlayerMovement.Instance.ToggleMove(true);
+        musicUI.Animate(false);
+        player.Reset();
+        print("Stop using Flute");
+        isPlayable = false;
+    }
+    
 
     // Update is called once per frame
     void Update()
@@ -39,7 +62,7 @@ public class FluteTool : Tool {
         {
             PlayNote(FluteNote.A);
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             PlayNote(FluteNote.hiC);
         }
@@ -53,58 +76,43 @@ public class FluteTool : Tool {
         if (currentNote != maxNotes)
         {
             notePlacer.SetNextNote(note);
-            playSong = checker.SongCheck(note, currentNote);
+            playSong = checker.SongCheck(note);
             player.PlayNote(note);
         }
+        currentNote++;
 
         if (playSong)
         {
-            // play song
+            PlaySong();
         }
-        ++currentNote;
-        
+
         if (!playSong && currentNote == maxNotes)
         {
-            Reset();
+            StartCoroutine(HoldOnReset(1));
         }
+    }
+
+    void PlaySong()
+    {
+        print("Play song!");
+        checker.PlaySong();
+        StartCoroutine(HoldOnReset(checker.GetSongLength));
+        player.DelayStopAllNotes(1f);
     }
 
     void Reset()
     {
-        StartCoroutine(HoldOnReset());
-    }
-
-    IEnumerator HoldOnReset()
-    {
-        isPlayable = false;
-        yield return new WaitForSeconds(1);
         notePlacer.Reset();
         checker.Reset();
         currentNote = 0;
         player.Reset();
-        isPlayable = true;
     }
 
-    IEnumerator StartWait()
+    IEnumerator HoldOnReset(float waitTime)
     {
-        yield return new WaitForSeconds(1);
-        currentNote = 0;
-        isPlayable = true;
-    }
-    public override void Use()
-    {
-        PlayerMovement.Instance.ToggleMove(false);
-        musicUI.Animate(true);
-        StartCoroutine(StartWait());
-        print("Use Flute!");
-    }
-    
-    public override void Stop()
-    {
-        PlayerMovement.Instance.ToggleMove(true);
-        musicUI.Animate(false);
-        player.Reset();
-        print("Stop using Flute");
         isPlayable = false;
+        yield return new WaitForSeconds(waitTime);
+        Reset();
+        isPlayable = true;
     }
 }

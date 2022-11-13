@@ -17,8 +17,10 @@ public class ToolManager : MonoBehaviour {
     [SerializeField] private Tool flute;
     [SerializeField] private Tool blacklight;
     [SerializeField] private Tool wrench;
-
-    [SerializeField] private Tool current;
+    [SerializeField] private InteractController interactController;
+    
+    private Tool current;
+    
 
 
     private bool toolInUse;
@@ -63,19 +65,21 @@ public class ToolManager : MonoBehaviour {
 
     void UseToolInput()
     {
-        if (Input.GetButtonDown("UseTool"))
+        
+        if (Input.GetButtonDown("Interact"))
         {
+            if (interactController.interactableExists) return;
             if (toolIndex != ToolInUse.None)
             {
                 if (!toolInUse)
                 {
                     Equipped.Use();
-                    toolInUse = !toolInUse;
+                    toolInUse = true;
                 }
-                else
+                else if (current.CanUnequip())
                 {
                     Equipped.Stop();
-                    toolInUse = !toolInUse;
+                    toolInUse = false;
                 }
             }
         }

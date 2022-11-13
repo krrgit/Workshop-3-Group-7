@@ -4,9 +4,22 @@
     <list default="true" id="2ef47eef-71a2-4d6d-b243-094496b8942f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Workshop-3-Group-7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Workshop-3-Group-7/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/InteractDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InteractDemo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/Flute/SongChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/Flute/SongChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/FluteTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/FluteTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/NotePlacer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/NotePlacer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/Tool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/Tool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/ToolManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/ToolManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprBlacklightTemp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprBlacklightTemp.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprFishingPoleTemp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprFishingPoleTemp.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprFluteTemp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprFluteTemp.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprWrenchTemp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Placeholders/sprWrenchTemp.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,12 +27,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Workshop-2-Group-1/Assets/Scripts/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Debug/DebugDialogue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ButtonPromptController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/InteractableController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/SoundManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/Flute/NotePlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/Flute/SongSO.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Tools/FluteTool.cs" root0="FORCE_HIGHLIGHTING" />
@@ -87,6 +102,8 @@
       <updated>1667449011426</updated>
       <workItem from="1667449015451" duration="42417000" />
       <workItem from="1667944193979" duration="17011000" />
+      <workItem from="1668212442832" duration="2593000" />
+      <workItem from="1668248292147" duration="7053000" />
     </task>
     <servers />
   </component>
