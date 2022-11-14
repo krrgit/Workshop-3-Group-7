@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70081aeb0a5076441ad1e7295887ce75
+guid: 6c9b128d44bb37a4dad2e80ef1b376eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,33 +105,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_IdleRight_0
+      name: Frog_(Dinks)_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 33
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 123cbacf13a11cc498b232b497c3d429
-      internalID: 921296728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_IdleRight_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 26
+        width: 27
         height: 34
       alignment: 7
       pivot: {x: 0.5, y: 0}
@@ -140,8 +119,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8251a6c5e0b7a984da8fccbf09cbbf27
-      internalID: -544666217
+      spriteID: fc88f6fca801663499239e0b5c627d6b
+      internalID: -734897607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Frog_(Dinks)_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 27
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4584105c0fa430d4983e288a4c5800ef
+      internalID: 491099533
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_IdleRight_0: 921296728
-      Player_IdleRight_1: -544666217
+      Frog_(Dinks)_1: -734897607
+      Frog_(Dinks)_3: -984639132
+      Frog_(Dinks)_4: 491099533
+      Frog_(Dinks)_5: 1281961167
+      Frog_(Dinks)_2: -700113681
+      Frog_(Dinks)_0: -119690795
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
