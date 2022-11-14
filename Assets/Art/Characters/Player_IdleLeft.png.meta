@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 803114c8f05de452a97e81755e915d15
+guid: ea6c24493adbf4b4eb2971a958e8fbf2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,9 +45,9 @@ TextureImporter:
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
-  spritePixelsToUnits: 24
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -111,16 +111,16 @@ TextureImporter:
         x: 0
         y: 0
         width: 26
-        height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        height: 33
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 907912c099ebf3348a9a4b807845541b
-      internalID: -258531261
+      spriteID: 8975611b6833a35439ff93e749422b92
+      internalID: -445294043
       vertices: []
       indices: 
       edges: []
@@ -133,15 +133,15 @@ TextureImporter:
         y: 0
         width: 26
         height: 34
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1078ba679a9ca264abb706586aa3700f
-      internalID: 1277426480
+      spriteID: d481b9817515d4642b3a75d2c1818d0e
+      internalID: -59498856
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_IdleLeft_0: -258531261
-      Player_IdleLeft_1: 1277426480
+      Player_IdleLeft_0: -445294043
+      Player_IdleLeft_1: -59498856
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

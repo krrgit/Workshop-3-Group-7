@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 70081aeb0a5076441ad1e7295887ce75
+guid: c23072ba9a3e57744b52956f1525fbac
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_IdleRight_0
+      name: Groundhog_(Klev)_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 1
         y: 0
-        width: 26
-        height: 33
+        width: 31
+        height: 30
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 123cbacf13a11cc498b232b497c3d429
-      internalID: 921296728
+      spriteID: 89a169f418796f04a8d510b2f576beef
+      internalID: -1926362372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_IdleRight_1
+      name: Groundhog_(Klev)_4
       rect:
         serializedVersion: 2
-        x: 36
+        x: 45
         y: 0
-        width: 26
-        height: 34
+        width: 31
+        height: 31
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8251a6c5e0b7a984da8fccbf09cbbf27
-      internalID: -544666217
+      spriteID: 1e7b49291eea6ab4d97890b0c148eb22
+      internalID: -858749551
       vertices: []
       indices: 
       edges: []
@@ -157,8 +157,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_IdleRight_0: 921296728
-      Player_IdleRight_1: -544666217
+      Groundhog_(Klev)_0: 922505201
+      Groundhog_(Klev)_5: 647915533
+      Groundhog_(Klev)_3: -2080161194
+      Groundhog_(Klev)_4: -858749551
+      Groundhog_(Klev)_1: -1926362372
+      Groundhog_(Klev)_2: 1165658077
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
