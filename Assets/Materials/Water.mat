@@ -73,7 +73,7 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     - _FlowSpeed: 0.015
-    - _FlowStrength: 0.015
+    - _FlowStrength: 0.01
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Size: 3
@@ -83,6 +83,6 @@ Material:
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _LightFoamColor: {r: 0.36912602, g: 0.5265249, b: 0.745283, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ScrollSpeed: {r: -0.015, g: -0.015, b: 0, a: 0}
+    - _ScrollSpeed: {r: -0.03, g: -0.03, b: 0, a: 0}
     - _WaterColor: {r: 0, g: 0.3215487, b: 0.764151, a: 1}
   m_BuildTextureStacks: []
