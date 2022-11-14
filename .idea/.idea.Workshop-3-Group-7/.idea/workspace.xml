@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef47eef-71a2-4d6d-b243-094496b8942f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player.controller.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player.controller.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleBack.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleBack.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleFront.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleFront.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleLeft.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleLeft.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleRight.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_IdleRight.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_WalkForward.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Character Animations/Player_WalkForward.anim.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Player_IdleBack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Player_IdleBack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Player_IdleLeft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Player_IdleLeft.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Player_IdleRight.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Player_IdleRight.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkBack.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkBack.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkForward.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkForward.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkLeft.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkLeft.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkRight.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/Player_WalkRight.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Characters/icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Characters/icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art/Player/Player_Idle.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Player/Player_Idle.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Workshop-3-Group-7/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Workshop-3-Group-7/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InteractDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InteractDemo.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/../Workshop-2-Group-1/Assets/Scripts/Player/PlayerMovement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/CamAimAtTarget.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Camera/TriggerRoomCamera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Cat/CatAnimEvents.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Debug/DebugDialogue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/ButtonPromptController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/InteractController.cs" root0="FORCE_HIGHLIGHTING" />
