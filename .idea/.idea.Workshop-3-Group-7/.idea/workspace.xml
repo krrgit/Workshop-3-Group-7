@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef47eef-71a2-4d6d-b243-094496b8942f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tools/FluteTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tools/FluteTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cat/CatFollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cat/CatFollowPlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
