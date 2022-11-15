@@ -1491,7 +1491,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_66
+      name: Bedroom_Window
       rect:
         serializedVersion: 2
         x: 70
@@ -3129,7 +3129,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_144
+      name: String_Lights
       rect:
         serializedVersion: 2
         x: 162
@@ -3150,7 +3150,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_145
+      name: Plant
       rect:
         serializedVersion: 2
         x: 2
@@ -3339,7 +3339,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_154
+      name: Small_Lamp
       rect:
         serializedVersion: 2
         x: 3
@@ -3654,7 +3654,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_169
+      name: Wide_Dresser_Top
       rect:
         serializedVersion: 2
         x: 80
@@ -3822,7 +3822,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_177
+      name: Wide_Dresser
       rect:
         serializedVersion: 2
         x: 80
@@ -3864,7 +3864,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_179
+      name: Lamp_Top
       rect:
         serializedVersion: 2
         x: 176
@@ -4032,7 +4032,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_187
+      name: Lamp
       rect:
         serializedVersion: 2
         x: 193
@@ -4116,7 +4116,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_191
+      name: Meidum_Dresser_Top
       rect:
         serializedVersion: 2
         x: 52
@@ -4221,7 +4221,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_196
+      name: Medium_Dresser
       rect:
         serializedVersion: 2
         x: 52
@@ -4599,7 +4599,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_214
+      name: Room_Mess
       rect:
         serializedVersion: 2
         x: 118
@@ -4683,7 +4683,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_218
+      name: Mirror
       rect:
         serializedVersion: 2
         x: 134
@@ -7463,7 +7463,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -7493,6 +7493,7 @@ TextureImporter:
       Interiors_free_16x16_217: 1668949024
       Interiors_free_16x16_192: -1265531103
       Interiors_free_16x16_78: -237651491
+      Lamp_Top: -1038923574
       Interiors_free_16x16_71: 1082698230
       Interiors_free_16x16_133: -1103976545
       Interiors_free_16x16_206: 375468482
@@ -7505,6 +7506,7 @@ TextureImporter:
       Interiors_free_16x16_334: -701916433
       Interiors_free_16x16_141: -2132583557
       Interiors_free_16x16_335: 1470908526
+      Bedroom_Window: 364542571
       Interiors_free_16x16_180: -920125532
       Interiors_free_16x16_207: -650738896
       Interiors_free_16x16_109: 98195854
@@ -7546,11 +7548,12 @@ TextureImporter:
       Interiors_free_16x16_183: -1523933265
       Interiors_free_16x16_15: -1056088886
       Interiors_free_16x16_278: -262369886
+      Medium_Dresser: -743824559
       Interiors_free_16x16_198: 952051161
+      Wide_Dresser_Top: -472753639
       Interiors_free_16x16_101: -29430134
       Interiors_free_16x16_319: 1649934868
       Interiors_free_16x16_123: 1652234469
-      Interiors_free_16x16_187: 449676297
       Interiors_free_16x16_40: 45507814
       Interiors_free_16x16_236: 448738635
       Interiors_free_16x16_82: -1470843970
@@ -7564,10 +7567,9 @@ TextureImporter:
       Interiors_free_16x16_2: -1132037619
       Interiors_free_16x16_212: 112723133
       Interiors_free_16x16_263: 1431811735
-      Interiors_free_16x16_66: 364542571
+      String_Lights: 1295616399
       Interiors_free_16x16_93: -1826944662
       Interiors_free_16x16_104: 1255111627
-      Interiors_free_16x16_177: -424018547
       Interiors_free_16x16_322: 1280230144
       Interiors_free_16x16_53: 938875336
       Interiors_free_16x16_281: 2003286974
@@ -7642,7 +7644,6 @@ TextureImporter:
       Interiors_free_16x16_122: 1961813369
       Interiors_free_16x16_227: -2051097510
       Interiors_free_16x16_330: -1331521856
-      Interiors_free_16x16_154: 1386417481
       Interiors_free_16x16_47: -2020645305
       Interiors_free_16x16_10: -672727214
       Interiors_free_16x16_30: 763247974
@@ -7661,7 +7662,6 @@ TextureImporter:
       Interiors_free_16x16_257: -323369449
       Interiors_free_16x16_339: -1769018895
       Interiors_free_16x16_62: -725031261
-      Interiors_free_16x16_144: 1295616399
       Blue_Stair_Begin: -636051472
       Interiors_free_16x16_19: -1196641758
       Interiors_free_16x16_98: 796061822
@@ -7674,7 +7674,7 @@ TextureImporter:
       Interiors_free_16x16_69: 1347637983
       Interiors_free_16x16_327: -794302102
       Interiors_free_16x16_202: 1170139898
-      Interiors_free_16x16_196: -743824559
+      Meidum_Dresser_Top: -933907
       Interiors_free_16x16_42: 512351311
       Interiors_free_16x16_52: -1992892712
       Interiors_free_16x16_291: 36867099
@@ -7690,7 +7690,6 @@ TextureImporter:
       Interiors_free_16x16_14: 1274237517
       Interiors_free_16x16_299: -1867056514
       Interiors_free_16x16_178: -701544277
-      Interiors_free_16x16_191: -933907
       Interiors_free_16x16_314: 1216914268
       Interiors_free_16x16_26: -1168458005
       Interiors_free_16x16_174: -1488002754
@@ -7706,8 +7705,8 @@ TextureImporter:
       Interiors_free_16x16_32: -1210542109
       Interiors_free_16x16_127: -1496115840
       Interiors_free_16x16_204: -1816691862
-      Interiors_free_16x16_179: -1038923574
       Interiors_free_16x16_247: -1274701922
+      Wide_Dresser: -424018547
       Interiors_free_16x16_116: -2043060960
       Interiors_free_16x16_251: -1438527521
       Interiors_free_16x16_96: -767683740
@@ -7729,6 +7728,7 @@ TextureImporter:
       Interiors_free_16x16_97: -1486519815
       Interiors_free_16x16_276: 1924138161
       Interiors_free_16x16_296: 1358633210
+      Mirror: -554156724
       Interiors_free_16x16_228: 731599475
       Interiors_free_16x16_29: -882380612
       Interiors_free_16x16_72: 154105840
@@ -7742,12 +7742,11 @@ TextureImporter:
       Interiors_free_16x16_211: 1666433382
       Interiors_free_16x16_341: 1563515816
       Interiors_free_16x16_36: 2059014957
-      Interiors_free_16x16_145: 503100402
       Interiors_free_16x16_285: -1570730972
       Interiors_free_16x16_142: 404007703
       Interiors_free_16x16_176: -987849859
+      Room_Mess: 1042121513
       Interiors_free_16x16_4: -2037218673
-      Interiors_free_16x16_218: -554156724
       Interiors_free_16x16_85: -1681318590
       Interiors_free_16x16_21: -1653019293
       Interiors_free_16x16_7: -1687591864
@@ -7772,7 +7771,6 @@ TextureImporter:
       Interiors_free_16x16_333: 1839336052
       Interiors_free_16x16_190: -95307057
       Interiors_free_16x16_157: -730925903
-      Interiors_free_16x16_169: -472753639
       Interiors_free_16x16_44: -35807757
       Interiors_free_16x16_222: 134082757
       Interiors_free_16x16_91: 1609002148
@@ -7817,12 +7815,14 @@ TextureImporter:
       Interiors_free_16x16_18: 1101647170
       Interiors_free_16x16_17: 1131841594
       Interiors_free_16x16_83: -1459782653
+      Small_Lamp: 1386417481
       Interiors_free_16x16_343: 683982783
       Interiors_free_16x16_244: 995994079
       Interiors_free_16x16_262: 1031438267
       Interiors_free_16x16_45: -1768393494
       Interiors_free_16x16_311: -2018127493
       Interiors_free_16x16_51: 444169369
+      Lamp: 449676297
       Interiors_free_16x16_150: -2110343501
       Interiors_free_16x16_306: 742022299
       Interiors_free_16x16_331: -2002274943
@@ -7831,7 +7831,7 @@ TextureImporter:
       Interiors_free_16x16_95: 633447622
       Interiors_free_16x16_307: 650610620
       Interiors_free_16x16_138: -1846307569
-      Interiors_free_16x16_214: 1042121513
+      Plant: 503100402
       Interiors_free_16x16_132: -1342178109
       Interiors_free_16x16_134: 598486027
       Interiors_free_16x16_259: -1999396478
