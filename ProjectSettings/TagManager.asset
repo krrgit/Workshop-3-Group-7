@@ -44,16 +44,16 @@ TagManager:
   - name: Wall
     uniqueID: 1604540333
     locked: 0
-  - name: Foreground
+  - name: Background
     uniqueID: 3258404307
     locked: 0
   - name: Player
     uniqueID: 2566393285
     locked: 0
-  - name: Stairs
+  - name: Foreground
     uniqueID: 1000858423
     locked: 0
-  - name: New Layer 5
+  - name: Border
     uniqueID: 3071108903
     locked: 0
   - name: New Layer 6
