@@ -32,7 +32,7 @@ public class CatFollowPlayer : MonoBehaviour {
     {
         for(int i=0;i<pointLimit;++i)
         {
-            points.Add(player.position);
+            points.Add(player.position + (Vector3.left * 2));
         }
     }
 
