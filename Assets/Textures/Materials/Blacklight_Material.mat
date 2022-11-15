@@ -55,11 +55,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _MessIntensity: 0.8
-    - _NoiseScale: 40
+    - _MessIntensity: 1.5
+    - _NoiseScale: 35
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 0.96078444, b: 1, a: 1}
+    - _GlowColor: {r: 0.998508, g: 1, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
