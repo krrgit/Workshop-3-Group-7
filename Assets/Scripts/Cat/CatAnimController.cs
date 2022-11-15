@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class CatAnimController : MonoBehaviour {
    [SerializeField] private Animator anim;
+   [SerializeField] private CatFollowPlayer follow;
    [SerializeField]private bool canMove;
+   [SerializeField] private bool followPlayer;
    [SerializeField] private float moveSpeed = 1;
    [SerializeField] private float turnSpeed = 1;
-   
 
    private bool turnClockwise;
    private bool turnCounter;
@@ -19,7 +20,6 @@ public class CatAnimController : MonoBehaviour {
    private float rotDiff;
    void Update()
    {
-      //DemoInputs();
       GetInput();
       SetTurnBoolValues();
       
@@ -27,24 +27,28 @@ public class CatAnimController : MonoBehaviour {
       Move();
       Rotate();
    }
-   
-   void DemoInputs()
+
+   void FollowInput()
    {
-      if (Input.GetKey(KeyCode.A))
+      if (!followPlayer) return;
+      if (follow.CloseToPlayer)
       {
-         turnClockwise = Input.GetKey(KeyCode.A);
-         turnCounter = false;
+         dir = Vector2.zero;
+         return;
       }
-      else
-      {
-         turnCounter = Input.GetKey(KeyCode.D);
-         turnClockwise = false;
-      }
+
+      dir = follow.FollowPoint - (Vector2)transform.position;
+      dir = dir.normalized;
    }
 
    void GetInput()
    {
       if (!canMove) return;
+      if (followPlayer)
+      {
+         FollowInput();
+         return;
+      }
       dir.x = Input.GetAxisRaw("Horizontal");
       dir.y = Input.GetAxisRaw("Vertical");
       dir = Vector2.ClampMagnitude(dir,1);
@@ -53,7 +57,7 @@ public class CatAnimController : MonoBehaviour {
    void SetTurnBoolValues()
    {
       rotDiff = Mathf.Abs(transform.rotation.z) - Mathf.Abs(toRot.z);
-      print("z diff: " + rotDiff );
+     // print("z diff: " + rotDiff );
       if (Mathf.Abs(rotDiff) > 0.1f)
       {
          turnCounter = rotDiff < 0 ? true : false;
