@@ -9,13 +9,16 @@ public class CatFollowPlayer : MonoBehaviour {
     [SerializeField] private Transform player;
     
     private List<Vector2> points = new List<Vector2>();
+    private List<Vector2> forward = new List<Vector2>();
 
     private float playerDist;
     private float pointDist;
 
+    private Vector2 tempPoint;
+
     public Vector2 FollowPoint
     {
-        get { return points[0];  }
+        get { return points[0]; }
     }
 
     public bool CloseToPlayer
@@ -33,36 +36,35 @@ public class CatFollowPlayer : MonoBehaviour {
         }
     }
 
+    void Update()
+    {
+        DrawPoints();
+    }
+
     // Update is called once per frame
     void LateUpdate()
     {
         UpdatePoints();
-        ResetWhenClose();
     }
 
-    void ResetWhenClose()
+    void DrawPoints()
     {
-        if (!CloseToPlayer) return;
-        points.Clear();
-        for(int i=0;i<pointLimit;++i)
+        for(int i=0;i<pointLimit-1;++i)
         {
-            points.Add(player.position);
+            Debug.DrawRay(points[i],points[i+1] - points[i], Color.red);
         }
+        //print("p1: " + points[0] + "p2: " + points[points.Count-1]);
     }
-
+    
     void UpdatePoints()
     {
-        
+        // 0 = newest, last = oldest
         playerDist = Vector2.Distance(points[points.Count-1], player.position);
         if (playerDist > pointSpacing)
         {
             points.Add(player.position);
-        }
-        
-        pointDist = Vector2.Distance(points[0], transform.position);
-        if (points.Count > pointLimit || pointDist < pointSpacing)
-        {
             points.RemoveAt(0);
+            print("update point");
         }
     }
 }

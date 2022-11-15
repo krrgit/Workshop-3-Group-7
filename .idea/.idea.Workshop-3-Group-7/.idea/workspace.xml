@@ -6,6 +6,7 @@
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cat.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Cat.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/InteractDemo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InteractDemo.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cat/CatAnimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cat/CatAnimController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Cat/CatFollowPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Cat/CatFollowPlayer.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

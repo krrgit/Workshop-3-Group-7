@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 875bf741d663e45e587c3d1ffa9ff604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointDist: 0.2
+  pointSpacing: 0.5
   pointLimit: 5
   player: {fileID: 0}
 --- !u!114 &5918104422094115170

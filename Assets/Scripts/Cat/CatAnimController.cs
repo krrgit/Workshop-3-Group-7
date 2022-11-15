@@ -18,6 +18,9 @@ public class CatAnimController : MonoBehaviour {
    private Vector2 dir;
    private Quaternion toRot;
    private float rotDiff;
+
+   private Vector2 tempDir;
+   
    void Update()
    {
       GetInput();
@@ -31,14 +34,13 @@ public class CatAnimController : MonoBehaviour {
    void FollowInput()
    {
       if (!followPlayer) return;
-      if (follow.CloseToPlayer)
+
+      tempDir = follow.FollowPoint - (Vector2)transform.position;
+      dir = tempDir.normalized;
+      if (tempDir.magnitude < 0.1f)
       {
          dir = Vector2.zero;
-         return;
       }
-
-      dir = follow.FollowPoint - (Vector2)transform.position;
-      dir = dir.normalized;
    }
 
    void GetInput()
