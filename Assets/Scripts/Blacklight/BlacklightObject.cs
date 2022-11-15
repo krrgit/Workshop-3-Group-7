@@ -30,7 +30,7 @@ public class BlacklightObject : MonoBehaviour
 
     void Update() {
         updateWidthHeightRadiusDelta();                                                                     //set all necessary variables for mask generation
-        if(blacklight.gameObject.activeSelf && inRadius() && (lightDelta != previousDelta || !active)) {    //check if the mask should be rendered
+        if(blacklight.gameObject.activeSelf && (lightDelta != previousDelta || !active)) {    //check if the mask should be rendered
             GenerateMask();                                                                                 //generate the mask
             previousDelta = lightDelta;                                                                     //store the coordinate of the last generated texture
             active = true;                                                                                  //set the texture bool to be on
@@ -56,7 +56,7 @@ public class BlacklightObject : MonoBehaviour
     }
 
     bool inRadius() {
-        return lightDelta.sqrMagnitude <= Math.Pow(outerRadius+Math.Max(width, height)/2+0.1, 2);   //check if the light is within range to be rendered (using square magnitude because sqrt takes a long time)
+        return lightDelta.sqrMagnitude <= Math.Pow(outerRadius+Math.Max(hiddenSprite.size[0], hiddenSprite.size[1]), 2);   //check if the light is within range to be rendered (using square magnitude because sqrt takes a long time)
     }
 
     void updateWidthHeightRadiusDelta() {

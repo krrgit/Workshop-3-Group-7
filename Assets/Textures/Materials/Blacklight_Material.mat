@@ -55,8 +55,8 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _MessIntensity: 1.5
-    - _NoiseScale: 35
+    - _MessIntensity: 1.3
+    - _NoiseScale: 40
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
