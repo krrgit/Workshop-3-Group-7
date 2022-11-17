@@ -20,15 +20,32 @@ public class ToolManager : MonoBehaviour {
     [SerializeField] private InteractController interactController;
     
     private Tool current;
-    
-
 
     private bool toolInUse;
 
+    public static ToolManager Instance;
+
+    public ToolInUse CurrentTool
+    {
+        get { return toolIndex; }
+    }
+    
     public Tool Equipped
     {
         get { return current; }
-    } 
+    }
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
