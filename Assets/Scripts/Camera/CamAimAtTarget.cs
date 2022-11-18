@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CamAimAtTarget : MonoBehaviour {
-    [SerializeField] private Transform player;
+    [SerializeField] private Transform target;
     [SerializeField] private float playerCamSize = 8;
 
     private Transform roomTarget;
@@ -14,10 +14,30 @@ public class CamAimAtTarget : MonoBehaviour {
 
     private Vector3 zDist = new Vector3(0,0,-10);
 
-    public void ToggleRoomCam(bool state, Transform target)
+    public static CamAimAtTarget Instance;
+    
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+    
+    
+    public void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
+
+    public void ToggleRoomCam(bool state, Transform _roomTarget)
     {
         aimAtRoom = state;
-        roomTarget = target;
+        roomTarget = _roomTarget;
     }
     
     // Update is called once per frame
@@ -42,7 +62,7 @@ public class CamAimAtTarget : MonoBehaviour {
 
     void TargetPlayer()
     {
-        transform.position = Vector3.Lerp(transform.position, player.position+zDist, Time.deltaTime * speed);
+        transform.position = Vector3.Lerp(transform.position, target.position+zDist, Time.deltaTime * speed);
         Camera.main.orthographicSize = Mathf.Lerp(Camera.main.orthographicSize, playerCamSize, Time.deltaTime * speed);
     }
 }
