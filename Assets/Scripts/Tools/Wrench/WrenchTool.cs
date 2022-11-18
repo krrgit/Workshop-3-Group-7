@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WrenchTool : Tool
-{
+public class WrenchTool : Tool {
+    [SerializeField] 
+    private Rotate currentRotateObject;
     public override void Use()
     {
         PlayerMovement.Instance.ToggleMove(false);
+        Stop();
         print("Use Wrench!");
     }
     

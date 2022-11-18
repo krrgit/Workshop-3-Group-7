@@ -17,7 +17,6 @@ public class InteractController : MonoBehaviour {
     private bool inInteraction;
     
     public  bool interactableExists;
-    
     // Update is called once per frame
     void Update()
     {
