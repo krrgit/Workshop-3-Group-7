@@ -15,9 +15,10 @@ public class SongChecker : MonoBehaviour {
         get { return songs[0].song.length; }
     }
 
-    public void PlaySong()
+    public string PlaySong()
     {
         StartCoroutine(WaitToPlaySong());
+        return songs[0].command;
     }
 
     IEnumerator WaitToPlaySong()

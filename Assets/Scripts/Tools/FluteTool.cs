@@ -9,6 +9,7 @@ public class FluteTool : Tool {
     [SerializeField] private NotePlacer notePlacer;
     [SerializeField] private SongChecker checker;
     [SerializeField] private NotePlayer player;
+    [SerializeField] private FluteCommands commands;
     [SerializeField] private bool inUse;
     [SerializeField] private int maxNotes = 8;
     [SerializeField] private UnityEvent ControlCatEvent;
@@ -43,7 +44,7 @@ public class FluteTool : Tool {
         {
             PlayNote(FluteNote.A);
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetKeyDown(KeyCode.X))
         {
             PlayNote(FluteNote.hiC);
         }
@@ -76,10 +77,10 @@ public class FluteTool : Tool {
     void PlaySong()
     {
         print("Play song!");
-        checker.PlaySong();
+        string command = checker.PlaySong();
         Reset(checker.GetSongLength);
         StartCoroutine(HoldOnReset(checker.GetSongLength));
-        StartCoroutine(WaitForFluteEvent(checker.GetSongLength));
+        StartCoroutine(WaitForFluteEvent(checker.GetSongLength, command));
         player.DelayStopAllNotes(1f);
     }
 
@@ -111,6 +112,7 @@ public class FluteTool : Tool {
         musicUI.Animate(true);
         StartCoroutine(StartWait());
         StartCoroutine(HoldOnReset(0));
+        UpdateButtonLabels.Instance.UpdateLabels("Flute");
         print("Use Flute!");
     }
 
@@ -123,9 +125,11 @@ public class FluteTool : Tool {
         isPlayable = false;
     }
 
-    IEnumerator WaitForFluteEvent(float waitTime)
+    IEnumerator WaitForFluteEvent(float waitTime, string command)
     {        
         yield return new WaitForSeconds(waitTime);
+        Stop();
         ControlCatEvent.Invoke();
+        commands.DoCommand(command);
     }
 }

@@ -82,6 +82,7 @@ public class ToolManager : MonoBehaviour {
 
     void UseToolInput()
     {
+        if (!PlayerMovement.Instance.canMove) return;
         
         if (Input.GetButtonDown("Interact"))
         {
