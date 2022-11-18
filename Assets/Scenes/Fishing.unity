@@ -617,7 +617,7 @@ MonoBehaviour:
   hookGravity: 0.05
   progressBarContainer: {fileID: 1847517187}
   hookPower: 0.5
-  progressBarDecay: 0.1
+  progressBarDecay: 0.23
   failTimer: 10
 --- !u!4 &1371571302
 Transform:
