@@ -3,18 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WrenchTool : Tool {
-    [SerializeField] 
-    private Rotate currentRotateObject;
-    public override void Use()
+    [SerializeField]
+    public override bool Use()
     {
-        PlayerMovement.Instance.ToggleMove(false);
-        Stop();
         print("Use Wrench!");
+        PlayerMovement.Instance.ToggleMove(false);
+        if (InteractController.Instance.interactableExists)
+        {
+            var rotate = InteractController.Instance.Interactable.GetComponent<Rotate>();
+
+            if (rotate)
+            {
+                rotate.RotateObjects();
+            }
+        }
+
+        Stop();
+        return false;
     }
     
-    public override void Stop()
+    public override bool Stop()
     {
         PlayerMovement.Instance.ToggleMove(true);
         print("Stop using Wrench");
+        return false;
     }
 }

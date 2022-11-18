@@ -18,6 +18,8 @@ public class InteractController : MonoBehaviour {
     
     public  bool interactableExists;
 
+    public static InteractController Instance;
+
     public InteractableController Interactable
     {
         get
@@ -25,7 +27,19 @@ public class InteractController : MonoBehaviour {
             return currInteractable;
         }
     }
-    
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

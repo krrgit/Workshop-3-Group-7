@@ -86,18 +86,16 @@ public class ToolManager : MonoBehaviour {
         
         if (Input.GetButtonDown("Interact"))
         {
-            if (interactController.interactableExists) return;
+            //if (interactController.interactableExists) return;
             if (toolIndex != ToolInUse.None)
             {
                 if (!toolInUse)
                 {
-                    Equipped.Use();
-                    toolInUse = true;
+                    toolInUse = Equipped.Use();
                 }
                 else if (current.CanUnequip())
                 {
-                    Equipped.Stop();
-                    toolInUse = false;
+                    toolInUse = Equipped.Stop();;
                 }
             }
         }

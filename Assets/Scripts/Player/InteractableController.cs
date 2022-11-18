@@ -14,6 +14,7 @@ public class InteractableController : MonoBehaviour {
     public UnityEvent InteractEvent;
     public UnityEvent StopEvent;
     [SerializeField] private int interactAmount = 1;
+    [SerializeField] private bool hold;
     
 
     public bool canInteract = true;
@@ -33,7 +34,7 @@ public class InteractableController : MonoBehaviour {
             InteractEvent.Invoke();
             canInteract = false;
             --interactCount;
-            return true;
+            return hold;
         }
         else
         {

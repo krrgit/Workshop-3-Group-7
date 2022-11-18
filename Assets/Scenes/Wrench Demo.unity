@@ -123,6 +123,139 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &70452232
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70452236}
+  - component: {fileID: 70452235}
+  - component: {fileID: 70452234}
+  - component: {fileID: 70452233}
+  m_Layer: 6
+  m_Name: Square (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!50 &70452233
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70452232}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &70452234
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70452232}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!212 &70452235
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70452232}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &70452236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70452232}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.49, y: 0.95000005, z: 0}
+  m_LocalScale: {x: 3.1625, y: 0.82072276, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &87730365
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,8 +374,6 @@ GameObject:
   - component: {fileID: 115680470}
   - component: {fileID: 115680469}
   - component: {fileID: 115680468}
-  - component: {fileID: 115680467}
-  - component: {fileID: 115680466}
   m_Layer: 6
   m_Name: Square (9)
   m_TagString: Untagged
@@ -265,64 +396,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &115680466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115680464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48b6a166a051c0d48874e9a760bd2078, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotationDirection: -1
-  rotationStep: 10
---- !u!114 &115680467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 115680464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b12d2e906a5a84028a02be25c7886295, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  InteractEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DebugDialogue, Assembly-CSharp
-        m_MethodName: ShowText
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
-  StopEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: DebugDialogue, Assembly-CSharp
-        m_MethodName: HideText
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 0
-  interactAmount: 1
-  canInteract: 1
 --- !u!50 &115680468
 Rigidbody2D:
   serializedVersion: 4
@@ -516,6 +589,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   interactAmount: 1
+  hold: 0
   canInteract: 1
 --- !u!50 &125021145
 Rigidbody2D:
@@ -664,6 +738,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   interactAmount: 1
+  hold: 0
   canInteract: 1
 --- !u!114 &138347859
 MonoBehaviour:
@@ -713,8 +788,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48b6a166a051c0d48874e9a760bd2078, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsToRotate:
+  - {fileID: 115680465}
+  - {fileID: 70452236}
   rotationDirection: -1
-  rotationStep: 10
+  rotationStep: 90
 --- !u!114 &152207482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,9 +808,9 @@ MonoBehaviour:
   InteractEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 115680466}
+      - m_Target: {fileID: 152207481}
         m_TargetAssemblyTypeName: Rotate, Assembly-CSharp
-        m_MethodName: rotateObject
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -741,7 +819,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
   StopEvent:
     m_PersistentCalls:
       m_Calls:
@@ -758,6 +836,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 0
   interactAmount: 1
+  hold: 0
   canInteract: 1
 --- !u!50 &152207483
 Rigidbody2D:
@@ -927,7 +1006,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae1dbb0a61a74866bf3116dda4be152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 734280784}
+  target: {fileID: 734280784}
   playerCamSize: 7
   roomCamSize: 10
   speed: 4
@@ -1952,6 +2031,7 @@ MonoBehaviour:
   notePlacer: {fileID: 445617287}
   checker: {fileID: 523903772}
   player: {fileID: 523903771}
+  commands: {fileID: 0}
   inUse: 0
   maxNotes: 6
   ControlCatEvent:

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class FishingPoleTool : Tool
 {
-    public override void Use()
+    public override bool Use()
     {
         PlayerMovement.Instance.ToggleMove(false);
         print("Use FishingPole!");
+        return true;
     }
     
-    public override void Stop()
+    public override bool Stop()
     {
         PlayerMovement.Instance.ToggleMove(true);
         print("Stop using FishingPole");
+        return false;
     }
 }

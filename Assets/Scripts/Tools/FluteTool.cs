@@ -106,7 +106,7 @@ public class FluteTool : Tool {
         currentNote = 0;
         isPlayable = true;
     }
-    public override void Use()
+    public override bool Use()
     {
         PlayerMovement.Instance.ToggleMove(false);
         musicUI.Animate(true);
@@ -114,15 +114,17 @@ public class FluteTool : Tool {
         StartCoroutine(HoldOnReset(0));
         UpdateButtonLabels.Instance.UpdateLabels("Flute");
         print("Use Flute!");
+        return true;
     }
 
-    public override void Stop()
+    public override bool Stop()
     {
         PlayerMovement.Instance.ToggleMove(true);
         musicUI.Animate(false);
         player.Reset();
         print("Stop using Flute");
         isPlayable = false;
+        return false;
     }
 
     IEnumerator WaitForFluteEvent(float waitTime, string command)

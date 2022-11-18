@@ -9,17 +9,19 @@ public class BlacklightTool : Tool
     [SerializeField] private GameObject beam;
     [SerializeField] private GameObject circle;
 
-    public override void Use()
+    public override bool Use()
     {
         GetComponent<SpriteRenderer>().material.SetColor("_Glow", Color.HSVToRGB(0.75f, 1, .8f));
         beam.SetActive(true);
-        circle.SetActive(true);       
+        circle.SetActive(true);
+        return true;
     }
     
-    public override void Stop()
+    public override bool Stop()
     {
         GetComponent<SpriteRenderer>().material.SetColor("_Glow", Color.HSVToRGB(0.75f, 1, 0));
         beam.SetActive(false);
         circle.SetActive(false);
+        return false;
     }
 }

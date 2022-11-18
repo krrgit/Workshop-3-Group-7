@@ -23,28 +23,33 @@ public class Rotate : MonoBehaviour
         //     rotateObject();
         // }
     }
-    public void rotateObjects()
+    public void RotateObjects()
     {
-        
-        currentRotation = gameObject.transform.eulerAngles;
-        targetRotation.z = (currentRotation.z + (90 * rotationDirection));
-        StartCoroutine(objectRotationAnimation());
+        print("Rotate");
+        StartCoroutine(objectRotationAnimation(transform));
+        for (int i = 0; i < objectsToRotate.Length; ++i)
+        {
+            StartCoroutine(objectRotationAnimation(objectsToRotate[i]));
+        }
     }
 
-    IEnumerator objectRotationAnimation()
+    IEnumerator objectRotationAnimation(Transform obj)
     {
-        // add rotation step to current rotation.
-        currentRotation.z += (rotationStep * rotationDirection);
-        gameObject.transform.eulerAngles = currentRotation;
+        Vector3 currRot = obj.eulerAngles;
+        Vector3 targetRot = obj.eulerAngles + new Vector3(0, 0, 90 * rotationDirection);
 
-        yield return new WaitForSeconds(0);
+        float dot = Vector3.Dot(obj.up, targetRot);
 
-        if (((int)currentRotation.z >
-                (int)targetRotation.z && rotationDirection < 0) || // for clockwise
-            ((int)currentRotation.z < (int)targetRotation.z && rotationDirection > 0)) // for anti-clockwise
+        while (((int)currRot.z >
+            (int)targetRot.z && rotationDirection < 0) || // for clockwise
+        ((int)currRot.z < (int)targetRot.z && rotationDirection > 0)) // for anti-clockwise
         {
-            StartCoroutine(objectRotationAnimation());
+            currRot.z += rotationDirection * rotationStep * Time.deltaTime;
+            obj.eulerAngles = currRot;
+            yield return new WaitForEndOfFrame();
         }
+
+        obj.eulerAngles = targetRot;
     }
     
 }
