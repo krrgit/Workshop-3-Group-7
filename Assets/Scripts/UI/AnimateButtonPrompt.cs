@@ -5,8 +5,8 @@ using UnityEngine;
 public class AnimateButtonPrompt : MonoBehaviour
 {
     [SerializeField] private float duration;
+    [SerializeField] private Transform target;
     [SerializeField] private AnimationCurve animCurve;
-
     [SerializeField] private RectTransform rect;
 
     private float defaultSize;
@@ -14,20 +14,27 @@ public class AnimateButtonPrompt : MonoBehaviour
     void Start()
     {
         defaultSize = rect.localScale.x;
+        gameObject.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Animate();
-        }
+        if (target) transform.position = target.position;
     }
 
-    public void Animate()
+    public void Animate(Transform t)
     {
+        gameObject.SetActive(true);
+        target = t;
         StopAllCoroutines();
         StartCoroutine(IAnimate());
+    }
+
+    public void Stop()
+    {
+        gameObject.SetActive(false);
+        StopAllCoroutines();
+        rect.localScale = Vector2.zero;
     }
     
     // Open Text Bubble
