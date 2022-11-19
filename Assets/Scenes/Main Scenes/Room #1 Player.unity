@@ -1455,6 +1455,9 @@ MonoBehaviour:
   player: {fileID: 490483579}
   inUse: 0
   maxNotes: 6
+  ControlCatEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &490483582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4205,7 +4208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2059602804}
-  playerCamSize: 6
+  playerCamSize: 5
   roomCamSize: 10
   speed: 4
 --- !u!114 &1313324864
