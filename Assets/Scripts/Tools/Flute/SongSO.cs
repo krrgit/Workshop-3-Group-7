@@ -6,4 +6,5 @@ using UnityEngine;
 public class SongSO : ScriptableObject {
     public FluteNote[] notes;
     public AudioClip song;
+    public string command;
 }

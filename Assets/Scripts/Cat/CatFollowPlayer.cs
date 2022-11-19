@@ -56,6 +56,7 @@ public class CatFollowPlayer : MonoBehaviour {
         //print("p1: " + points[0] + "p2: " + points[points.Count-1]);
     }
     
+    // Update the points when the player moves a certain distance away from the last point
     void UpdatePoints()
     {
         // 0 = newest, last = oldest
@@ -64,7 +65,6 @@ public class CatFollowPlayer : MonoBehaviour {
         {
             points.Add(player.position);
             points.RemoveAt(0);
-            print("update point");
         }
     }
 }

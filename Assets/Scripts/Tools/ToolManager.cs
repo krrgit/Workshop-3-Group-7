@@ -20,15 +20,32 @@ public class ToolManager : MonoBehaviour {
     [SerializeField] private InteractController interactController;
     
     private Tool current;
-    
-
 
     private bool toolInUse;
 
+    public static ToolManager Instance;
+
+    public ToolInUse CurrentTool
+    {
+        get { return toolIndex; }
+    }
+    
     public Tool Equipped
     {
         get { return current; }
-    } 
+    }
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -65,21 +82,20 @@ public class ToolManager : MonoBehaviour {
 
     void UseToolInput()
     {
+        if (!PlayerMovement.Instance.canMove) return;
         
         if (Input.GetButtonDown("Interact"))
         {
-            if (interactController.interactableExists) return;
+            //if (interactController.interactableExists) return;
             if (toolIndex != ToolInUse.None)
             {
                 if (!toolInUse)
                 {
-                    Equipped.Use();
-                    toolInUse = true;
+                    toolInUse = Equipped.Use();
                 }
                 else if (current.CanUnequip())
                 {
-                    Equipped.Stop();
-                    toolInUse = false;
+                    toolInUse = Equipped.Stop();;
                 }
             }
         }

@@ -17,7 +17,29 @@ public class InteractController : MonoBehaviour {
     private bool inInteraction;
     
     public  bool interactableExists;
-    
+
+    public static InteractController Instance;
+
+    public InteractableController Interactable
+    {
+        get
+        {
+            return currInteractable;
+        }
+    }
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {

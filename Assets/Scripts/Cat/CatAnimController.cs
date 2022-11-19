@@ -6,7 +6,7 @@ using UnityEngine;
 public class CatAnimController : MonoBehaviour {
    [SerializeField] private Animator anim;
    [SerializeField] private CatFollowPlayer follow;
-   [SerializeField]private bool canMove;
+   [SerializeField] private bool canMove;
    [SerializeField] private bool followPlayer;
    [SerializeField] private float moveSpeed = 1;
    [SerializeField] private float turnSpeed = 1;
@@ -20,10 +20,16 @@ public class CatAnimController : MonoBehaviour {
    private float rotDiff;
 
    private Vector2 tempDir;
-   
+
+   public void ToggleControl(bool control)
+   {
+      followPlayer = control;
+   }
+
    void Update()
    {
       GetInput();
+      ButtonCommands();
       SetTurnBoolValues();
       
       SetAnimVariables();
@@ -40,6 +46,16 @@ public class CatAnimController : MonoBehaviour {
       if (tempDir.magnitude < 0.1f)
       {
          dir = Vector2.zero;
+      }
+   }
+
+   void ButtonCommands()
+   {
+      if (!canMove || followPlayer) return;
+
+      if (Input.GetButtonDown("CycleTool"))
+      {
+         SwitchPlayerController.Instance.Switch(true);
       }
    }
 

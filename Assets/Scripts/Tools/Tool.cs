@@ -8,14 +8,16 @@ public abstract class Tool : MonoBehaviour
     {
         return true;
     }
-    public virtual void Use()
+    public virtual bool Use()
     {
         PlayerMovement.Instance.ToggleMove(false);
+        return true;
     }
 
-    public virtual void Stop()
+    public virtual bool Stop()
     {
         PlayerMovement.Instance.ToggleMove(true);
+        return false;
 
     }
 }

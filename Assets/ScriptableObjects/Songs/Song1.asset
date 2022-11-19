@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notes: 01000000020000000200000002000000
   song: {fileID: 8300000, guid: 5b0a12474a6eb4542a7757d7a06b2c52, type: 3}
+  command: controlCat
