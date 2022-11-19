@@ -1713,8 +1713,12 @@ MonoBehaviour:
   notePlacer: {fileID: 0}
   checker: {fileID: 490483580}
   player: {fileID: 490483579}
+  commands: {fileID: 0}
   inUse: 0
   maxNotes: 6
+  ControlCatEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &490483582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4263,7 +4267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae1dbb0a61a74866bf3116dda4be152, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2059602804}
+  target: {fileID: 2059602804}
   playerCamSize: 4
   roomCamSize: 10
   speed: 4
