@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     public bool canMove = true;
+    [SerializeField] private Transform startPos;
     [SerializeField] private Vector2 startFacingDir = Vector2.down;
     [SerializeField] private float speed = 6;
     [SerializeField] private Rigidbody2D rb;
@@ -13,6 +14,11 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 dir;
 
     public static PlayerMovement Instance;
+
+    private void OnEnable()
+    {
+        if (startPos) transform.position = startPos.position;
+    }
 
     void Awake()
     {

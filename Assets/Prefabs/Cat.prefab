@@ -319,8 +319,8 @@ MonoBehaviour:
   - {fileID: 8218186427051126600}
   - {fileID: 8218186425178176555}
   m_Bounds:
-    m_Center: {x: -0.18035114, y: -0.2254883, z: 0}
-    m_Extent: {x: 1.0922892, y: 1.3357315, z: 0}
+    m_Center: {x: -0.18035173, y: -0.2254883, z: 0}
+    m_Extent: {x: 1.0922891, y: 1.3357315, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -367,8 +367,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8218186425731267685}
-  - component: {fileID: 644957742}
   - component: {fileID: 5918104422094115170}
+  - component: {fileID: 644957742}
   - component: {fileID: 644957741}
   - component: {fileID: 644957740}
   m_Layer: 7
@@ -394,6 +394,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5918104422094115170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218186425731267683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f342e9135dc54f9cb5630534db2274c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startPos: {fileID: 0}
+  anim: {fileID: 8218186425523280356}
+  follow: {fileID: 644957742}
+  canMove: 1
+  followPlayer: 1
+  moveSpeed: 1.75
+  turnSpeed: 4
 --- !u!114 &644957742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,24 +428,6 @@ MonoBehaviour:
   pointSpacing: 0.5
   pointLimit: 5
   player: {fileID: 0}
---- !u!114 &5918104422094115170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8218186425731267683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f342e9135dc54f9cb5630534db2274c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 8218186425523280356}
-  follow: {fileID: 644957742}
-  canMove: 1
-  followPlayer: 1
-  moveSpeed: 1.75
-  turnSpeed: 4
 --- !u!50 &644957741
 Rigidbody2D:
   serializedVersion: 4

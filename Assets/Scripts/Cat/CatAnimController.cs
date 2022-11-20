@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
 public class CatAnimController : MonoBehaviour {
+   [SerializeField] private Transform startPos;
    [SerializeField] private Animator anim;
    [SerializeField] private CatFollowPlayer follow;
    [SerializeField] private bool canMove;
@@ -20,6 +22,11 @@ public class CatAnimController : MonoBehaviour {
    private float rotDiff;
 
    private Vector2 tempDir;
+
+   private void OnEnable()
+   {
+      if (startPos) transform.position = startPos.position;
+   }
 
    public void ToggleControl(bool control)
    {

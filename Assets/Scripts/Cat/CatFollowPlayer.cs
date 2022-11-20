@@ -28,11 +28,11 @@ public class CatFollowPlayer : MonoBehaviour {
 
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         for(int i=0;i<pointLimit;++i)
         {
-            points.Add(player.position + (Vector3.left * 2));
+            points.Add(transform.position);
         }
     }
 
