@@ -11,9 +11,9 @@ public class Rotate : MonoBehaviour
     //  1 for anti-clockwise
 
     public int rotationStep = 10; // should be less than 90
-
-
     private Vector3 currentRotation, targetRotation;
+
+    private bool isRotating;
 
 
     void Update()
@@ -25,6 +25,8 @@ public class Rotate : MonoBehaviour
     }
     public void RotateObjects()
     {
+        if (isRotating) return;
+        isRotating = true;
         print("Rotate");
         StartCoroutine(objectRotationAnimation(transform));
         for (int i = 0; i < objectsToRotate.Length; ++i)
@@ -50,6 +52,7 @@ public class Rotate : MonoBehaviour
         }
 
         obj.eulerAngles = targetRot;
+        isRotating = false;
     }
     
 }
