@@ -7,10 +7,11 @@ public class AnimateTransitionStencil : MonoBehaviour {
     [SerializeField] private float duration = 1;
 
     private Vector2 size;
-    
-    void Start()
+
+    void Awake()
     {
         size = rect.sizeDelta;
+        AnimateEnter();
     }
 
     void Update()
