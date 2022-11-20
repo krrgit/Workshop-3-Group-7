@@ -11,8 +11,13 @@ public class AnimateTransitionStencil : MonoBehaviour {
     [SerializeField] private Sprite[] sprites;
     [SerializeField] private RectTransform rect;
     [SerializeField] private float duration = 1;
+    [SerializeField] private float startDelay = 0.4f;
 
     private Vector2 size;
+
+    public static AnimateTransitionStencil Instance;
+    
+    
 
     public void UpdateStencil(int index)
     {
@@ -21,9 +26,20 @@ public class AnimateTransitionStencil : MonoBehaviour {
 
     void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+        
         size = rect.sizeDelta;
-        AnimateEnter();
+        StartCoroutine(IDelay());
     }
+    
+    
 
     void Update()
     {
@@ -38,16 +54,25 @@ public class AnimateTransitionStencil : MonoBehaviour {
         }
     }
 
-    public void AnimateEnter()
+    public float AnimateEnter()
     {
         StopAllCoroutines();
         StartCoroutine(IOpen());
+        return duration;
     }
     
-    public void AnimateExit()
+    public float AnimateExit()
     {
         StopAllCoroutines();
         StartCoroutine(IClose());
+        return duration;
+    }
+
+    IEnumerator IDelay()
+    {
+        rect.sizeDelta = Vector2.zero;
+        yield return new WaitForSeconds(startDelay);
+        AnimateEnter();
     }
 
     IEnumerator IOpen()
