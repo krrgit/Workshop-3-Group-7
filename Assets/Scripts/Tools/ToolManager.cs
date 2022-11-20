@@ -87,11 +87,9 @@ public class ToolManager : MonoBehaviour {
 
     void UseToolInput()
     {
-        //if (!PlayerMovement.Instance.canMove) return;
-
         if (Input.GetButtonDown("Interact"))
         {
-            //if (interactController.interactableExists) return;
+            if (interactController.interactableExists) return;
             if (toolIndex != ToolInUse.None)
             {
                 if (!toolInUse)
