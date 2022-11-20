@@ -71,7 +71,7 @@ public class ToolManager : MonoBehaviour {
     {
         if (PlayerMovement.Instance.GetDir().magnitude == 0 || !PlayerMovement.Instance.canMove) return;
         transform.up = PlayerMovement.Instance.GetDir();
-        transform.localPosition = PlayerMovement.Instance.GetDir() * distance;
+        //transform.localPosition = PlayerMovement.Instance.GetDir() * distance;
     }
 
     void CycleInput()

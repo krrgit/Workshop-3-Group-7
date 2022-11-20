@@ -11,8 +11,10 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] private float speed = 6;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Animator animator;
-    
+
     private Vector2 dir;
+
+    private Vector2 facingDir;
 
     public static PlayerMovement Instance;
 
@@ -48,6 +50,11 @@ public class PlayerMovement : MonoBehaviour {
     {
         return dir;
     }
+
+    public Vector2 FacingDir
+    {
+        get { return facingDir; }
+    }
     
     // Start is called before the first frame update
     void Start()
@@ -76,6 +83,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             animator.SetFloat("Horizontal", dir.x);
             animator.SetFloat("Vertical", dir.y);
+            facingDir = dir;
         }
     }
     void GetInput()
