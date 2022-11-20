@@ -1,12 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
+
 
 public class AnimateTransitionStencil : MonoBehaviour {
+    [SerializeField] private Image stencil;
+    [SerializeField] private Sprite[] sprites;
     [SerializeField] private RectTransform rect;
     [SerializeField] private float duration = 1;
 
     private Vector2 size;
+
+    public void UpdateStencil(int index)
+    {
+        stencil.sprite = sprites[index];
+    }
 
     void Awake()
     {
