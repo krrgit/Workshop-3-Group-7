@@ -62,9 +62,9 @@ Material:
     - _QueueOffset: 0
     - _Size: 6
     m_Colors:
-    - _DarkFoamColor: {r: 0.2242791, g: 0.49168998, b: 0.754717, a: 1}
+    - _DarkFoamColor: {r: 0.007843138, g: 0.21176472, b: 0.41960788, a: 1}
     - _FlowScrollSpeed: {r: 0, g: -0.05, b: 0, a: 0}
-    - _LightFoamColor: {r: 0.20803669, g: 0.6450838, b: 0.8018868, a: 1}
-    - _ScrollSpeed: {r: 0.05, g: 0.05, b: 0, a: 0}
-    - _WaterColor: {r: 0.2206746, g: 0.5226759, b: 0.8207547, a: 1}
+    - _LightFoamColor: {r: 0.30437878, g: 0.57764596, b: 0.6792453, a: 1}
+    - _ScrollSpeed: {r: 0, g: 0.1, b: 0, a: 0}
+    - _WaterColor: {r: 0, g: 0.21421154, b: 0.4245283, a: 1}
   m_BuildTextureStacks: []

@@ -70,7 +70,7 @@ public class FluteTool : Tool {
 
         if (!playSong && currentNote == maxNotes)
         {
-            Reset(1);
+            StartCoroutine(WaitToReset(1));
         }
     }
 
@@ -78,26 +78,36 @@ public class FluteTool : Tool {
     {
         print("Play song!");
         string command = checker.PlaySong();
-        Reset(checker.GetSongLength);
-        StartCoroutine(HoldOnReset(checker.GetSongLength));
-        StartCoroutine(WaitForFluteEvent(checker.GetSongLength, command));
+        StartCoroutine(IEndSong(checker.GetSongLength, command));
         player.DelayStopAllNotes(1f);
+        
     }
-
-    void Reset(float waitTime)
-    {
-        StartCoroutine(HoldOnReset(waitTime));
-    }
-
-    IEnumerator HoldOnReset(float waitTime)
+    
+    IEnumerator IEndSong(float waitTime, string command)
     {
         isPlayable = false;
         yield return new WaitForSeconds(waitTime);
+        Reset();
+        ToolManager.Instance.SetInUse(false);
+        Stop();
+        
+        commands.DoCommand(command);
+        musicUI.Animate(false);
+        isPlayable = false;
+    }
+
+    IEnumerator WaitToReset(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Reset();
+    }
+
+    void Reset()
+    {
         notePlacer.Reset();
         checker.Reset();
         currentNote = 0;
         player.Reset();
-        isPlayable = true;
     }
 
     IEnumerator StartWait()
@@ -111,7 +121,7 @@ public class FluteTool : Tool {
         PlayerMovement.Instance.ToggleMove(false);
         musicUI.Animate(true);
         StartCoroutine(StartWait());
-        StartCoroutine(HoldOnReset(0));
+        Reset();
         UpdateButtonLabels.Instance.UpdateLabels("Flute");
         print("Use Flute!");
         return true;
@@ -125,13 +135,5 @@ public class FluteTool : Tool {
         print("Stop using Flute");
         isPlayable = false;
         return false;
-    }
-
-    IEnumerator WaitForFluteEvent(float waitTime, string command)
-    {        
-        yield return new WaitForSeconds(waitTime);
-        Stop();
-        ControlCatEvent.Invoke();
-        commands.DoCommand(command);
     }
 }
