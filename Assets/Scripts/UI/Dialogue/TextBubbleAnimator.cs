@@ -31,7 +31,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     [SerializeField] private TextMeshProUGUI textMesh;
     [SerializeField] private TextMeshProUGUI hiddenText;
     [SerializeField] private Image bubble;
-    [SerializeField] private RectTransform tail;
+    [SerializeField] private Image tail;
     [SerializeField] private Transform tailTarget;
 
     private string formattedText = "";
@@ -47,6 +47,37 @@ public class TextBubbleAnimator : MonoBehaviour {
     
     // Camera Values
     private Vector2 screenBounds;
+
+    public void SetColors(Color bubbleColor, Color textColor)
+    {
+        bubble.color = bubbleColor;
+        tail.color = bubbleColor;
+        textMesh.color = textColor;
+    }
+    
+    public void Animate(string newText, Transform target)
+    {
+        tailTarget = target;
+
+        transform.position = tailTarget.position + Vector3.up * tailPadding;
+        gameObject.SetActive(true);
+        dialogue = newText;
+        if (!isActive)
+        {
+            AnimateOpen();
+            isActive = true;
+        }
+        else
+        {
+            AnimateRefresh();
+        }
+    }
+
+    public void Hide()
+    {
+        gameObject.SetActive(false);
+        isActive = false;
+    }
 
     private void OnDisable()
     {
@@ -76,34 +107,10 @@ public class TextBubbleAnimator : MonoBehaviour {
         }
     }
 
-    public void Animate(string newText, Transform target)
-    {
-        tailTarget = target;
-
-        transform.position = tailTarget.position + Vector3.up * tailPadding;
-        gameObject.SetActive(true);
-        dialogue = newText;
-        if (!isActive)
-        {
-            AnimateOpen();
-            isActive = true;
-        }
-        else
-        {
-            AnimateRefresh();
-        }
-    }
-
-    public void Hide()
-    {
-        gameObject.SetActive(false);
-        isActive = false;
-    }
-
     void AnimateOpen()
     {
         StopAllCoroutines();
-        FormatString();
+        UpdateTextDimensions();
         StartCoroutine(AnimateText(0));
         StartCoroutine(AnimateWholeBubble());
     }
@@ -111,7 +118,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     void AnimateRefresh()
     {
         StopAllCoroutines();
-        FormatString();
+        UpdateTextDimensions();
         StartCoroutine(AnimateText(bubbleAnimDur/2f));
         StartCoroutine(AnimateTop());
     }
@@ -162,25 +169,38 @@ public class TextBubbleAnimator : MonoBehaviour {
     
     IEnumerator AnimateText(float wait)
     {
-        int i = 0;
+        int i = 3;
         yield return new WaitForSeconds(wait);
         yield return new WaitForEndOfFrame();
         FormatTextMesh();
         yield return new WaitForSeconds(textDelay);
-        
 
+        tempText = "";
+        string toParse = ReplaceNewLine(dialogue);
+        
         while (i < dialogue.Length)
         {
+            // Delay
+            if (toParse[i] == '[')
+            {
+                ++i;
+                float delay =
+                    MultiActorDialogueSO.GetHoldDuration((int)(int)System.Char.GetNumericValue(toParse[i]));
+                yield return new WaitForSeconds(delay);
+                ++i;
+            }
+            
             // Animate Text
-            tempText = tempText + formattedText[i];
+            tempText = tempText + toParse[i];
             textMesh.text = tempText;
             
             yield return new WaitForSeconds(1f / letterPerSec);
             ++i;
         }
     }
-
-    void FormatString()
+    
+    // This updates the hidden text with proper formatting to get the actual dimensions of the text when displayed
+    void UpdateTextDimensions()
     {
         textMesh.text = " ";
         tempText = "";
@@ -188,6 +208,9 @@ public class TextBubbleAnimator : MonoBehaviour {
         formattedText = dialogue;
         formattedText = formattedText.Replace('|','\n');
         lineCount = dialogue.Split('|').Length;
+        
+        formattedText = RemoveOtherChars(formattedText);
+        
         hiddenText.text = formattedText;
 
         if (formattedText.Contains('\n'))
@@ -198,6 +221,28 @@ public class TextBubbleAnimator : MonoBehaviour {
         }
     }
 
+    string ReplaceNewLine(string text)
+    {
+        return text.Replace('|','\n');
+    }
+
+    string RemoveOtherChars(string text)
+    {
+        text = text.Remove(0, 3);
+        for (int i = 0; i < text.Length; ++i)
+        {
+            if (text[i] == '[')
+            {
+                text = text.Remove(i,1);
+            } else if (text[i] == '<')
+            {
+                text = text.Remove(i);
+            }
+        }
+        return text;
+    }
+    
+    // Set position and size of text mesh
     void FormatTextMesh()
     {
         var textPos = textMesh.rectTransform.localPosition;
@@ -205,7 +250,8 @@ public class TextBubbleAnimator : MonoBehaviour {
         textMesh.rectTransform.localPosition = textPos; 
         textMesh.rectTransform.sizeDelta = hiddenText.GetRenderedValues();
     }
-
+    
+    // Resize bubble to encapsulate text
     void ResizeBubble()
     {
         bubble.rectTransform.sizeDelta = (hiddenText.GetRenderedValues() * defTextSize) + padding;

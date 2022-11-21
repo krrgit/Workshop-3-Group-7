@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78482204ebc81405cbd29112eac1c0f3, type: 3}
+  m_Name: FoxPlayer1
+  m_EditorClassIdentifier: 
+  bubbleColors:
+  - {r: 1, g: 0.9, b: 0.65, a: 1}
+  - {r: 1, g: 0.71489096, b: 0.514151, a: 1}
+  textColors:
+  - {r: 0.20784314, g: 0.10980392, b: 0.10980392, a: 1}
+  - {r: 0.3141936, g: 0.13389997, b: 0.4811321, a: 1}
+  lines:
+  - 15 hey
+  - 15 wanna hear a joke?
+  - 05 not really
+  - 15 ok so
+  - 15 a blind man walks into|a bar[9, a chair[4, and a table
+  - 05 ...
+  - 05 thats a joke to you?
+  - 15 lifes a joke to me[3, pal
