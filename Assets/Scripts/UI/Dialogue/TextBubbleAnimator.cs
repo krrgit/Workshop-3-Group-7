@@ -22,7 +22,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     [Header("Bubble")]
     [SerializeField] private Vector2 padding = new Vector2(10,15);
 
-    [SerializeField] private float tailDist = 1;
+    [SerializeField] private float tailPadding = 1;
     [SerializeField] private AnimationCurve enterCurve;
     [SerializeField] private float bubbleAnimDur;
     [SerializeField] private BubbleAlign align = BubbleAlign.Center;
@@ -80,7 +80,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     {
         tailTarget = target;
 
-        transform.position = tailTarget.position;
+        transform.position = tailTarget.position + Vector3.up * tailPadding;
         gameObject.SetActive(true);
         dialogue = newText;
         if (!isActive)
@@ -216,9 +216,9 @@ public class TextBubbleAnimator : MonoBehaviour {
     void PlaceBubble()
     {
         if (!tail) return;
-        transform.position = new Vector3(tailTarget.position.x,tailTarget.position.y + tailDist, transform.position.z);
+        transform.position = new Vector3(tailTarget.position.x,tailTarget.position.y + tailPadding, transform.position.z);
         MoveBubblePivot();
-        ClampBubbleToView();
+        //ClampBubbleToView();
         ClampBubbleToTail();
     }
     
