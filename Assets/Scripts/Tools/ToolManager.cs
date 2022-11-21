@@ -11,7 +11,6 @@ public enum ToolInUse {
 }
 
 public class ToolManager : MonoBehaviour {
-    [SerializeField] private float distance = 1;
     [SerializeField] private ToolInUse toolIndex;
     [SerializeField] private Tool fishingPole;
     [SerializeField] private Tool flute;
