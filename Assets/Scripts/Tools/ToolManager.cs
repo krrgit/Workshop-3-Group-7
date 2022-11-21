@@ -11,7 +11,6 @@ public enum ToolInUse {
 }
 
 public class ToolManager : MonoBehaviour {
-    [SerializeField] private float distance = 1;
     [SerializeField] private ToolInUse toolIndex;
     [SerializeField] private Tool fishingPole;
     [SerializeField] private Tool flute;
@@ -71,7 +70,7 @@ public class ToolManager : MonoBehaviour {
     {
         if (PlayerMovement.Instance.GetDir().magnitude == 0 || !PlayerMovement.Instance.canMove) return;
         transform.up = PlayerMovement.Instance.GetDir();
-        transform.localPosition = PlayerMovement.Instance.GetDir() * distance;
+        //transform.localPosition = PlayerMovement.Instance.GetDir() * distance;
     }
 
     void CycleInput()

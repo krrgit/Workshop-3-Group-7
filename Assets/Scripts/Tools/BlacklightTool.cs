@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -8,6 +9,20 @@ public class BlacklightTool : Tool
 {
     [SerializeField] private GameObject beam;
     [SerializeField] private GameObject circle;
+
+    public static BlacklightTool Instance;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     public override bool Use()
     {
