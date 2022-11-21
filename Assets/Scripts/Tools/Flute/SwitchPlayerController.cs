@@ -22,7 +22,7 @@ public class SwitchPlayerController : MonoBehaviour {
 
     public void Switch(bool switchToPlayer)
     {
-        player.canMove = switchToPlayer;
+        player.ToggleControl(switchToPlayer);
         cat.ToggleControl(switchToPlayer);
         CamAimAtTarget.Instance.SetTarget(switchToPlayer ? player.transform : cat.transform);
         UpdateButtonLabels.Instance.UpdateLabels(switchToPlayer ? "Default" : "Cat");

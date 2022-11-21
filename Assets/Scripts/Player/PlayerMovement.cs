@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
     public bool canMove = true;
+    public bool isControlling = true;
+    [SerializeField] private Transform startPos;
     [SerializeField] private Vector2 startFacingDir = Vector2.down;
     [SerializeField] private float speed = 6;
     [SerializeField] private Rigidbody2D rb;
@@ -13,6 +15,17 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 dir;
 
     public static PlayerMovement Instance;
+
+    public void ToggleControl(bool state)
+    {
+        StartCoroutine(WaitForControl(state));
+    }
+    
+
+    private void OnEnable()
+    {
+        if (startPos) transform.position = startPos.position;
+    }
 
     void Awake()
     {
@@ -46,6 +59,7 @@ public class PlayerMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (!isControlling) return;
         GetInput();
         SetAnimValues();
     }
@@ -76,5 +90,11 @@ public class PlayerMovement : MonoBehaviour {
     {
         if (!canMove) return;
         rb.position += dir * speed * Time.fixedDeltaTime;
+    }
+
+    IEnumerator WaitForControl(bool state)
+    {
+        yield return new WaitForEndOfFrame();
+        isControlling = state;
     }
 }

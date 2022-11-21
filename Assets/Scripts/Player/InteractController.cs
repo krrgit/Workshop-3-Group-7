@@ -53,7 +53,8 @@ public class InteractController : MonoBehaviour {
         if (Input.GetButtonDown("Interact"))
         {
             inInteraction = currInteractable.Interact();
-            movement.canMove = !inInteraction;
+            //movement.canMove = !inInteraction;
+            movement.ToggleControl(!inInteraction);
         }
     }
 

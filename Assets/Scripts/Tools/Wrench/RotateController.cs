@@ -3,32 +3,23 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour
+public class RotateController : MonoBehaviour
 {
     [SerializeField] private Transform[] objectsToRotate;
     // Start is called before the first frame update
     public int rotationDirection = -1; // -1 for clockwise
     //  1 for anti-clockwise
 
-    public int rotationStep = 10; // should be less than 90
+    public int rotationStep = 90;
     private Vector3 currentRotation, targetRotation;
 
     private bool isRotating;
-
-
-    void Update()
-    {
-        // if (Input.GetKeyDown(KeyCode.Z) && ToolManager.Instance.CurrentTool == ToolInUse.Wrench)
-        // {
-        //     rotateObject();
-        // }
-    }
+    
     public void RotateObjects()
     {
         if (isRotating) return;
         isRotating = true;
         print("Rotate");
-        StartCoroutine(objectRotationAnimation(transform));
         for (int i = 0; i < objectsToRotate.Length; ++i)
         {
             StartCoroutine(objectRotationAnimation(objectsToRotate[i]));

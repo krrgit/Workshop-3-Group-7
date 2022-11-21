@@ -25,6 +25,11 @@ public class ToolManager : MonoBehaviour {
 
     public static ToolManager Instance;
 
+    public void SetInUse(bool state)
+    {
+        toolInUse = state;
+    }
+
     public ToolInUse CurrentTool
     {
         get { return toolIndex; }
@@ -56,6 +61,7 @@ public class ToolManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        if (!PlayerMovement.Instance.isControlling) return;
         CycleInput();
         UseToolInput();
         UpdatePosition();
@@ -76,17 +82,14 @@ public class ToolManager : MonoBehaviour {
             {
                 CycleTools();
             }
-            
         }
     }
 
     void UseToolInput()
     {
-        if (!PlayerMovement.Instance.canMove) return;
-        
         if (Input.GetButtonDown("Interact"))
         {
-            //if (interactController.interactableExists) return;
+            if (interactController.interactableExists) return;
             if (toolIndex != ToolInUse.None)
             {
                 if (!toolInUse)
