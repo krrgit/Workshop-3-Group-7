@@ -340,6 +340,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2482954230743059064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: targetPadding
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726214752928537, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -415,6 +419,46 @@ PrefabInstance:
     - target: {fileID: 3360974002806759674, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854855522970064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: tailDist
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854855522970064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: padding.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854855522970064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: padding.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854855590145698, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854855590145698, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854856179195501, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854857017206641, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854857017206641, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854857166687009, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_fontSize
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054854857166687009, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 8376838017918459234, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: startPos
