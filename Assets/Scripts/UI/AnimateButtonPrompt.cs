@@ -7,6 +7,7 @@ public class AnimateButtonPrompt : MonoBehaviour
 {
     [SerializeField] private float duration;
     [SerializeField] private Transform target;
+    [SerializeField] private float targetPadding = 1;
     [SerializeField] private AnimationCurve animCurve;
     [SerializeField] private RectTransform rect;
 
@@ -34,7 +35,7 @@ public class AnimateButtonPrompt : MonoBehaviour
 
     private void Update()
     {
-        if (target) transform.position = target.position;
+        if (target) transform.position = target.position + Vector3.up * targetPadding;
     }
 
     public void Animate(Transform t)
