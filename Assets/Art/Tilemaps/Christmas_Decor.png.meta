@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 891489eed9d5faf4c953ed729c782bcd
+guid: 6f166d0d93d64f1448a18605e03d651a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player&Frog_room_0
+      name: Christmas_Decor_0
       rect:
         serializedVersion: 2
         x: 7
-        y: 58
-        width: 61
-        height: 72
+        y: 92
+        width: 32
+        height: 12
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8d03eded050c4067bee029f5590b7a2
-      internalID: -1874486760
+      spriteID: ae19e55fb20c09e4ebe9fa70dcde1607
+      internalID: 1387413698
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player&Frog_room_1
+      name: Christmas_Decor_1
       rect:
         serializedVersion: 2
-        x: 86
-        y: 97
-        width: 20
-        height: 29
+        x: 51
+        y: 94
+        width: 32
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,167 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fd403490aae44fc7a0c5d0ba9cda85c
-      internalID: 1121905768
+      spriteID: fe3aa2ba38478974b8df771c08d9f2a5
+      internalID: 903372847
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player&Frog_room_2
-      rect:
-        serializedVersion: 2
-        x: 117
-        y: 59
-        width: 69
-        height: 65
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bd159c0759ca349e9b627e4b018231f2
-      internalID: 996932719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player&Frog_room_3
-      rect:
-        serializedVersion: 2
-        x: 197
-        y: 95
-        width: 17
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33cf734634340474499931b19da946e8
-      internalID: -1008512183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player&Frog_room_4
-      rect:
-        serializedVersion: 2
-        x: 222
-        y: 81
-        width: 23
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3e6c6c3f2c6084664a5804fdd654b4d2
-      internalID: -2016395252
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player&Frog_room_5
-      rect:
-        serializedVersion: 2
-        x: 86
-        y: 58
-        width: 20
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e91ee22722e241d3b2becff66b7d41d
-      internalID: 1118107829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player&Frog_room_6
-      rect:
-        serializedVersion: 2
-        x: 198
-        y: 68
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 78f4b5e17695e4048a2afb337b025bcc
-      internalID: 927396579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player&Frog_room_7
-      rect:
-        serializedVersion: 2
-        x: 219
-        y: 44
-        width: 45
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a31955f9e40534bcd96693a1a90ae4c5
-      internalID: -1464285753
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player&Frog_room_8
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 4
-        width: 75
-        height: 45
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce95860481bcf49cabc8b9a1f20f7179
-      internalID: 1332967801
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player&Frog_room_9
+      name: Christmas_Decor_2
       rect:
         serializedVersion: 2
         x: 91
-        y: 10
-        width: 49
-        height: 33
+        y: 21
+        width: 56
+        height: 78
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -308,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1e26afa8aa8c4ca6bfc7991e734f30e
-      internalID: 2022713297
+      spriteID: c5dcbb41e699f9142a6ba6f2628ff4dc
+      internalID: 952559166
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player&Frog_room_10
+      name: Christmas_Decor_3
       rect:
         serializedVersion: 2
-        x: 198
-        y: 40
-        width: 16
-        height: 16
+        x: 13
+        y: 63
+        width: 9
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -329,20 +182,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf07095317fd04de3ab204bc666547b6
-      internalID: -414979308
+      spriteID: e8ac49bec2d917b4e9b77fbc520139f4
+      internalID: -1155141511
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player&Frog_room_11
+      name: Christmas_Decor_4
       rect:
         serializedVersion: 2
-        x: 149
-        y: 12
-        width: 39
-        height: 28
+        x: 32
+        y: 63
+        width: 10
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -350,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b188d7f099cab45cb95b940f384a2952
-      internalID: -1890765806
+      spriteID: c74a493080e187e45b350fa3baa3590a
+      internalID: -1521370650
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player&Frog_room_12
+      name: Christmas_Decor_5
       rect:
         serializedVersion: 2
-        x: 198
-        y: 12
-        width: 16
-        height: 16
+        x: 53
+        y: 61
+        width: 27
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -371,20 +224,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0d4a43e3b26f4773b82db49e1c380bd
-      internalID: 351920398
+      spriteID: 01ecbc9b8b2201e45a09e28ddc74c139
+      internalID: -1200742588
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player&Frog_room_13
+      name: Christmas_Decor_6
       rect:
         serializedVersion: 2
-        x: 231
-        y: 19
-        width: 14
-        height: 13
+        x: 13
+        y: 31
+        width: 11
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -392,8 +245,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9515e95019e74d9795a7f8ea8a79a60
-      internalID: 1384081301
+      spriteID: 6d74f61041d21484a9735e36afa3cac4
+      internalID: -504186110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas_Decor_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 31
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61abe2acf4348f345bdb16505ee96e0f
+      internalID: 2031653357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas_Decor_8
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 32
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fbe96670283044f83aa24b927ada65
+      internalID: -1469741371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas_Decor_9
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 14
+        width: 32
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352f879a80ba6db46bf3a8fd5112a9cf
+      internalID: 498880852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Christmas_Decor_10
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 14
+        width: 32
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946c9d4cfdc969d47ae6cfbaefa83ef5
+      internalID: 211612927
       vertices: []
       indices: 
       edges: []
@@ -409,20 +346,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player&Frog_room_11: -1890765806
-      Player&Frog_room_2: 996932719
-      Player&Frog_room_4: -2016395252
-      Player&Frog_room_9: 2022713297
-      Player&Frog_room_12: 351920398
-      Player&Frog_room_8: 1332967801
-      Player&Frog_room_1: 1121905768
-      Player&Frog_room_5: 1118107829
-      Player&Frog_room_6: 927396579
-      Player&Frog_room_7: -1464285753
-      Player&Frog_room_3: -1008512183
-      Player&Frog_room_13: 1384081301
-      Player&Frog_room_10: -414979308
-      Player&Frog_room_0: -1874486760
+      Christmas_Decor_5: -1200742588
+      Christmas_Decor_3: -1155141511
+      Christmas_Decor_8: -1469741371
+      Christmas_Decor_4: -1521370650
+      Christmas_Decor_1: 903372847
+      Christmas_Decor_6: -504186110
+      Christmas_Decor_10: 211612927
+      Christmas_Decor_0: 1387413698
+      Christmas_Decor_2: 952559166
+      Christmas_Decor_9: 498880852
+      Christmas_Decor_7: 2031653357
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
