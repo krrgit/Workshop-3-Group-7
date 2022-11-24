@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sprite_Lit_Glow
+  m_Name: Blacklight Glow
   m_Shader: {fileID: -6465566751694194690, guid: 940a0abe22816204fa40920e8e10a33e, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -43,5 +43,5 @@ Material:
     m_Ints: []
     m_Floats: []
     m_Colors:
-    - _Glow: {r: 0.65837497, g: 0.33716366, b: 0.012983031, a: 1}
+    - _Glow: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
