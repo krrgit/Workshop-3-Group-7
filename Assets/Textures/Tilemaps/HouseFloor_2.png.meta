@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6532e0d1d5dcbe547854415f094aed0c
+guid: 6387322317bbf554cbd30dcd1e627d65
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hedge_pieces_0
+      name: HouseFloor_2_0
       rect:
         serializedVersion: 2
-        x: 9
-        y: 15
-        width: 53
-        height: 48
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d422ce2eaf416264490b28068904d72b
-      internalID: 1414053151
+      spriteID: f0594a6492d02e843b4ade94a96d5b0a
+      internalID: -1735317625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedge_pieces_1
+      name: HouseFloor_2_1
       rect:
         serializedVersion: 2
-        x: 73
-        y: 14
-        width: 51
-        height: 51
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae1cf816368806b46b93d63ec36729cc
-      internalID: -979563069
+      spriteID: 78992cb3849619a4db7de1c29dde9a77
+      internalID: 978336155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedge_pieces_2
+      name: HouseFloor_2_2
       rect:
         serializedVersion: 2
-        x: 134
-        y: 14
-        width: 53
-        height: 51
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,8 +161,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fb9d0694659b43498ea1daec9ed1fea
-      internalID: 294495514
+      spriteID: d75cd801c66530a4882590b203d9a8c3
+      internalID: -111357099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HouseFloor_2_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee83c5704570634f8a1fc7528e6eafd
+      internalID: 618757232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HouseFloor_2_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112457dac34dcdb43835fc61c7b11619
+      internalID: 434997610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HouseFloor_2_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6252be74ae8260c49aa8c7eaf4710db6
+      internalID: 715098422
       vertices: []
       indices: 
       edges: []
@@ -178,9 +241,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hedge_pieces_1: -979563069
-      Hedge_pieces_2: 294495514
-      Hedge_pieces_0: 1414053151
+      HouseFloor_2_3: 618757232
+      HouseFloor_2_1: 978336155
+      HouseFloor_2_5: 715098422
+      HouseFloor_2_4: 434997610
+      HouseFloor_2_2: -111357099
+      HouseFloor_2_0: -1735317625
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
