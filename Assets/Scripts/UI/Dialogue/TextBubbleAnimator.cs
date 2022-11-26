@@ -80,7 +80,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     {
         tailTarget = target;
 
-        transform.position = tailTarget.position;
+        transform.position = tailTarget.position + Vector3.up * tailDist;
         gameObject.SetActive(true);
         dialogue = newText;
         if (!isActive)
