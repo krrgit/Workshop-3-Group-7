@@ -26,11 +26,6 @@ public class CatAnimController : MonoBehaviour {
 
    private bool isCheckingFollow;
 
-   private void OnEnable()
-   {
-      if (startPos) transform.position = startPos.position;
-   }
-
    public void ToggleControl(bool control)
    {
       isControlled = !control;
@@ -42,6 +37,32 @@ public class CatAnimController : MonoBehaviour {
       {
          followPlayer = false;
       }
+   }
+
+   public void ScriptMove(Vector2 _dir, float dur)
+   {
+      StopAllCoroutines();
+      StartCoroutine(IScriptMove(_dir, dur));
+   }
+
+   IEnumerator IScriptMove(Vector2 _dir, float dur)
+   {
+      isControlled = false;
+
+      while (dur > 0)
+      {
+         dir = _dir;
+         dur -= Time.deltaTime;
+         yield return new WaitForEndOfFrame();
+      }
+      
+      dir = Vector2.zero;
+      isControlled = true;
+   }
+   
+   private void OnEnable()
+   {
+      if (startPos) transform.position = startPos.position;
    }
 
    void Update()
