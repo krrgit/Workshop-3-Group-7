@@ -1922,6 +1922,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 6531285040887946190, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6531285040887946190, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
+      propertyPath: m_Size.y
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6531285040887946191, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
       propertyPath: m_RootOrder
       value: 12
