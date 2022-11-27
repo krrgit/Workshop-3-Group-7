@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 
 public class LoadNextRoom : MonoBehaviour {
+    [SerializeField] private Room thisRoom;
     [SerializeField] private int stencil;
     [SerializeField] private int nextScene;
     private bool loading;
@@ -14,6 +15,7 @@ public class LoadNextRoom : MonoBehaviour {
         if (col.tag == "Player")
         {
             if (loading) return;
+            
             PlayerMovement.Instance.canMove = false;
             AnimateTransitionStencil.Instance.UpdateStencil(stencil);
             float dur = AnimateTransitionStencil.Instance.AnimateExit();
@@ -24,7 +26,7 @@ public class LoadNextRoom : MonoBehaviour {
     IEnumerator LoadNextScene(float delay)
     {
         loading = true;
-        // SET Last Scene to this scene
+        if (ProgressTracker.Instance) ProgressTracker.Instance.lastRoom = thisRoom;
         yield return new WaitForSecondsRealtime(delay);
         SceneManager.LoadScene(nextScene);
         loading = false;

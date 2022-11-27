@@ -9,6 +9,7 @@ public class CatAnimController : MonoBehaviour {
    [SerializeField] private Animator anim;
    [SerializeField] private CatFollowPlayer follow;
    [SerializeField] private bool canMove;
+   [SerializeField] private bool isControlled;
    [SerializeField] private bool followPlayer;
    [SerializeField] private float moveSpeed = 1;
    [SerializeField] private float turnSpeed = 1;
@@ -23,19 +24,52 @@ public class CatAnimController : MonoBehaviour {
 
    private Vector2 tempDir;
 
+   private bool isCheckingFollow;
+
+   public void ToggleControl(bool control)
+   {
+      isControlled = !control;
+      if (!isControlled)
+      {
+         StartCoroutine(IFollowCheck());
+      }
+      else
+      {
+         followPlayer = false;
+      }
+   }
+
+   public void ScriptMove(Vector2 _dir, float dur)
+   {
+      StopAllCoroutines();
+      StartCoroutine(IScriptMove(_dir, dur));
+   }
+
+   IEnumerator IScriptMove(Vector2 _dir, float dur)
+   {
+      isControlled = false;
+
+      while (dur > 0)
+      {
+         dir = _dir;
+         dur -= Time.deltaTime;
+         yield return new WaitForEndOfFrame();
+      }
+      
+      dir = Vector2.zero;
+      isControlled = true;
+   }
+   
    private void OnEnable()
    {
       if (startPos) transform.position = startPos.position;
    }
 
-   public void ToggleControl(bool control)
-   {
-      followPlayer = control;
-   }
-
    void Update()
    {
+      FollowCheck();
       GetInput();
+      FollowInput();
       ButtonCommands();
       SetTurnBoolValues();
       
@@ -44,9 +78,36 @@ public class CatAnimController : MonoBehaviour {
       Rotate();
    }
 
+   void FollowCheck()
+   {
+      if (isControlled) return;
+
+      if (!isCheckingFollow)
+      {
+         StartCoroutine(IFollowCheck());
+      }
+   }
+
+   IEnumerator IFollowCheck()
+   {
+      isCheckingFollow = true;
+      RaycastHit2D hit;
+      while (!followPlayer)
+      {
+
+         hit = Physics2D.Raycast((Vector3)follow.FollowPoint,  transform.position - (Vector3)follow.FollowPoint);
+         if (hit.collider.gameObject == gameObject)
+         {
+            followPlayer = true;
+         }
+         yield return new WaitForSeconds(0.35f);
+      }
+      isCheckingFollow = true;
+   }
+
    void FollowInput()
    {
-      if (!followPlayer) return;
+      if (!followPlayer || isControlled) return;
 
       tempDir = follow.FollowPoint - (Vector2)transform.position;
       dir = tempDir.normalized;
@@ -58,7 +119,7 @@ public class CatAnimController : MonoBehaviour {
 
    void ButtonCommands()
    {
-      if (!canMove || followPlayer) return;
+      if (!isControlled) return;
 
       if (Input.GetButtonDown("CycleTool"))
       {
@@ -68,13 +129,9 @@ public class CatAnimController : MonoBehaviour {
 
    void GetInput()
    {
-      if (!canMove) return;
-      if (followPlayer)
-      {
-         FollowInput();
-         return;
-      }
-      dir.x = Input.GetAxisRaw("Horizontal");
+      if (!isControlled) return;
+
+         dir.x = Input.GetAxisRaw("Horizontal");
       dir.y = Input.GetAxisRaw("Vertical");
       dir = Vector2.ClampMagnitude(dir,1);
    }

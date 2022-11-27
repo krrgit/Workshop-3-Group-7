@@ -483,7 +483,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Interiors_free_16x16_18
+      name: Door
       rect:
         serializedVersion: 2
         x: 113
@@ -7538,6 +7538,7 @@ TextureImporter:
       Interiors_free_16x16_253: -623906696
       Interiors_free_16x16_293: 1242192400
       Interiors_free_16x16_31: 42961382
+      Door: 1101647170
       Interiors_free_16x16_155: 1868046426
       Interiors_free_16x16_219: 87683560
       Interiors_free_16x16_143: 1400678143
@@ -7812,7 +7813,6 @@ TextureImporter:
       Interiors_free_16x16_199: -1207745604
       Interiors_free_16x16_34: -1439854998
       Interiors_free_16x16_13: -2141169987
-      Interiors_free_16x16_18: 1101647170
       Interiors_free_16x16_17: 1131841594
       Interiors_free_16x16_83: -1459782653
       Small_Lamp: 1386417481

@@ -30,7 +30,7 @@ public class BlacklightObject : MonoBehaviour
 
     void Update() {
         updateWidthHeightRadiusDelta();                                                                     //set all necessary variables for mask generation
-        if(blacklight.gameObject.activeSelf && (lightDelta != previousDelta || !active)) {    //check if the mask should be rendered
+        if(blacklight.gameObject.activeSelf && (lightDelta != previousDelta || !active)) {                  //check if the mask should be rendered
             GenerateMask();                                                                                 //generate the mask
             previousDelta = lightDelta;                                                                     //store the coordinate of the last generated texture
             active = true;                                                                                  //set the texture bool to be on
