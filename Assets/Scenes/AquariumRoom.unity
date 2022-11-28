@@ -550,6 +550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fce7c87cf284d19baa8fa8ef34c778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  thisRoom: 0
   stencil: 1
   nextScene: 0
 --- !u!61 &213817218
@@ -1097,6 +1098,22 @@ PrefabInstance:
     - target: {fileID: 2482954230743059064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: targetPadding
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765726214658304842, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1936930324, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
+    - target: {fileID: 2765726214658304843, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 1208119848}
+    - target: {fileID: 2765726214658304845, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765726214658304845, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2765726214752928537, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13283,6 +13300,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!1 &1208119846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2765726214658304845, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 470081025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1208119848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1208119846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780178d310d15de48aab1ec7e939aede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horSprite: {fileID: 1936930324, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
+  verSprite: {fileID: 1661488393, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
+  rend: {fileID: 1208119849}
+--- !u!212 &1208119849 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2765726214658304842, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 470081025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1218081068
 GameObject:
   m_ObjectHideFlags: 0

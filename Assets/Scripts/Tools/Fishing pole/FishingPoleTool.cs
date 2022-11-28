@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class FishingPoleTool : Tool
 {
+    [SerializeField] FishingPoleAnimator anim;
+
     public override bool Use()
     {
         PlayerMovement.Instance.ToggleMove(false);
         print("Use FishingPole!");
+        anim.UpdateSprite(PlayerMovement.Instance.FacingDir);
         return true;
     }
     
