@@ -109,11 +109,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 35
-        width: 63
-        height: 29
+        y: 1
+        width: 29
+        height: 63
       alignment: 9
-      pivot: {x: 0.945, y: 0.3}
+      pivot: {x: 0.3, y: 0.07}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,12 +129,12 @@ TextureImporter:
       name: sprFishingPole_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 1
+        x: 30
+        y: 0
         width: 5
-        height: 63
+        height: 64
       alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+      pivot: {x: 0.5, y: 0.075}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
