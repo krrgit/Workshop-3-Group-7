@@ -14,6 +14,8 @@ public class CatAnimController : MonoBehaviour {
    [SerializeField] private float moveSpeed = 1;
    [SerializeField] private float turnSpeed = 1;
 
+   public static CatAnimController Instance;
+   
    private bool turnClockwise;
    private bool turnCounter;
    private bool moveForward;
@@ -25,6 +27,11 @@ public class CatAnimController : MonoBehaviour {
    private Vector2 tempDir;
 
    private bool isCheckingFollow;
+
+   public void SetSpawnPoint(Transform t)
+   {
+      startPos = t;
+   }
 
    public void ToggleControl(bool control)
    {
@@ -60,8 +67,17 @@ public class CatAnimController : MonoBehaviour {
       isControlled = true;
    }
    
-   private void OnEnable()
+   void Awake()
    {
+      if (Instance == null)
+      {
+         Instance = this;
+      }
+      else
+      {
+         Destroy(this);
+      }
+        
       if (startPos) transform.position = startPos.position;
    }
 
