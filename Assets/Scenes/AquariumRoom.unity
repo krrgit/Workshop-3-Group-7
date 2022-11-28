@@ -965,6 +965,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &454749952 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1322160184374422707, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+  m_PrefabInstance: {fileID: 1210196209}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &457363388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1104,9 +1109,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1936930324, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
     - target: {fileID: 2765726214658304843, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: max
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765726214658304843, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: anim
       value: 
       objectReference: {fileID: 1208119848}
+    - target: {fileID: 2765726214658304843, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: miniGame
+      value: 
+      objectReference: {fileID: 454749952}
     - target: {fileID: 2765726214658304845, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_Layer
       value: 10
@@ -13325,6 +13338,67 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2765726214658304842, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
   m_PrefabInstance: {fileID: 470081025}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1210196209
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422705, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422707, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_Name
+      value: FishingMiniGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422707, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
 --- !u!1 &1218081068
 GameObject:
   m_ObjectHideFlags: 0

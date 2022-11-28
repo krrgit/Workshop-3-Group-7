@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FishingMiniGame : MonoBehaviour
 {
@@ -37,6 +38,9 @@ public class FishingMiniGame : MonoBehaviour
     
     [SerializeField] float failTimer = 10f;
 
+    [SerializeField] UnityEvent winEvent = new UnityEvent();
+    [SerializeField] UnityEvent loseEvent = new UnityEvent();
+
     private void FixedUpdate()
     {
         if(pause) return;
@@ -62,6 +66,7 @@ public class FishingMiniGame : MonoBehaviour
             {
                 pause = true;
                 Debug.Log("You Win!");
+                winEvent.Invoke();
             }
         }
         else
@@ -72,6 +77,7 @@ public class FishingMiniGame : MonoBehaviour
             {
                 pause = true;
                 Debug.Log("You Lose!");
+                loseEvent.Invoke();
             }
         }
         catchProgress = Mathf.Clamp(catchProgress, 0, 1);
