@@ -4050,7 +4050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1468270396}
-  background: Background
+  background: Wall
   foreground: Foreground
 --- !u!1 &1141819206
 GameObject:
