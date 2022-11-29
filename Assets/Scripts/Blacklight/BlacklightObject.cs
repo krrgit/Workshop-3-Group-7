@@ -50,6 +50,7 @@ public class BlacklightObject : MonoBehaviour
         blacklightCompute.SetFloat("width", width);                                         //set the width in the shader
         blacklightCompute.SetFloat("height", height);                                       //set the height in the shader
         blacklightCompute.SetFloat("radius", outerRadius);                                  //set the radius in the shader
+        blacklightCompute.SetFloat("resolution", resolution);                                  //set the radius in the shader
         blacklightCompute.Dispatch(0, mask.width/8, mask.height/8, 1);                      //dispatch the compute shader to generate the texture
 
         hiddenSprite.material.SetTexture("_LightMask", mask);                               //update the texture
