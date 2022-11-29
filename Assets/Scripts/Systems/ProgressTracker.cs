@@ -7,7 +7,8 @@ public enum Room {
     Bedroom,
     Railroads,
     Garden,
-    Aquarium
+    Aquarium,
+    House
 }
 public class ProgressTracker : MonoBehaviour {
 

@@ -50,7 +50,7 @@ public class BlacklightObject : MonoBehaviour
         blacklightCompute.SetFloat("width", width);                                         //set the width in the shader
         blacklightCompute.SetFloat("height", height);                                       //set the height in the shader
         blacklightCompute.SetFloat("radius", outerRadius);                                  //set the radius in the shader
-        blacklightCompute.SetFloat("resolution", resolution);                                  //set the radius in the shader
+        blacklightCompute.SetFloat("resolution", resolution);                               //set the resolution in the shader
         blacklightCompute.Dispatch(0, mask.width/8, mask.height/8, 1);                      //dispatch the compute shader to generate the texture
 
         hiddenSprite.material.SetTexture("_LightMask", mask);                               //update the texture
@@ -61,9 +61,9 @@ public class BlacklightObject : MonoBehaviour
     }
 
     void updateWidthHeightRadiusDelta() {
-        outerRadius = blacklight.pointLightOuterRadius;                         //set the outer radius
-        width = Convert.ToInt32(hiddenSprite.size[0]*resolution);               //set the width based on the relative size and the resolution
-        height = Convert.ToInt32(hiddenSprite.size[1]*resolution);              //set the height based on the relative size and the resolution
-        lightDelta = blacklight.transform.position - this.transform.position;   //find the position of the light relative to the hiddenSprite
+        outerRadius = blacklight.pointLightOuterRadius;                                 //set the outer radius
+        width = Convert.ToInt32(hiddenSprite.size[0]*resolution);           //set the width based on the relative size and the resolution
+        height = Convert.ToInt32(hiddenSprite.size[1]*resolution);          //set the height based on the relative size and the resolution
+        lightDelta = blacklight.transform.position - this.transform.position;           //find the position of the light relative to the hiddenSprite
     }
 }
