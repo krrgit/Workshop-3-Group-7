@@ -5,6 +5,7 @@ float2 deltaPos;            //relative position of light to the hiddenSprite
 float width;                //width of the texture
 float height;               //height of the texture
 float radius;               //radius of the light
+float resolution;           //resolution of the mask
 
 [numthreads(8,8,1)]
 void CSMain (uint3 id : SV_DispatchThreadID)
@@ -15,7 +16,7 @@ void CSMain (uint3 id : SV_DispatchThreadID)
     float reCenterX = x-width/2;                                        //convert x to center based
     float reCenterY = y-height/2;                                       //convert y to center based
 
-    float2 pixelPos = float2((reCenterX)/width, (reCenterY)/height);    //convert pixels to be relative to sprite position
+    float2 pixelPos = float2(reCenterX/resolution, reCenterY/resolution);        //convert pixels to be relative to sprite position
     pixelPos = pixelPos - deltaPos;                                     //subtract the relative position of the light from the pixel
     float sqrMagnitude = pow(pixelPos.x, 2) + pow(pixelPos.y, 2);       //find the square magnitude of pixelPos (squared length)
     float c = 1 - clamp(sqrMagnitude/pow(radius, 2), 0, 1);             //divide the square magnitude by the radius squared to get a nice gradient | clamp it between 0 and 1 | then invert it

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7702832ff160494aab309d3b4a6dda8
+guid: 7edeeaa3df3cb1f42bb93e7e8a68a521
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,7 +105,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Room #1 Main_0
+      name: Final Room#1 Puzzle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 794b016dbd3342f40abade587b8d5c43
-      internalID: -279276057
+      spriteID: f039f56fbfa9f3f429c999ee225924a8
+      internalID: 1602766688
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room #1 Main_1
+      name: Final Room#1 Puzzle_1
       rect:
         serializedVersion: 2
         x: 21
         y: 0
-        width: 19
-        height: 21
+        width: 17
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,17 +140,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1779e30cb15d6c409be10de0221908c
-      internalID: -320521987
+      spriteID: 11736c5e029e3ce4db143358fba0d3ff
+      internalID: -1039561301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room #1 Main_2
+      name: Final Room#1 Puzzle_2
       rect:
         serializedVersion: 2
-        x: 41
+        x: 39
         y: 0
         width: 20
         height: 19
@@ -161,17 +161,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc98114950f9d9a4a9e4f881ec1fafb7
-      internalID: 702629856
+      spriteID: f4b87e4e92221aa4eb783099a41840ab
+      internalID: 1531357478
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room #1 Main_3
+      name: Final Room#1 Puzzle_3
       rect:
         serializedVersion: 2
-        x: 62
+        x: 60
         y: 0
         width: 18
         height: 18
@@ -182,17 +182,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e9ff6d4c6a046f45b77fc337a223b79
-      internalID: -1539464821
+      spriteID: c00234539d40c92498dc3f2ffc1d2f7e
+      internalID: -2100938969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Room #1 Main_4
+      name: Final Room#1 Puzzle_4
       rect:
         serializedVersion: 2
-        x: 81
+        x: 79
         y: 0
         width: 17
         height: 19
@@ -203,29 +203,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d22ee81c5029e14d96602747e91a811
-      internalID: 768393719
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Room #1 Main_5
-      rect:
-        serializedVersion: 2
-        x: 98
-        y: 0
-        width: 19
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 399ccd2e7d42bd543a06ea0973ffa251
-      internalID: 918831760
+      spriteID: ddb6be29bedc66e469a8d972708aa6ff
+      internalID: 211551371
       vertices: []
       indices: 
       edges: []
@@ -241,12 +220,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Room #1 Main_2: 702629856
-      Room #1 Main_0: -279276057
-      Room #1 Main_4: 768393719
-      Room #1 Main_1: -320521987
-      Room #1 Main_5: 918831760
-      Room #1 Main_3: -1539464821
+      Final Room#1 Puzzle_3: -2100938969
+      Final Room#1 Puzzle_2: 1531357478
+      Final Room#1 Puzzle_4: 211551371
+      Final Room#1 Puzzle_1: -1039561301
+      Final Room#1 Puzzle_0: 1602766688
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

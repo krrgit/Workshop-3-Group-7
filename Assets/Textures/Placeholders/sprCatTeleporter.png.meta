@@ -176,7 +176,9 @@ TextureImporter:
     indices: 
     edges: []
     weights: []
-    secondaryTextures: []
+    secondaryTextures:
+    - texture: {fileID: 2800000, guid: 9d871d5c3e1361241af77eb45c0630b1, type: 3}
+      name: _Emission
     nameFileIdTable:
       sprCatTeleporter_1: 172192380
       sprCatTeleporter_0: 1591124013

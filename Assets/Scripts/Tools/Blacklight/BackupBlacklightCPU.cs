@@ -52,7 +52,7 @@ public class BackupBlacklightCPU : MonoBehaviour
 
     double getColor(int x, int y) {
         Vector3 pixelPos = new Vector3(x-width/2, y-height/2, 0);
-        pixelPos = new Vector3(pixelPos.x/width, pixelPos.y/height, 0);
+        pixelPos = new Vector3(pixelPos.x/resolution, pixelPos.y/resolution, 0);
         pixelPos -= deltaPos;
         return 1 - Math.Clamp(pixelPos.sqrMagnitude/Math.Pow(outerRadius, 2), 0, 1);
     }
