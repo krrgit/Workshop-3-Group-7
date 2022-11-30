@@ -9,6 +9,7 @@ public class Minecart : MonoBehaviour {
     [SerializeField] private bool isMoving;
     [SerializeField] private bool catInCart;
     [SerializeField] private GameObject startInteractor;
+    [SerializeField] private AnimateMinecart anim;
 
     public void Reset()
     {
@@ -16,6 +17,7 @@ public class Minecart : MonoBehaviour {
         transform.up = resetPos.up;
         isMoving = false;
         startInteractor.SetActive(true);
+        anim.AnimateReset();
     }
 
     public void StartCart()
