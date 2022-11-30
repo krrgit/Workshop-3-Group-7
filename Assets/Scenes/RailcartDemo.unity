@@ -237,6 +237,11 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!212 &229071018 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6083527835745670630, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 764817974}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &339523115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -742,10 +747,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e7f2159740542c3aec23b23e7259ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 5
   resetPos: {fileID: 358285473}
   isMoving: 0
-  catInCart: 0
   startInteractor: {fileID: 82656473}
   anim: {fileID: 2103754661}
 --- !u!212 &2103754657
@@ -786,8 +790,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1728574011
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -2060939099, guid: ab0394066fdecd04caeae33e0289b14f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -867,6 +871,9 @@ MonoBehaviour:
   sr: {fileID: 2103754657}
   duration: 1
   clearInterval: 0.1
+  cartEmpty: {fileID: -2060939099, guid: ab0394066fdecd04caeae33e0289b14f, type: 3}
+  cartWithCat: {fileID: -1726289559, guid: ab0394066fdecd04caeae33e0289b14f, type: 3}
+  cat: {fileID: 229071018}
 --- !u!1 &2142075816
 GameObject:
   m_ObjectHideFlags: 0

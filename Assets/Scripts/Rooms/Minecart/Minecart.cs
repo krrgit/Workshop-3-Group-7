@@ -7,7 +7,6 @@ public class Minecart : MonoBehaviour {
     [SerializeField] private float speed = 1;
     [SerializeField] private Transform resetPos;
     [SerializeField] private bool isMoving;
-    [SerializeField] private bool catInCart;
     [SerializeField] private GameObject startInteractor;
     [SerializeField] private AnimateMinecart anim;
 
@@ -18,14 +17,15 @@ public class Minecart : MonoBehaviour {
         isMoving = false;
         startInteractor.SetActive(true);
         anim.AnimateReset();
+        anim.CatExit();
     }
 
     public void StartCart()
     {
         if (isMoving) return;
-        catInCart = true;
         isMoving = true;
         startInteractor.SetActive(false);
+        anim.CatEnter();
     }
 
     // Update is called once per frame
