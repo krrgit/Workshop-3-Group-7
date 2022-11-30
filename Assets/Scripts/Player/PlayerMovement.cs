@@ -17,18 +17,19 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 facingDir;
 
     public static PlayerMovement Instance;
+    
+    public void SetSpawnPoint(Transform t, Vector2 dir)
+    {
+        startPos = t;
+        startFacingDir = dir;
+    }
+
 
     public void ToggleControl(bool state)
     {
         StartCoroutine(WaitForControl(state));
     }
     
-
-    private void OnEnable()
-    {
-        if (startPos) transform.position = startPos.position;
-    }
-
     void Awake()
     {
         if (Instance == null)
@@ -61,6 +62,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         animator.SetFloat("Horizontal",startFacingDir.x);
         animator.SetFloat("Vertical", startFacingDir.y);
+        
+        if (startPos) transform.position = startPos.position;
     }
 
     // Update is called once per frame

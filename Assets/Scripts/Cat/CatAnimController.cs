@@ -5,7 +5,6 @@ using Unity.Mathematics;
 using UnityEngine;
 
 public class CatAnimController : MonoBehaviour {
-   [SerializeField] private Transform startPos;
    [SerializeField] private Animator anim;
    [SerializeField] private CatFollowPlayer follow;
    [SerializeField] private bool canMove;
@@ -13,6 +12,8 @@ public class CatAnimController : MonoBehaviour {
    [SerializeField] private bool followPlayer;
    [SerializeField] private float moveSpeed = 1;
    [SerializeField] private float turnSpeed = 1;
+   [SerializeField] private bool isSleeping;
+   [SerializeField] private Transform spawnPoint;
 
    private bool turnClockwise;
    private bool turnCounter;
@@ -26,8 +27,37 @@ public class CatAnimController : MonoBehaviour {
 
    private bool isCheckingFollow;
 
+   public static CatAnimController Instance;
+
+   public void SetSpawnPoint(Transform t)
+   {
+      spawnPoint = t;
+   }
+   void Awake()
+   {
+      if (Instance == null)
+      {
+         Instance = this;
+      }
+      else
+      {
+         Destroy(this);
+      }
+      
+      if (isSleeping)
+      {
+         anim.Play("Cat_Sleep");
+      }
+   }
+
    public void ToggleControl(bool control)
    {
+      if (isSleeping)
+      {
+         anim.Play("Cat_Idle");
+         isSleeping = false;
+      }
+      
       isControlled = !control;
       if (!isControlled)
       {
@@ -62,7 +92,11 @@ public class CatAnimController : MonoBehaviour {
    
    private void OnEnable()
    {
-      if (startPos) transform.position = startPos.position;
+      if (spawnPoint)
+      {
+         transform.position = spawnPoint.position;
+         transform.up = spawnPoint.right;
+      }
    }
 
    void Update()
@@ -80,7 +114,7 @@ public class CatAnimController : MonoBehaviour {
 
    void FollowCheck()
    {
-      if (isControlled) return;
+      if (isControlled || !canMove) return;
 
       if (!isCheckingFollow)
       {
