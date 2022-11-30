@@ -9,21 +9,13 @@ public class WrenchTool : Tool {
     {
         print("Use Wrench!");
         PlayerMovement.Instance.ToggleMove(false);
+
         if (rotator)
         {
-            rotator.RotateObjects();
+            float waitTime = rotator.RotateObjects();
+            StartCoroutine(Wait(waitTime));
         }
-        // if (InteractController.Instance.interactableExists)
-        // {
-        //     var rotate = InteractController.Instance.Interactable.GetComponent<RotateController>();
-        //
-        //     if (rotate)
-        //     {
-        //         rotate.RotateObjects();
-        //     }
-        // }
 
-        Stop();
         return false;
     }
     
@@ -32,6 +24,12 @@ public class WrenchTool : Tool {
         PlayerMovement.Instance.ToggleMove(true);
         print("Stop using Wrench");
         return false;
+    }
+
+    IEnumerator Wait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Stop();
     }
 
     private void OnTriggerEnter2D(Collider2D col)

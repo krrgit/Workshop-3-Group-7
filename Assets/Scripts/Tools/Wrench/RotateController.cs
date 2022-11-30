@@ -15,15 +15,17 @@ public class RotateController : MonoBehaviour
 
     private bool isRotating;
     
-    public void RotateObjects()
+    public float RotateObjects()
     {
-        if (isRotating) return;
+        if (isRotating) return 0;
         isRotating = true;
         print("Rotate");
         for (int i = 0; i < objectsToRotate.Length; ++i)
         {
             StartCoroutine(objectRotationAnimation(objectsToRotate[i]));
         }
+
+        return 90f/rotationStep;
     }
 
     IEnumerator objectRotationAnimation(Transform obj)
