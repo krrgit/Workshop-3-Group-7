@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main Scenes/Room #4 Frog Room.unity
     guid: 58581c6767c11f04cae1e7d192da1f48
+  - enabled: 1
+    path: Assets/Scenes/Main Scenes/Room #2 Parents Room.unity
+    guid: cbf89780832212c46ab28cd753cbbe21
   m_configObjects: {}
