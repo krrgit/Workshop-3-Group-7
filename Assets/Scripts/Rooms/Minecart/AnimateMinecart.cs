@@ -36,12 +36,13 @@ public class AnimateMinecart : MonoBehaviour {
         bool spriteOff = true;
         while (timer > 0)
         {
-            sr.color = spriteOff ? Color.clear : Color.white;
+            sr.color = cat.color = spriteOff ? Color.clear : Color.white;
             spriteOff = !spriteOff;
             yield return new WaitForSeconds(clearInterval);
             timer -= clearInterval;
         }
         
-        sr.color = Color.white;
+        sr.color = cat.color = Color.white;
+        
     }
 }
