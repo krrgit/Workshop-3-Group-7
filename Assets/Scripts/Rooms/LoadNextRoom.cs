@@ -7,10 +7,24 @@ using UnityEngine.SceneManagement;
 
 public class LoadNextRoom : MonoBehaviour {
     [SerializeField] private Room thisRoom;
-    [SerializeField] private int stencil;
-    [SerializeField] private int nextScene;
+    [SerializeField] private Room nextRoom;
+    [SerializeField] private AnimateTransitionStencil stencilAnim;
     private bool loading;
 
+    int Stencil
+    {
+        get { return Mathf.Max((int)thisRoom - 1, (int)nextRoom-1); }
+    }
+
+    private void Start()
+    {
+        if (ProgressTracker.Instance.LastRoom == nextRoom)
+        {
+            stencilAnim.UpdateStencil(Stencil);
+        }
+        
+    }
+    
     public Room GetRoom()
     {
         return thisRoom;
@@ -22,7 +36,7 @@ public class LoadNextRoom : MonoBehaviour {
             if (loading) return;
             
             PlayerMovement.Instance.canMove = false;
-            AnimateTransitionStencil.Instance.UpdateStencil(stencil);
+            AnimateTransitionStencil.Instance.UpdateStencil(Stencil);
             float dur = AnimateTransitionStencil.Instance.AnimateExit();
             StartCoroutine(LoadNextScene(dur));
         }
@@ -33,7 +47,7 @@ public class LoadNextRoom : MonoBehaviour {
         loading = true;
         ProgressTracker.Instance.SetLastRoom(thisRoom);
         yield return new WaitForSecondsRealtime(delay);
-        SceneManager.LoadScene(nextScene);
+        SceneManager.LoadScene((int)nextRoom);
         loading = false;
     }
 }

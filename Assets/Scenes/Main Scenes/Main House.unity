@@ -465,13 +465,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: nextRoom
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: thisRoom
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: nextScene
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: stencilAnim
+      value: 
+      objectReference: {fileID: 1921682396}
     - target: {fileID: 4668078455662970725, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: m_Name
       value: LoadZone Frog
@@ -1178,13 +1186,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
-      propertyPath: thisRoom
+      propertyPath: nextRoom
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: thisRoom
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: nextScene
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: stencilAnim
+      value: 
+      objectReference: {fileID: 1921682396}
     - target: {fileID: 4668078455662970725, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: m_Name
       value: LoadZone Parents
@@ -4583,22 +4599,22 @@ MonoBehaviour:
   cat: {fileID: 1642559675}
   playerPositions:
   - {fileID: 1976154323}
-  - {fileID: 1392614489}
+  - {fileID: 1976154323}
   - {fileID: 1016616119}
   - {fileID: 1903391417}
-  - {fileID: 1976154323}
+  - {fileID: 1392614489}
   catPositions:
   - {fileID: 1517260843}
-  - {fileID: 792201685}
+  - {fileID: 1517260843}
   - {fileID: 1456697023}
   - {fileID: 822302338}
-  - {fileID: 1517260843}
+  - {fileID: 792201685}
   startDir:
   - {x: 1, y: 0}
-  - {x: 0, y: -1}
+  - {x: 1, y: 0}
   - {x: -1, y: 0}
   - {x: 1, y: 0}
-  - {x: 1, y: 0}
+  - {x: 0, y: -1}
 --- !u!4 &1226278569
 Transform:
   m_ObjectHideFlags: 0
@@ -5764,13 +5780,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: nextRoom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: thisRoom
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: nextScene
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: stencilAnim
+      value: 
+      objectReference: {fileID: 1921682396}
     - target: {fileID: 4668078455662970725, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: m_Name
       value: LoadZone Player
@@ -6027,13 +6051,21 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: nextRoom
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: thisRoom
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: nextScene
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: stencilAnim
+      value: 
+      objectReference: {fileID: 1921682396}
     - target: {fileID: 4668078455662970725, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: m_Name
       value: LoadZone Rabbit
@@ -7847,6 +7879,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Core-Objects
       objectReference: {fileID: 0}
+    - target: {fileID: 2765726214971453059, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 6ad9124cd2efb4729be6cd76d9ded048, type: 3}
+    - target: {fileID: 2765726214971453059, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: sprites.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 65154a765d5144fb89ad61676f3e6583, type: 3}
+    - target: {fileID: 2765726214971453059, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: sprites.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4e05c9ec0db5f4999b1e5970009c0c58, type: 3}
+    - target: {fileID: 2765726214971453059, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: sprites.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: be74386e6df024412842fdf7dd7d0441, type: 3}
     - target: {fileID: 2765726215286382632, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.3
@@ -7914,6 +7962,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a3a001e7cdc44715a247e78e7c53169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1921682396 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2765726214971453059, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b807a98b30954e519b016497b253467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1948402580
