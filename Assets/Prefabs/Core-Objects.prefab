@@ -3031,6 +3031,8 @@ MonoBehaviour:
   sprites:
   - {fileID: 21300000, guid: be74386e6df024412842fdf7dd7d0441, type: 3}
   - {fileID: 21300000, guid: 4e05c9ec0db5f4999b1e5970009c0c58, type: 3}
+  - {fileID: 21300000, guid: 65154a765d5144fb89ad61676f3e6583, type: 3}
+  - {fileID: 21300000, guid: 6ad9124cd2efb4729be6cd76d9ded048, type: 3}
   rect: {fileID: 2765726214971453063}
   duration: 2
   startDelay: 0.4
