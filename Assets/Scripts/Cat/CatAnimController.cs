@@ -80,7 +80,7 @@ public class CatAnimController : MonoBehaviour {
 
    void FollowCheck()
    {
-      if (isControlled) return;
+      if (isControlled || !canMove) return;
 
       if (!isCheckingFollow)
       {
