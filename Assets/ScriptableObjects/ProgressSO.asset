@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ProgressSO
   m_EditorClassIdentifier: 
   lastRoom: 1
-  bedroomSolved: 1
+  bedroomSolved: 0
   railroadsSolved: 0
   gardenSolved: 0
   aquariumSolved: 0
