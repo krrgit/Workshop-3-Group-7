@@ -34,6 +34,7 @@ public class InteractableController : MonoBehaviour {
             InteractEvent.Invoke();
             canInteract = false;
             --interactCount;
+            if (!hold) Reset(); 
             return hold;
         }
         else

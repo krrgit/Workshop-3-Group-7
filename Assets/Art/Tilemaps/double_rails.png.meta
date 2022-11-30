@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ab0394066fdecd04caeae33e0289b14f
+guid: 7c82e82f13b23b04eb5cf78fa0c1d381
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -105,13 +105,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Hedge,_Minecart,_Cat_Sleeping_0
+      name: double_rails_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 8
-        width: 53
-        height: 54
+        x: 41
+        y: 85
+        width: 48
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,20 +119,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfb9edf0954864a41a57da5b75dc35e0
-      internalID: -1823006316
+      spriteID: b43061e28bd3af346b7a02c4754020cf
+      internalID: 2032493390
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedge,_Minecart,_Cat_Sleeping_1
+      name: double_rails_1
       rect:
         serializedVersion: 2
-        x: 72
-        y: 22
-        width: 21
-        height: 26
+        x: 116
+        y: 85
+        width: 48
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,20 +140,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9382b55672d394648880997bf00ec302
-      internalID: -2060939099
+      spriteID: 8fefe673df236574fa3551d41a4da072
+      internalID: -1656260585
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedge,_Minecart,_Cat_Sleeping_2
+      name: double_rails_2
       rect:
         serializedVersion: 2
-        x: 113
+        x: 41
         y: 18
-        width: 21
-        height: 30
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,20 +161,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0fbd2f56a61eee24a8b2c4d0152e835c
-      internalID: -1726289559
+      spriteID: 57c7827682db0a3409458931b97022da
+      internalID: 1240876682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Hedge,_Minecart,_Cat_Sleeping_3
+      name: double_rails_3
       rect:
         serializedVersion: 2
-        x: 152
-        y: 26
-        width: 15
-        height: 14
+        x: 115
+        y: 18
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -182,29 +182,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e8ec04951955a8459c8eb737d3975d8
-      internalID: 1969706630
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hedge,_Minecart,_Cat_Sleeping_4
-      rect:
-        serializedVersion: 2
-        x: 169
-        y: 28
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e4bccb6be85641ad95d0029411c9042
-      internalID: -652620711
+      spriteID: f40eb7bfd2e0a4446967051e63ce6c38
+      internalID: 71217782
       vertices: []
       indices: 
       edges: []
@@ -220,11 +199,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Hedge,_Minecart,_Cat_Sleeping_2: -1726289559
-      Hedge,_Minecart,_Cat_Sleeping_4: -652620711
-      Hedge,_Minecart,_Cat_Sleeping_3: 1969706630
-      Hedge,_Minecart,_Cat_Sleeping_0: -1823006316
-      Hedge,_Minecart,_Cat_Sleeping_1: -2060939099
+      double_rails_2: 1240876682
+      double_rails_0: 2032493390
+      double_rails_3: 71217782
+      double_rails_1: -1656260585
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
