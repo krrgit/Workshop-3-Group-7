@@ -16,7 +16,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     [SerializeField] private RectTransform rect;
     [Header("Text")]
     [SerializeField] private string dialogue;
-    [SerializeField] private float letterPerSec = 3;
+    [SerializeField] private float letterPerSec = 40;
     [SerializeField] private float textDelay = 0.05f;
     
     [Header("Bubble")]
@@ -53,6 +53,11 @@ public class TextBubbleAnimator : MonoBehaviour {
         bubble.color = bubbleColor;
         tail.color = bubbleColor;
         textMesh.color = textColor;
+    }
+
+    public void SetSpeed(float modifier)
+    {
+        letterPerSec = 40 * modifier;
     }
     
     public void Animate(string newText, Transform target)

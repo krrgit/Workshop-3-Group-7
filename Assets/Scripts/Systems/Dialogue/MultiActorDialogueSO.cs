@@ -34,7 +34,7 @@ public class MultiActorDialogueSO : ScriptableObject {
 
     public float GetSpeedModifier(int currLine)
     {
-        return 1 + ((float)System.Char.GetNumericValue(lines[currLine][0]) - 5) * 0.5f;
+        return 1 + ((float)System.Char.GetNumericValue(lines[currLine][1]) - 5) * 0.167f;
     }
     
 }

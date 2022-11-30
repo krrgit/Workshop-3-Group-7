@@ -29,6 +29,8 @@ public class DialoguePlayer : MonoBehaviour {
         
         SetBubbleColors(actorIndex, so.GetBubbleColor(currLine), so.GetTextColor(currLine));
         
+        bubbles[actorIndex].SetSpeed(so.GetSpeedModifier(currLine));
+
         // Animate Text Bubble
         bubbles[actorIndex].Animate(so.lines[currLine], GetActor(actorIndex));
         ++currLine;
