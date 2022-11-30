@@ -13,6 +13,7 @@ public class CatAnimController : MonoBehaviour {
    [SerializeField] private bool followPlayer;
    [SerializeField] private float moveSpeed = 1;
    [SerializeField] private float turnSpeed = 1;
+   [SerializeField] private bool isSleeping;
 
    private bool turnClockwise;
    private bool turnCounter;
@@ -26,12 +27,25 @@ public class CatAnimController : MonoBehaviour {
 
    private bool isCheckingFollow;
 
+   void Awake()
+   {
+      if (isSleeping)
+      {
+         anim.Play("Cat_Sleep");
+      }
+   }
+
    public void ToggleControl(bool control)
    {
       isControlled = !control;
       if (!isControlled)
       {
          StartCoroutine(IFollowCheck());
+         if (isSleeping)
+         {
+            anim.Play("Cat_Idle");
+            isSleeping = false;
+         }
       }
       else
       {
