@@ -28,7 +28,7 @@ public class SpawnPointManager : MonoBehaviour {
 
     void SetPlayerSpawn()
     {
-        switch (ProgressTracker.Instance.lastRoom)
+        switch (ProgressTracker.Instance.LastRoom)
         {
             case Room.Bedroom:
                 PlayerMovement.Instance.SetSpawnPoint(bedCatSpawn, bedFacingDir);

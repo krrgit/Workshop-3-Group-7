@@ -40,8 +40,6 @@ public class PlayerMovement : MonoBehaviour {
         {
             Destroy(this);
         }
-        
-        if (startPos) transform.position = startPos.position;
     }
 
     public void ToggleMove(bool toggle)
@@ -64,6 +62,8 @@ public class PlayerMovement : MonoBehaviour {
     {
         animator.SetFloat("Horizontal",startFacingDir.x);
         animator.SetFloat("Vertical", startFacingDir.y);
+        
+        if (startPos) transform.position = startPos.position;
     }
 
     // Update is called once per frame

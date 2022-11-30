@@ -10,9 +10,14 @@ public class LoadNextRoom : MonoBehaviour {
     [SerializeField] private int stencil;
     [SerializeField] private int nextScene;
     private bool loading;
+
+    public Room GetRoom()
+    {
+        return thisRoom;
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.tag == "Player")
+        if (col.gameObject.name == "Player")
         {
             if (loading) return;
             
@@ -26,7 +31,7 @@ public class LoadNextRoom : MonoBehaviour {
     IEnumerator LoadNextScene(float delay)
     {
         loading = true;
-        if (ProgressTracker.Instance) ProgressTracker.Instance.lastRoom = thisRoom;
+        ProgressTracker.Instance.SetLastRoom(thisRoom);
         yield return new WaitForSecondsRealtime(delay);
         SceneManager.LoadScene(nextScene);
         loading = false;

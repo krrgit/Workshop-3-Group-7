@@ -5,7 +5,6 @@ using Unity.Mathematics;
 using UnityEngine;
 
 public class CatAnimController : MonoBehaviour {
-   [SerializeField] private Transform startPos;
    [SerializeField] private Animator anim;
    [SerializeField] private CatFollowPlayer follow;
    [SerializeField] private bool canMove;
@@ -49,24 +48,20 @@ public class CatAnimController : MonoBehaviour {
       {
          anim.Play("Cat_Sleep");
       }
-
-      if (spawnPoint)
-      {
-         transform.position = spawnPoint.position;
-      }
    }
 
    public void ToggleControl(bool control)
    {
+      if (isSleeping)
+      {
+         anim.Play("Cat_Idle");
+         isSleeping = false;
+      }
+      
       isControlled = !control;
       if (!isControlled)
       {
          StartCoroutine(IFollowCheck());
-         if (isSleeping)
-         {
-            anim.Play("Cat_Idle");
-            isSleeping = false;
-         }
       }
       else
       {
@@ -97,7 +92,11 @@ public class CatAnimController : MonoBehaviour {
    
    private void OnEnable()
    {
-      if (startPos) transform.position = startPos.position;
+      if (spawnPoint)
+      {
+         transform.position = spawnPoint.position;
+         transform.up = spawnPoint.right;
+      }
    }
 
    void Update()

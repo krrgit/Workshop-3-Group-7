@@ -27,18 +27,21 @@ public class CatFollowPlayer : MonoBehaviour {
     }
 
 
-    // Start is called before the first frame update
     void Start()
+    {
+        CreateStartPoints();
+    }
+
+    public void CreateStartPoints()
     {
         for(int i=0;i<pointLimit;++i)
         {
             points.Add(transform.position);
         }
     }
-
     void Update()
     {
-        DrawPoints();
+        //DrawPoints();
     }
 
     // Update is called once per frame

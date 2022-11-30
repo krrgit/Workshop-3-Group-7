@@ -81,6 +81,8 @@ public class FluteTool : Tool {
         StartCoroutine(IEndSong(checker.GetSongLength, command));
         player.DelayStopAllNotes(1f);
         
+        ControlCatEvent.Invoke();
+        
     }
     
     IEnumerator IEndSong(float waitTime, string command)

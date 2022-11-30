@@ -11,43 +11,48 @@ public enum Room {
     House
 }
 public class ProgressTracker : MonoBehaviour {
-
-    public Room lastRoom = Room.Bedroom;
-    public bool bedroomSolved;
-    public bool railroadsSolved;
-    public bool gardenSolved;
-    public bool aquariumSolved;
+    [SerializeField] private ProgressSO so;
 
     public static ProgressTracker Instance;
-    private void Awake()
+
+    public Room LastRoom
     {
-        if (Instance == null) {
-            Instance = this;
-        } else {
-            Destroy(this);
-        }
-        
-        DontDestroyOnLoad(gameObject);
+        get { return so.lastRoom; }
     }
+
+    public void SetLastRoom(Room room)
+    {
+        so.lastRoom = room;
+    }
+
 
     public void SolvePuzzle(Room solvedRoom)
     {
         switch (solvedRoom)
         {
             case Room.Bedroom:
-                bedroomSolved = true;
+                so.bedroomSolved = true;
                 break;
             case Room.Railroads:
-                railroadsSolved = true;
+                so.railroadsSolved = true;
                 break;
             case Room.Garden:
-                gardenSolved = true;
+                so.gardenSolved = true;
                 break;
             case Room.Aquarium:
-                aquariumSolved = true;
+                so.aquariumSolved = true;
                 break;
             default:
                 break;
+        }
+    }
+    
+    private void Awake()
+    {
+        if (Instance == null) {
+            Instance = this;
+        } else {
+            Destroy(this);
         }
     }
 }
