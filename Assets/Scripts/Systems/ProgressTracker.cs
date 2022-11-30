@@ -4,16 +4,35 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum Room {
+    House,
     Bedroom,
-    Railroads,
     Garden,
     Aquarium,
-    House
+    Railroads
 }
 public class ProgressTracker : MonoBehaviour {
     [SerializeField] private ProgressSO so;
 
     public static ProgressTracker Instance;
+
+    public bool IsRoomSolved (Room room)
+    {
+        switch (room)
+        {
+            case Room.Bedroom:
+                return so.bedroomSolved;
+            case Room.Railroads:
+                return so.railroadsSolved;
+            case Room.Garden:
+                return so.gardenSolved;
+            case Room.Aquarium:
+                return so.aquariumSolved;
+            default:
+                break;
+        }
+
+        return false;
+    }
 
     public Room LastRoom
     {

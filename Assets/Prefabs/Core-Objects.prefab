@@ -3030,10 +3030,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stencil: {fileID: 2765726214971453061}
   sprites:
-  - {fileID: 21300000, guid: be74386e6df024412842fdf7dd7d0441, type: 3}
-  - {fileID: 21300000, guid: 4e05c9ec0db5f4999b1e5970009c0c58, type: 3}
-  - {fileID: 21300000, guid: 65154a765d5144fb89ad61676f3e6583, type: 3}
   - {fileID: 21300000, guid: 6ad9124cd2efb4729be6cd76d9ded048, type: 3}
+  - {fileID: 21300000, guid: 65154a765d5144fb89ad61676f3e6583, type: 3}
+  - {fileID: 21300000, guid: 4e05c9ec0db5f4999b1e5970009c0c58, type: 3}
+  - {fileID: 21300000, guid: be74386e6df024412842fdf7dd7d0441, type: 3}
   rect: {fileID: 2765726214971453063}
   duration: 2
   startDelay: 0.4
@@ -4755,7 +4755,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.18035173
+      value: -0.1803546
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -4763,11 +4763,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.092289
+      value: 1.0922881
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.335732
+      value: 1.3357321
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425731267683, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Name

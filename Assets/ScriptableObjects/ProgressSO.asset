@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0edebdb1862204029a8320e0aab67b3b, type: 3}
   m_Name: ProgressSO
   m_EditorClassIdentifier: 
-  lastRoom: 3
-  bedroomSolved: 0
+  lastRoom: 1
+  bedroomSolved: 1
   railroadsSolved: 0
   gardenSolved: 0
   aquariumSolved: 0

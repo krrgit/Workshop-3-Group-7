@@ -29,6 +29,14 @@ public class CatAnimController : MonoBehaviour {
 
    public static CatAnimController Instance;
 
+   public void SetDefaultFollowValues()
+   {
+      anim.Play("Cat_Idle");
+      isSleeping = false;
+      canMove = true;
+      followPlayer = true;
+   }
+
    public void SetSpawnPoint(Transform t)
    {
       spawnPoint = t;

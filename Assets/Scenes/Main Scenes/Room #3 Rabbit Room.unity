@@ -7666,6 +7666,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+--- !u!114 &1062088866 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2765726214971453059, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b807a98b30954e519b016497b253467, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1067647075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2622506860080291954, guid: 4af15f5afebb5de4c9ca06b034955568, type: 3}
@@ -12107,6 +12118,10 @@ PrefabInstance:
       propertyPath: thisRoom
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4668078455662970724, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
+      propertyPath: stencilAnim
+      value: 
+      objectReference: {fileID: 1062088866}
     - target: {fileID: 4668078455662970725, guid: 8bdc05a31cea546a3b991c26526539fd, type: 3}
       propertyPath: m_Name
       value: LoadZone
