@@ -14,6 +14,7 @@ public class CatAnimController : MonoBehaviour {
    [SerializeField] private float moveSpeed = 1;
    [SerializeField] private float turnSpeed = 1;
    [SerializeField] private bool isSleeping;
+   [SerializeField] private Transform spawnPoint;
 
    private bool turnClockwise;
    private bool turnCounter;
@@ -27,11 +28,31 @@ public class CatAnimController : MonoBehaviour {
 
    private bool isCheckingFollow;
 
+   public static CatAnimController Instance;
+
+   public void SetSpawnPoint(Transform t)
+   {
+      spawnPoint = t;
+   }
    void Awake()
    {
+      if (Instance == null)
+      {
+         Instance = this;
+      }
+      else
+      {
+         Destroy(this);
+      }
+      
       if (isSleeping)
       {
          anim.Play("Cat_Sleep");
+      }
+
+      if (spawnPoint)
+      {
+         transform.position = spawnPoint.position;
       }
    }
 
