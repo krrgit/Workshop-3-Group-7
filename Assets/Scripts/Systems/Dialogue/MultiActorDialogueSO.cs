@@ -10,10 +10,9 @@ public class MultiActorDialogueSO : ScriptableObject {
     /**Dialogue Parameters
      * Start of Line:
      * 0-n Actor; 0 = player, 1 = this actor, 2+ = others
-     * 0-9 Speed: 5 = normal +- 0.5x;
+     * 0-9 Speed: 5 = normal +- 0.167x;
      *
      * In-Line Events:
-     * '>' Interrupt with next line
      * '[#' Hold # = 0-9
      */
 
