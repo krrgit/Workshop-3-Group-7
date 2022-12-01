@@ -2365,6 +2365,8 @@ GameObject:
   - component: {fileID: 2765726214658304844}
   - component: {fileID: 2765726214658304843}
   - component: {fileID: 2765726214658304842}
+  - component: {fileID: 1121770474279078594}
+  - component: {fileID: 2422528971972956408}
   m_Layer: 0
   m_Name: FishingPole
   m_TagString: Untagged
@@ -2399,6 +2401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a11035d9a3fb4a758efc71830d51a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 2422528971972956408}
+  min: 1
+  max: 3
+  miniGame: {fileID: 0}
 --- !u!212 &2765726214658304842
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2440,7 +2446,7 @@ SpriteRenderer:
   m_SortingLayerID: -1728574011
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: 4dad0c9f59ff542f2946a0b25c8fc386, type: 3}
+  m_Sprite: {fileID: 1936930324, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2451,6 +2457,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &1121770474279078594
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765726214658304845}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.33142185, y: 3.5250788}
+  serializedVersion: 2
+  m_Radius: 0.9109888
+--- !u!114 &2422528971972956408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765726214658304845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 780178d310d15de48aab1ec7e939aede, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horSprite: {fileID: 1936930324, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
+  verSprite: {fileID: 1661488393, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
+  rend: {fileID: 2765726214658304842}
 --- !u!1 &2765726214752928538
 GameObject:
   m_ObjectHideFlags: 0

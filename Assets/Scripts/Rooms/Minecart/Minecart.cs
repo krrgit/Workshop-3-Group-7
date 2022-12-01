@@ -10,6 +10,8 @@ public class Minecart : MonoBehaviour {
     [SerializeField] private GameObject startInteractor;
     [SerializeField] private AnimateMinecart anim;
 
+    private Transform parent;
+
     public void Reset()
     {
         transform.position = resetPos.position;
@@ -28,6 +30,16 @@ public class Minecart : MonoBehaviour {
         anim.CatEnter();
     }
 
+    public void StopCart()
+    {
+        if(!isMoving) return;
+        isMoving = false;
+        startInteractor.SetActive(true);
+        transform.position = resetPos.position;
+        transform.up = resetPos.up;
+        anim.CatExit();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -43,7 +55,42 @@ public class Minecart : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        Reset();
+        if (col.gameObject.tag == "CartCheckpoint") {
+            col.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            GameObject checkpointRail = col.transform.parent.gameObject;
+            resetPos = checkpointRail.transform.GetChild(1);
+            startInteractor = resetPos.GetChild(0).gameObject;
+            StopCart();
 
+            parent = this.transform.parent;
+            this.transform.parent = checkpointRail.transform;
+
+            StartCoroutine(reachedCheckPoint(checkpointRail.transform, 180, -1));
+
+            
+        } else {
+            Reset();
+        }
+    }
+
+    IEnumerator reachedCheckPoint(Transform obj, int rotationStep, int rotationDirection)
+    {
+        Vector3 currRot = obj.eulerAngles;
+        Vector3 targetRot = obj.eulerAngles + new Vector3(0, 0, rotationStep * rotationDirection);
+
+        float dot = Vector3.Dot(obj.up, targetRot);
+
+        while (((int)currRot.z >
+            (int)targetRot.z && rotationDirection < 0) || // for clockwise
+        ((int)currRot.z < (int)targetRot.z && rotationDirection > 0)) // for anti-clockwise
+        {
+            currRot.z += rotationDirection * rotationStep * Time.deltaTime;
+            obj.eulerAngles = currRot;
+            yield return new WaitForEndOfFrame();
+        }
+
+        obj.eulerAngles = targetRot;
+        StopCart();
+        this.transform.parent = parent;
     }
 }

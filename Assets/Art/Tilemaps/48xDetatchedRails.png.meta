@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8882e5b41463b1349a90bdd143fcd39d
+guid: 4b95fb49f90b05642b18739caeaac69b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,148 +105,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: detached_rails_0
+      name: 48xDetatchedRails_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 63
-        width: 48
-        height: 22
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 64d8a59ad26dc1948b497af1e51cc9ef
-      internalID: 164761261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: detached_rails_1
-      rect:
-        serializedVersion: 2
-        x: 62
-        y: 56
-        width: 48
-        height: 41
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5440655e76694134fab2a05fc42d6138
-      internalID: 341111361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: detached_rails_2
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 56
-        width: 48
-        height: 35
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 82c7e761bcdd4284398411aaed926f5f
-      internalID: -1394590022
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: detached_rails_3
-      rect:
-        serializedVersion: 2
-        x: 5
+        x: 0
         y: 0
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3640fbe012b339844bf8707efabbf4f5
-      internalID: 582957501
+      spriteID: c84801e9f13aef54e854253d6febcfab
+      internalID: 820046947
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: detached_rails_4
+      name: 48xDetatchedRails_1
       rect:
         serializedVersion: 2
-        x: 62
+        x: 48
         y: 0
         width: 48
         height: 48
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8dabe86b9f4d2c4da2b46058975be69
-      internalID: -1999281779
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: detached_rails_5
-      rect:
-        serializedVersion: 2
-        x: 118
-        y: 0
-        width: 48
-        height: 48
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18c693637ddbc6042a1a9a68acee8725
-      internalID: -316080070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: detached_rails_6
-      rect:
-        serializedVersion: 2
-        x: 175
-        y: 17
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4b7df29e45129f14dbfa9c4821ea2132
-      internalID: -1218634437
+      spriteID: f0af82b47ab70514285665a0d3ae3a41
+      internalID: -2094255581
       vertices: []
       indices: 
       edges: []
@@ -262,13 +157,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      detached_rails_6: -1218634437
-      detached_rails_5: -316080070
-      detached_rails_4: -1999281779
-      detached_rails_0: 164761261
-      detached_rails_2: -1394590022
-      detached_rails_3: 582957501
-      detached_rails_1: 341111361
+      48xDetatchedRails_0: 820046947
+      48xDetatchedRails_1: -2094255581
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

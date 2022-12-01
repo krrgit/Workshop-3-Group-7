@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Scenes/Room #3 Rabbit Room.unity
     guid: 7b4cb9e168bd43249bf81cfd1c76d30f
   - enabled: 1
-    path: Assets/Scenes/Main Scenes/Room #4 Frog Room.unity
+    path: Assets/Scenes/Room #4 Frog Room.unity
     guid: 58581c6767c11f04cae1e7d192da1f48
   - enabled: 1
     path: Assets/Scenes/Main Scenes/Room #2 Parents Room.unity

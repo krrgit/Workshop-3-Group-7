@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FishingMiniGame : MonoBehaviour
 {
@@ -37,6 +38,11 @@ public class FishingMiniGame : MonoBehaviour
     
     [SerializeField] float failTimer = 10f;
 
+    [SerializeField] UnityEvent winEvent = new UnityEvent();
+    [SerializeField] UnityEvent loseEvent = new UnityEvent();
+
+    [SerializeField] FishingPoleTool pole;
+
     private void FixedUpdate()
     {
         if(pause) return;
@@ -61,7 +67,8 @@ public class FishingMiniGame : MonoBehaviour
             if(catchProgress >= 1)
             {
                 pause = true;
-                Debug.Log("You Win!");
+                winCondition();
+                winEvent.Invoke();
             }
         }
         else
@@ -71,7 +78,8 @@ public class FishingMiniGame : MonoBehaviour
             if(failTimer < 0)
             {
                 pause = true;
-                Debug.Log("You Lose!");
+                loseCondition();
+                loseEvent.Invoke();
             }
         }
         catchProgress = Mathf.Clamp(catchProgress, 0, 1);
@@ -112,6 +120,39 @@ public class FishingMiniGame : MonoBehaviour
         }
         fishPosition = Mathf.SmoothDamp(fishPosition, fishTargetPosition, ref fishSpeed, smoothMotion);
         fish.position = Vector3.Lerp(bottomBounds.position, topBounds.position, fishPosition);
+    }
+    
+    void winCondition()
+    {
+        stopMiniGame();
+        pole.CatchFish();
+    }
+    
+    void loseCondition()
+    {
+        stopMiniGame();
+    }
 
+    void stopMiniGame()
+    {
+        gameObject.SetActive(false);
+        pole.UpdateExitStatus(true);
+    }
+
+    void OnEnable()
+    {
+        reset();
+    }
+
+    void reset()
+    {
+        catchProgress = 0;
+        progressBarContainer.localScale = new Vector3(1, 0.5f, 1);
+        pause = false;
+        fishPosition = 0;
+        hookPosition = 0; 
+        fishTimer = 0; 
+        fishTargetPosition = 0;
+        failTimer = 10;
     }
 }

@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Railcart
+  - CartCheckpoint
+  - Bobber
+  - FishingSpot
   layers:
   - Default
   - TransparentFX
