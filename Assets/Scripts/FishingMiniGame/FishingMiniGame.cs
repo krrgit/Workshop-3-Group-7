@@ -126,6 +126,7 @@ public class FishingMiniGame : MonoBehaviour
     {
         ProgressTracker.Instance.UpdateFishCaught();
         stopMiniGame();
+        pole.catch();
     }
     
     void loseCondition()
