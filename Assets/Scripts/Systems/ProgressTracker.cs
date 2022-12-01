@@ -46,6 +46,18 @@ public class ProgressTracker : MonoBehaviour {
         get { return so.lastRoom; }
     }
 
+    public int FishCaught
+    {
+        get { return so.listPieces; }
+    }
+
+    public void Reset()
+    {
+        so.lastRoom = Room.Bedroom;
+        so.aquariumSolved = so.bedroomSolved = so.gardenSolved = so.railroadsSolved = false;
+        so.listPieces = 0;
+    }
+
     public void SetLastRoom(Room room)
     {
         so.lastRoom = room;

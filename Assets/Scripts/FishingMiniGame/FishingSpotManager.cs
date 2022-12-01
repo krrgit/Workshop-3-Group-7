@@ -10,6 +10,21 @@ public class FishingSpotManager : MonoBehaviour {
 
     private int currArea;
 
+    public static FishingSpotManager Instance;
+
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     public void SpotFished(bool fishingSuccess)
     { 
         successes += fishingSuccess ? 1 : 0;
