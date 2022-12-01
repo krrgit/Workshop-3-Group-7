@@ -6,7 +6,19 @@ using UnityEngine.Video;
 public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource[] sources;
     public static SoundManager Instance;
-
+    [SerializeField] private AudioSource doorOpen;
+    [SerializeField] private AudioSource correctSong;
+    [SerializeField] private AudioSource toggleBlacklight;
+    [SerializeField] private AudioSource sparkling;
+    [SerializeField] private AudioSource castHook;
+    [SerializeField] private AudioSource switchTool;
+    [SerializeField] private AudioSource pullHook;
+    [SerializeField] private AudioSource useWrench;
+    [SerializeField] private AudioSource frogSong;
+    [SerializeField] private AudioSource puzzleSolved;
+    [SerializeField] private AudioSource wrongPuzzle;
+    [SerializeField] private AudioSource foundSomething;
+    [SerializeField] private AudioSource waterSplash;
     void Awake()
     {
         // This only allows one instance of GameStateManager to exist in any scene
@@ -56,5 +68,70 @@ public class SoundManager : MonoBehaviour {
         }
 
         return audioIndex;
+    }
+
+    public void PlaydoorOpen()
+    {
+        doorOpen.Play();
+    }
+
+    public void PlaycorrectSong()
+    {
+        correctSong.Play();
+    }
+
+    public void PlaytoggleBlacklight()
+    {
+        toggleBlacklight.Play();
+    }
+
+    public void PlaySparkling()
+    {
+        sparkling.Play();
+    }
+
+    public void PlaycastHook()
+    {
+        castHook.Play();
+    }
+
+    public void PlayswitchTool()
+    {
+        switchTool.Play();
+    }
+
+    public void PlaypullHook()
+    {
+        pullHook.Play();
+    }
+
+    public void PlayuseWrench()
+    {
+        useWrench.Play();
+    }
+
+    public void PlayfrogSong()
+    {
+        frogSong.Play();
+    }
+
+    public void PlaypuzzleSolved()
+    {
+        puzzleSolved.Play();
+    }
+
+    public void PlaywrongPuzzle()
+    {
+        wrongPuzzle.Play();
+    }
+
+    public void PlayfoundSomething()
+    {
+        foundSomething.Play();
+    }
+
+    public void PlaywaterSplash()
+    {
+        waterSplash.Play();
     }
 }
