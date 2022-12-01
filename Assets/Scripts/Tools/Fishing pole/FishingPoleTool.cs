@@ -11,10 +11,13 @@ public class FishingPoleTool : Tool
 
     bool canExit;
     bool correctSpot;
+    bool isFishingSpot;
 
 
     public override bool Use()
     {
+        if(!isFishingSpot) return false;
+
         PlayerMovement.Instance.ToggleMove(false);
         print("Use FishingPole!");
         anim.UpdateSprite(PlayerMovement.Instance.FacingDir);
@@ -63,6 +66,10 @@ public class FishingPoleTool : Tool
         anim.playCatchAnim();
         if(correctSpot)
         {
+            if(FishingSpotManager.Instance)
+            {
+                FishingSpotManager.Instance.SpotFished(true);
+            }
             ProgressTracker.Instance.UpdateFishCaught();
         }
 
@@ -71,5 +78,10 @@ public class FishingPoleTool : Tool
     public void SetCorrectSpot(bool state)
     {
         correctSpot = state;
+    }
+
+    public void SetInFishingSpot(bool state)
+    {
+        isFishingSpot = state;
     }
 }

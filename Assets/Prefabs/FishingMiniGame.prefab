@@ -334,7 +334,7 @@ SpriteRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
   m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
+  m_RenderingLayerMask: 0
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -549,6 +549,13 @@ MonoBehaviour:
   hookPower: 0.5
   progressBarDecay: 0.23
   failTimer: 10
+  winEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  loseEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  pole: {fileID: 0}
 --- !u!1 &1322160184382829324
 GameObject:
   m_ObjectHideFlags: 0
