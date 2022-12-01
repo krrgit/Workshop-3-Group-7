@@ -19,6 +19,8 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource wrongPuzzle;
     [SerializeField] private AudioSource foundSomething;
     [SerializeField] private AudioSource waterSplash;
+    [SerializeField] private AudioSource movingCart;
+    
     void Awake()
     {
         // This only allows one instance of GameStateManager to exist in any scene
@@ -133,5 +135,10 @@ public class SoundManager : MonoBehaviour {
     public void PlaywaterSplash()
     {
         waterSplash.Play();
+    }
+
+    public void PlaymovingCart()
+    {
+        movingCart.Play();
     }
 }
