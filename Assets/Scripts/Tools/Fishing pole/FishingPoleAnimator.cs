@@ -7,6 +7,7 @@ public class FishingPoleAnimator : MonoBehaviour
     [SerializeField] Sprite horSprite;
     [SerializeField] Sprite verSprite;
     [SerializeField] SpriteRenderer rend;
+    [SerializeField] Sprite heldSprite;
 
     // Update is called once per frame
     public void UpdateSprite(Vector2 direction)
@@ -37,5 +38,12 @@ public class FishingPoleAnimator : MonoBehaviour
             rend.flipX = false;
             rend.flipY = false;
         }
+        else
+        {
+            rend.sprite = heldSprite;
+            rend.flipX = false;
+            rend.flipY = false;
+        }
     }
+
 }

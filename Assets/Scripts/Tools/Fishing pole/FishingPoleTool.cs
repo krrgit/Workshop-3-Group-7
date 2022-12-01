@@ -9,6 +9,8 @@ public class FishingPoleTool : Tool
     [SerializeField] float max = 8;
     [SerializeField] GameObject miniGame;
 
+    private bool canExit;
+
     public override bool Use()
     {
         PlayerMovement.Instance.ToggleMove(false);
@@ -22,6 +24,7 @@ public class FishingPoleTool : Tool
     {
         PlayerMovement.Instance.ToggleMove(true);
         print("Stop using FishingPole");
+        anim.UpdateSprite(Vector2.zero);
         return false;
     }
 
@@ -39,5 +42,17 @@ public class FishingPoleTool : Tool
     {
         miniGame.SetActive(true);
         miniGame.transform.position = transform.position + Vector3.right * 5;
+
+        UpdateExitStatus(false);
+    }
+
+    public void UpdateExitStatus(bool state)
+    {
+        canExit = state;
+    }
+
+    public override bool CanUnequip()
+    {
+        return canExit;
     }
 }

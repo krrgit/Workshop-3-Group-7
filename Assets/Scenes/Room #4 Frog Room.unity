@@ -1377,10 +1377,18 @@ PrefabInstance:
       propertyPath: m_Offset.y
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2422528971972956408, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: heldSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c5f0e7b728258fc45b40dcb9c9c0238b, type: 3}
     - target: {fileID: 2482954230743059064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: targetPadding
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2765726214658304842, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c5f0e7b728258fc45b40dcb9c9c0238b, type: 3}
     - target: {fileID: 2765726214658304843, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: miniGame
       value: 
@@ -1391,7 +1399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2765726214658304845, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2765726214752928537, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13508,6 +13516,17 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &1481019873 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2765726214658304843, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 470081025}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481019861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a11035d9a3fb4a758efc71830d51a91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1511805506
 GameObject:
   m_ObjectHideFlags: 0
@@ -14211,6 +14230,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1322160184374422706, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
+      propertyPath: pole
+      value: 
+      objectReference: {fileID: 1481019873}
     - target: {fileID: 1322160184374422707, guid: b89bea2266b84cd489cbf63c7c8b58ac, type: 3}
       propertyPath: m_Name
       value: FishingMiniGame
