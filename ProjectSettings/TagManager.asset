@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Railcart
   - CartCheckpoint
+  - Bobber
+  - FishingSpot
   layers:
   - Default
   - TransparentFX
