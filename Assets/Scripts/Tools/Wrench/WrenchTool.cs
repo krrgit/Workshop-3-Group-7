@@ -36,7 +36,7 @@ public class WrenchTool : Tool {
         rotator = col.GetComponent<RotateController>();
         if (rotator)
         {
-            AnimateButtonPrompt.Instance.Animate(col.transform);
+            AnimateButtonPrompt.Instance.Animate(col.transform,0);
         }
     }
 

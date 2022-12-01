@@ -38,10 +38,11 @@ public class AnimateButtonPrompt : MonoBehaviour
         if (target) transform.position = target.position + Vector3.up * targetPadding;
     }
 
-    public void Animate(Transform t)
+    public void Animate(Transform t, float padding)
     {
         gameObject.SetActive(true);
         target = t;
+        targetPadding = padding;
         StopAllCoroutines();
         StartCoroutine(IAnimate());
     }
