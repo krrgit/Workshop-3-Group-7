@@ -14,10 +14,11 @@ public class MainRoomStartPos : MonoBehaviour {
     [SerializeField] private Vector2[] startDir;
     
 
-    private void OnEnable()
+    private void Start()
     {
         int room = (int)prog.LastRoom;
         player.SetSpawnPoint(playerPositions[room], startDir[room]);
+        Camera.main.transform.position = playerPositions[room].position;
         cat.SetSpawnPoint(catPositions[room]);
         cam.position = playerPositions[room].position;
     }

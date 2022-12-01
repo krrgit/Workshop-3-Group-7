@@ -37,9 +37,19 @@ public class CatAnimController : MonoBehaviour {
       followPlayer = true;
    }
 
+   public void PlaySleepAnim()
+   {
+      anim.Play("Cat_Sleep");
+   }
+
    public void SetSpawnPoint(Transform t)
    {
       spawnPoint = t;
+      
+      transform.position = spawnPoint.position;
+      transform.up = spawnPoint.right;
+
+      follow.CreateStartPoints();
    }
    void Awake()
    {
@@ -50,11 +60,6 @@ public class CatAnimController : MonoBehaviour {
       else
       {
          Destroy(this);
-      }
-      
-      if (isSleeping)
-      {
-         anim.Play("Cat_Sleep");
       }
    }
 
@@ -75,6 +80,11 @@ public class CatAnimController : MonoBehaviour {
       {
          followPlayer = false;
       }
+   }
+
+   void Start()
+   {
+      follow.CreateStartPoints();
    }
 
    public void ScriptMove(Vector2 _dir, float dur)

@@ -4737,14 +4737,6 @@ PrefabInstance:
       propertyPath: pointDist
       value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 644957742, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
-      propertyPath: pointLimit
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 644957742, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
-      propertyPath: pointSpacing
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 5918104422094115170, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: moveSpeed
       value: 6
