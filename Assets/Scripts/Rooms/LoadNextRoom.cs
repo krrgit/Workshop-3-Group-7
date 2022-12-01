@@ -34,7 +34,7 @@ public class LoadNextRoom : MonoBehaviour {
         if (col.gameObject.name == "Player")
         {
             if (loading) return;
-            SoundManager.Instance.PlayopenDoor();
+            SoundManager.Instance.PlaydoorOpen();
             PlayerMovement.Instance.canMove = false;
             AnimateTransitionStencil.Instance.UpdateStencil(Stencil);
             float dur = AnimateTransitionStencil.Instance.AnimateExit();

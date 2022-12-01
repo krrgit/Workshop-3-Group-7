@@ -14,7 +14,7 @@ public class WrenchTool : Tool {
             PlayerMovement.Instance.ToggleMove(false);
             float waitTime = rotator.RotateObjects();
             StartCoroutine(Wait(waitTime));
-            SoundManager.Instance.PlayusingWrench();
+            SoundManager.Instance.PlayuseWrench();
 
         }
 

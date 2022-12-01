@@ -6,10 +6,19 @@ using UnityEngine.Video;
 public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource[] sources;
     public static SoundManager Instance;
-    [SerializeField] private AudioSource blacklightclick;
-    [SerializeField] private AudioSource usingWrench;
-    [SerializeField] private AudioSource switchTools;
-    [SerializeField] private AudioSource openDoor;
+    [SerializeField] private AudioSource doorOpen;
+    [SerializeField] private AudioSource correctSong;
+    [SerializeField] private AudioSource toggleBlacklight;
+    [SerializeField] private AudioSource sparkling;
+    [SerializeField] private AudioSource castHook;
+    [SerializeField] private AudioSource switchTool;
+    [SerializeField] private AudioSource pullHook;
+    [SerializeField] private AudioSource useWrench;
+    [SerializeField] private AudioSource frogSong;
+    [SerializeField] private AudioSource puzzleSolved;
+    [SerializeField] private AudioSource wrongPuzzle;
+    [SerializeField] private AudioSource foundSomething;
+    [SerializeField] private AudioSource waterSplash;
     void Awake()
     {
         // This only allows one instance of GameStateManager to exist in any scene
@@ -61,23 +70,68 @@ public class SoundManager : MonoBehaviour {
         return audioIndex;
     }
 
+    public void PlaydoorOpen()
+    {
+        doorOpen.Play();
+    }
+
+    public void PlaycorrectSong()
+    {
+        correctSong.Play();
+    }
+
     public void PlaytoggleBlacklight()
     {
-        blacklightclick.Play();
+        toggleBlacklight.Play();
     }
 
-    public void PlayusingWrench()
+    public void PlaySparkling()
     {
-        usingWrench.Play();
+        sparkling.Play();
     }
 
-    public void PlayswitchTools()
+    public void PlaycastHook()
     {
-        switchTools.Play();
+        castHook.Play();
     }
 
-    public void PlayopenDoor()
+    public void PlayswitchTool()
     {
-        openDoor.Play();
+        switchTool.Play();
+    }
+
+    public void PlaypullHook()
+    {
+        pullHook.Play();
+    }
+
+    public void PlayuseWrench()
+    {
+        useWrench.Play();
+    }
+
+    public void PlayfrogSong()
+    {
+        frogSong.Play();
+    }
+
+    public void PlaypuzzleSolved()
+    {
+        puzzleSolved.Play();
+    }
+
+    public void PlaywrongPuzzle()
+    {
+        wrongPuzzle.Play();
+    }
+
+    public void PlayfoundSomething()
+    {
+        foundSomething.Play();
+    }
+
+    public void PlaywaterSplash()
+    {
+        waterSplash.Play();
     }
 }
