@@ -55,4 +55,9 @@ public class FishingPoleTool : Tool
     {
         return canExit;
     }
+
+    public void catch()
+    {
+        anim.playCatchAnim();
+    }
 }
