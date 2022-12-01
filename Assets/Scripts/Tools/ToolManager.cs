@@ -79,6 +79,7 @@ public class ToolManager : MonoBehaviour {
         {
             if (!toolInUse)
             {
+                SoundManager.Instance.PlayswitchTools();
                 CycleTools();
             }
         }

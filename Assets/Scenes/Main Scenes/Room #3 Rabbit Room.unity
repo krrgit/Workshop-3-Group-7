@@ -7592,6 +7592,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2765726213794351403, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9f7a7d716e42200489ebe16759d8dc95, type: 3}
+    - target: {fileID: 2765726214769225287, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fcf52d9fd841287478585bc9f1d531f6, type: 3}
     - target: {fileID: 2765726214884168516, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7656,6 +7664,22 @@ PrefabInstance:
       propertyPath: startFacingDir.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: openDoor
+      value: 
+      objectReference: {fileID: 1062088870}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: switchTools
+      value: 
+      objectReference: {fileID: 1062088868}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: usingWrench
+      value: 
+      objectReference: {fileID: 1062088867}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: blacklightclick
+      value: 
+      objectReference: {fileID: 1062088869}
     - target: {fileID: 2765726215786632486, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: speed
       value: 2.5
@@ -7709,6 +7733,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b807a98b30954e519b016497b253467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1062088867 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 214225599988130028, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1062088868 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7983144319232864306, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1062088869 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2765726213794351403, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1062088870 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2765726214769225287, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1067647075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2622506860080291954, guid: 4af15f5afebb5de4c9ca06b034955568, type: 3}

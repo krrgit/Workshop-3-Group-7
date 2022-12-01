@@ -10,9 +10,12 @@ public class WrenchTool : Tool {
         if (rotator)
         {
             print("Use Wrench!");
+            SoundManager.Instance.Play("usingWrench");
             PlayerMovement.Instance.ToggleMove(false);
             float waitTime = rotator.RotateObjects();
             StartCoroutine(Wait(waitTime));
+            SoundManager.Instance.PlayusingWrench();
+
         }
 
         return false;

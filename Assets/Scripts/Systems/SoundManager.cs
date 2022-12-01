@@ -6,7 +6,10 @@ using UnityEngine.Video;
 public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource[] sources;
     public static SoundManager Instance;
-
+    [SerializeField] private AudioSource blacklightclick;
+    [SerializeField] private AudioSource usingWrench;
+    [SerializeField] private AudioSource switchTools;
+    [SerializeField] private AudioSource openDoor;
     void Awake()
     {
         // This only allows one instance of GameStateManager to exist in any scene
@@ -56,5 +59,25 @@ public class SoundManager : MonoBehaviour {
         }
 
         return audioIndex;
+    }
+
+    public void PlaytoggleBlacklight()
+    {
+        blacklightclick.Play();
+    }
+
+    public void PlayusingWrench()
+    {
+        usingWrench.Play();
+    }
+
+    public void PlayswitchTools()
+    {
+        switchTools.Play();
+    }
+
+    public void PlayopenDoor()
+    {
+        openDoor.Play();
     }
 }
