@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public enum Room {
     House,
@@ -13,6 +14,12 @@ public enum Room {
 public class ProgressTracker : MonoBehaviour {
     [SerializeField] private ProgressSO so;
 
+    public UnityEvent SolvedBedroom;
+    public UnityEvent SolvedAquarium;
+    public UnityEvent SolvedGarden;
+    public UnityEvent SolvedRailroads;
+
+    
     public static ProgressTracker Instance;
 
     public bool IsRoomSolved (Room room)
@@ -44,22 +51,37 @@ public class ProgressTracker : MonoBehaviour {
         so.lastRoom = room;
     }
 
-
+    public void UpdateFishCaught()
+    {
+        // Already caught all fish, exit
+        if (so.listPieces >= 4) return;
+        
+        ++so.listPieces;
+        if (so.listPieces == 4)
+        {
+            SolvePuzzle(Room.Aquarium);
+        }
+    }
+    
     public void SolvePuzzle(Room solvedRoom)
     {
         switch (solvedRoom)
         {
             case Room.Bedroom:
                 so.bedroomSolved = true;
+                SolvedBedroom.Invoke();
                 break;
             case Room.Railroads:
                 so.railroadsSolved = true;
+                SolvedRailroads.Invoke();
                 break;
             case Room.Garden:
                 so.gardenSolved = true;
+                SolvedGarden.Invoke();
                 break;
             case Room.Aquarium:
                 so.aquariumSolved = true;
+                SolvedAquarium.Invoke();
                 break;
             default:
                 break;

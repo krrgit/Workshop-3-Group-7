@@ -12,7 +12,7 @@ public class ButtonPromptController : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D col)
     {
         interactable = col.GetComponent<InteractableController>();
-        prompt.Animate(col.transform);
+        prompt.Animate(col.transform,1);
         isPrompted = true;
     }
 
@@ -26,7 +26,7 @@ public class ButtonPromptController : MonoBehaviour {
         }
         else
         {
-            prompt.Animate(other.transform);
+            prompt.Animate(other.transform,1);
             isPrompted = true;
         }
 

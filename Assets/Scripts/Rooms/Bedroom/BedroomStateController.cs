@@ -19,7 +19,10 @@ public class BedroomStateController : MonoBehaviour {
             player.SetSpawnPoint(spawnPoint,Vector2.left);
             cat.SetSpawnPoint(catSpawnPoint);
             cat.SetDefaultFollowValues();
-
+        }
+        else
+        {
+            cat.PlaySleepAnim();
         }
     }
 

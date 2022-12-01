@@ -16,6 +16,8 @@ public class CatFollowPlayer : MonoBehaviour {
 
     private Vector2 tempPoint;
 
+    private bool pointsExist;
+
     public Vector2 FollowPoint
     {
         get { return points[0]; }
@@ -29,15 +31,18 @@ public class CatFollowPlayer : MonoBehaviour {
 
     void Start()
     {
-        CreateStartPoints();
+        //CreateStartPoints();
     }
 
     public void CreateStartPoints()
     {
+        if (pointsExist) return;
         for(int i=0;i<pointLimit;++i)
         {
             points.Add(transform.position);
         }
+
+        pointsExist = true;
     }
     void Update()
     {
