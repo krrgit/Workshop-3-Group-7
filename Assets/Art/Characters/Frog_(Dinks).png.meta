@@ -157,12 +157,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Frog_(Dinks)_1: -734897607
-      Frog_(Dinks)_3: -984639132
-      Frog_(Dinks)_4: 491099533
-      Frog_(Dinks)_5: 1281961167
-      Frog_(Dinks)_2: -700113681
-      Frog_(Dinks)_0: -119690795
+      Frog_(Dinks)_1: -119690795
+      Frog_(Dinks)_3: -734897607
+      Frog_(Dinks)_4: -700113681
+      Frog_(Dinks)_5: -984639132
+      Frog_(Dinks)_2: 491099533
+      Frog_(Dinks)_0: 1281961167
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

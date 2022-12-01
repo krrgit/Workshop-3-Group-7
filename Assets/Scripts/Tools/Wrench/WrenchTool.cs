@@ -4,26 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WrenchTool : Tool {
-    private RotateController rotator;
+    [SerializeField] private RotateController rotator;
     public override bool Use()
     {
-        print("Use Wrench!");
-        PlayerMovement.Instance.ToggleMove(false);
         if (rotator)
         {
-            rotator.RotateObjects();
+            print("Use Wrench!");
+            PlayerMovement.Instance.ToggleMove(false);
+            float waitTime = rotator.RotateObjects();
+            StartCoroutine(Wait(waitTime));
         }
-        // if (InteractController.Instance.interactableExists)
-        // {
-        //     var rotate = InteractController.Instance.Interactable.GetComponent<RotateController>();
-        //
-        //     if (rotate)
-        //     {
-        //         rotate.RotateObjects();
-        //     }
-        // }
 
-        Stop();
         return false;
     }
     
@@ -34,12 +25,18 @@ public class WrenchTool : Tool {
         return false;
     }
 
+    IEnumerator Wait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        Stop();
+    }
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         rotator = col.GetComponent<RotateController>();
         if (rotator)
         {
-            AnimateButtonPrompt.Instance.Animate(col.transform);
+            AnimateButtonPrompt.Instance.Animate(col.transform,0);
         }
     }
 

@@ -16,8 +16,7 @@ public class AnimateTransitionStencil : MonoBehaviour {
     private Vector2 size;
 
     public static AnimateTransitionStencil Instance;
-    
-    
+
 
     public void UpdateStencil(int index)
     {
