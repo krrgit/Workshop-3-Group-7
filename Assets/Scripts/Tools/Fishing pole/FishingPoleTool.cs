@@ -9,7 +9,9 @@ public class FishingPoleTool : Tool
     [SerializeField] float max = 8;
     [SerializeField] GameObject miniGame;
 
-    private bool canExit;
+    bool canExit;
+    bool correctSpot;
+
 
     public override bool Use()
     {
@@ -56,8 +58,18 @@ public class FishingPoleTool : Tool
         return canExit;
     }
 
-    public void catch()
+    public void CatchFish()
     {
         anim.playCatchAnim();
+        if(correctSpot)
+        {
+            ProgressTracker.Instance.UpdateFishCaught();
+        }
+
+    }
+    
+    public void SetCorrectSpot(bool state)
+    {
+        correctSpot = state;
     }
 }

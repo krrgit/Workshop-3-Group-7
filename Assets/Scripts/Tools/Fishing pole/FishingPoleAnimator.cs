@@ -10,8 +10,14 @@ public class FishingPoleAnimator : MonoBehaviour
     [SerializeField] Sprite heldSprite;
     [SerializeField] Transform bobberPos;
     [SerializeField] Transform fish;
+    [SerializeField] float speed = 2;
 
     // Update is called once per frame
+    void Start()
+    {
+        fish.gameObject.SetActive(false);
+    }
+    
     public void UpdateSprite(Vector2 direction)
     {
         if (direction.y < 0)
@@ -51,23 +57,27 @@ public class FishingPoleAnimator : MonoBehaviour
     public void playCatchAnim()
     {
         UpdateSprite(Vector2.zero);
+        StartCoroutine(animateCatch());
 
     }
 
     IEnumerator animateCatch()
     {
-        float timer = 1f;
-        Vector3 displacement = bobberPos.position - PlayerMovement.Instance.transform.position;
-
-
         fish.gameObject.SetActive(true);
         fish.position = bobberPos.position;
-        while(timer > 0)
+
+        float distance = Vector3.Distance(fish.position, PlayerMovement.Instance.transform.position); 
+        
+        while(distance > 0.1f)
         {
-            fish.position = PlayerMovement.Instance.transform.position + displacement * timer;
-            timer -= Time.deltaTime;
+            fish.position = Vector3.Lerp(fish.position, PlayerMovement.Instance.transform.position, speed * Time.deltaTime);
+            distance = Vector3.Distance(fish.position, PlayerMovement.Instance.transform.position); 
             yield return new WaitForEndOfFrame();
         }
+
+        fish.position = PlayerMovement.Instance.transform.position + Vector3.up * 1.5f;
+        yield return new WaitForSeconds(1f);
+        fish.gameObject.SetActive(false);
 
     }
 }
