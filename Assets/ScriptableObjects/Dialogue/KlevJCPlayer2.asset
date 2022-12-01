@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 78482204ebc81405cbd29112eac1c0f3, type: 3}
-  m_Name: FrogPlayer1
+  m_Name: KlevJCPlayer2
   m_EditorClassIdentifier: 
   bubbleColors:
   - {r: 1, g: 0.9, b: 0.65, a: 1}
-  - {r: 0.8511535, g: 0.9811321, b: 0.763617, a: 1}
+  - {r: 0.69803923, g: 0.5764706, b: 0.3803922, a: 1}
+  - {r: 1, g: 0.7137255, b: 0.5137255, a: 1}
   textColors:
   - {r: 0.20784314, g: 0.10980392, b: 0.10980392, a: 1}
   - {r: 0.20754719, g: 0.15915301, b: 0.14978641, a: 1}
+  - {r: 0.20754719, g: 0.15915301, b: 0.14978641, a: 1}
   lines:
-  - 15 *ribbit*
-  - 05 u right
+  - 15 Our lists are stuck|behind this wall.
+  - 25 Can you send Mini through|on the minecart to get them for us?
+  - 05 Yes. Of course!

@@ -9,6 +9,8 @@ public class ControlFgBg : MonoBehaviour
     [SerializeField] private string background;
     [SerializeField] private string foreground;
 
+    [SerializeField] private float yOffset = 0;
+
     void Start()
     {
         
@@ -17,6 +19,6 @@ public class ControlFgBg : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Renderer>().sortingLayerName = player.position.y > transform.position.y ? foreground : background;
+        GetComponent<Renderer>().sortingLayerName = player.position.y > transform.position.y+yOffset ? foreground : background;
     }
 }
