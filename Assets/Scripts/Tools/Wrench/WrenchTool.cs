@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WrenchTool : Tool {
-    private RotateController rotator;
+    [SerializeField] private RotateController rotator;
     public override bool Use()
     {
-        print("Use Wrench!");
-        PlayerMovement.Instance.ToggleMove(false);
-
         if (rotator)
         {
+            print("Use Wrench!");
+            PlayerMovement.Instance.ToggleMove(false);
             float waitTime = rotator.RotateObjects();
             StartCoroutine(Wait(waitTime));
         }
