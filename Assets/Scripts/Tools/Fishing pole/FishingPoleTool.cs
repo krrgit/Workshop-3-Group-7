@@ -38,8 +38,8 @@ public class FishingPoleTool : Tool
     {
         float waitTime = Random.Range(min, max);
 
-        yield return new WaitForSeconds(waitTime); 
-        
+        yield return new WaitForSeconds(waitTime);
+        SoundManager.Instance.PlaywaterSplash();
         // Start FishingMiniGame animation
         StartMiniGame();
     }
@@ -57,7 +57,7 @@ public class FishingPoleTool : Tool
         canExit = state;
     }
 
-    public override bool CanUnequip()
+    public override bool CanUnequip()        
     {
         return canExit;
     }
