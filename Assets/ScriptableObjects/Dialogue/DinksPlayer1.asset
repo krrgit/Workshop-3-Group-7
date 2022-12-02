@@ -21,8 +21,8 @@ MonoBehaviour:
   lines:
   - 15 *ribbit*
   - 05 Hey Dinks!
-  - 15 What's Up
-  - 05 Where's your Christmas List?
+  - 15 What's Up?
+  - 05 Where's your|Christmas List?
   - 15 Ummm...
-  - 15 Your going to have to|fish for it
+  - 15 Your going to have to|fish for it...
   - 05 Dinks...
