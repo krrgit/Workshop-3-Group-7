@@ -2497,7 +2497,7 @@ MonoBehaviour:
   listPiece: {fileID: 0}
   fishParticles: {fileID: 0}
   speed: 6
-  pole: {fileID: 0}
+  pole: {fileID: 2765726214658304843}
 --- !u!50 &2201953186409475977
 Rigidbody2D:
   serializedVersion: 4
