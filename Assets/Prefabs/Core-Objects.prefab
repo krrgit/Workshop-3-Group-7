@@ -12373,6 +12373,14 @@ PrefabInstance:
       propertyPath: pointDist
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 5520241570583543695, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5520241570583543695, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1036562989
+      objectReference: {fileID: 0}
     - target: {fileID: 5918104422094115170, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: moveSpeed
       value: 6
