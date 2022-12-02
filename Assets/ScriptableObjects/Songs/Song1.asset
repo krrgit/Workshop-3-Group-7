@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a4b2a45469ac490f83f372eae407481, type: 3}
   m_Name: Song1
   m_EditorClassIdentifier: 
-  notes: 01000000020000000200000002000000
-  song: {fileID: 8300000, guid: 5b0a12474a6eb4542a7757d7a06b2c52, type: 3}
+  notes: 0400000002000000030000000100000002000000
+  song: {fileID: 8300000, guid: 2c8999928f1634185b5eb76d68bb6f55, type: 3}
   command: controlCat

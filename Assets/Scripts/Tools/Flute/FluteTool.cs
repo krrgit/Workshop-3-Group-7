@@ -30,23 +30,23 @@ public class FluteTool : Tool {
     {
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            PlayNote(FluteNote.loC);
+            PlayNote(FluteNote.E);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            PlayNote(FluteNote.E);
+            PlayNote(FluteNote.G);
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            PlayNote(FluteNote.G);
+            PlayNote(FluteNote.A);
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            PlayNote(FluteNote.A);
+            PlayNote(FluteNote.hiC);
         }
         if (Input.GetKeyDown(KeyCode.X))
         {
-            PlayNote(FluteNote.hiC);
+            PlayNote(FluteNote.loC);
         }
         
     }
