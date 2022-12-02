@@ -8,8 +8,7 @@ public class DialoguePlayer : MonoBehaviour {
     [SerializeField] private MultiActorDialogueSO so;
     [SerializeField] private TextBubbleAnimator[] bubbles;
     [SerializeField] private Transform[] actors = new Transform[2];
-    [SerializeField] private AudioSource mariahCarey;
-    
+
     private int currLine = 0;
     private int count;
     private int lastActor;
@@ -36,7 +35,7 @@ public class DialoguePlayer : MonoBehaviour {
         bubbles[actorIndex].Animate(so.lines[currLine], GetActor(actorIndex));
         ++currLine;
         lastActor = actorIndex;
-        SoundManager.Instance.Playhehe();
+        //SoundManager.Instance.Playhehe();
     }
     
 

@@ -8957,6 +8957,7 @@ GameObject:
   - component: {fileID: 1480818690}
   - component: {fileID: 1480818693}
   - component: {fileID: 1480818692}
+  - component: {fileID: 1480818694}
   m_Layer: 6
   m_Name: Front Entrance
   m_TagString: Untagged
@@ -9052,6 +9053,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1480818694}
+        m_TargetAssemblyTypeName: HeheDemo, Assembly-CSharp
+        m_MethodName: PlaySong
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StopEvent:
     m_PersistentCalls:
       m_Calls:
@@ -9070,6 +9083,18 @@ MonoBehaviour:
   interactAmount: 1
   hold: 1
   canInteract: 1
+--- !u!114 &1480818694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480818689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4362e6e60e0214c55899a8a3105441fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1488839142 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3207782723973957288, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
