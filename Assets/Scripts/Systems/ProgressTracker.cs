@@ -22,6 +22,11 @@ public class ProgressTracker : MonoBehaviour {
     
     public static ProgressTracker Instance;
 
+    public bool SolvedAllPuzzles
+    {
+        get { return so.aquariumSolved && so.bedroomSolved && so.gardenSolved && so.railroadsSolved; }
+    }
+
     public bool IsRoomSolved (Room room)
     {
         switch (room)
