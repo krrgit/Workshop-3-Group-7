@@ -1981,10 +1981,6 @@ PrefabInstance:
       propertyPath: targetPadding
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 2765726214658304842, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c5f0e7b728258fc45b40dcb9c9c0238b, type: 3}
     - target: {fileID: 2765726214658304843, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: list
       value: 
