@@ -840,11 +840,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!82 &226641078 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 7983144319232864306, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
-  m_PrefabInstance: {fileID: 1921682394}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &262657957
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,11 +1008,6 @@ Transform:
   m_Father: {fileID: 1964838953}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &298861513 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 431500301408506203, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
-  m_PrefabInstance: {fileID: 1921682394}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &327434490
 GameObject:
   m_ObjectHideFlags: 0
@@ -4162,11 +4152,6 @@ Transform:
   m_Father: {fileID: 1226278569}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &904173929 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 6786092396616060181, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
-  m_PrefabInstance: {fileID: 1921682394}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &956650023
 GameObject:
   m_ObjectHideFlags: 0
@@ -4636,11 +4621,6 @@ Transform:
   m_Father: {fileID: 1911884187}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1205166960 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3778782209279438777, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
-  m_PrefabInstance: {fileID: 1921682394}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1226278567
 GameObject:
   m_ObjectHideFlags: 0
@@ -5685,11 +5665,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!82 &1366694720 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 2967011007392408693, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
-  m_PrefabInstance: {fileID: 1921682394}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1388713843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2765726215786632536, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
@@ -7885,11 +7860,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!82 &1881019690 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 214225599988130028, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
-  m_PrefabInstance: {fileID: 1921682394}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1903391416
 GameObject:
   m_ObjectHideFlags: 0
@@ -8071,7 +8041,7 @@ PrefabInstance:
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: frogSong
       value: 
-      objectReference: {fileID: 298861513}
+      objectReference: {fileID: 1921682402}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: pullHook
       value: 
@@ -8083,11 +8053,15 @@ PrefabInstance:
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: useWrench
       value: 
-      objectReference: {fileID: 1881019690}
+      objectReference: {fileID: 1921682403}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: movingCart
+      value: 
+      objectReference: {fileID: 1921682398}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: switchTool
       value: 
-      objectReference: {fileID: 226641078}
+      objectReference: {fileID: 1921682404}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: correctSong
       value: 
@@ -8099,15 +8073,15 @@ PrefabInstance:
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: wrongPuzzle
       value: 
-      objectReference: {fileID: 904173929}
+      objectReference: {fileID: 1921682400}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: puzzleSolved
       value: 
-      objectReference: {fileID: 1205166960}
+      objectReference: {fileID: 1921682401}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: foundSomething
       value: 
-      objectReference: {fileID: 1366694720}
+      objectReference: {fileID: 1921682399}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: toggleBlacklight
       value: 
@@ -8119,7 +8093,7 @@ PrefabInstance:
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[5]
       value: 
-      objectReference: {fileID: 226641078}
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[6]
       value: 
@@ -8127,19 +8101,19 @@ PrefabInstance:
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[7]
       value: 
-      objectReference: {fileID: 1881019690}
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[8]
       value: 
-      objectReference: {fileID: 298861513}
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[9]
       value: 
-      objectReference: {fileID: 1205166960}
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[10]
       value: 
-      objectReference: {fileID: 904173929}
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[11]
       value: 
@@ -8147,7 +8121,7 @@ PrefabInstance:
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: sources.Array.data[12]
       value: 
-      objectReference: {fileID: 1366694720}
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726215590501143, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_audioClip
       value: 
@@ -8247,6 +8221,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a3a001e7cdc44715a247e78e7c53169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &1921682398 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8322596288248803236, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1921682399 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8044860093636332659, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1921682400 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7267187240579832134, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1921682401 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6599823111124893355, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1921682402 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 5037970277189828826, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1921682403 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 8393978255050716359, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1921682404 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 717550899424129636, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1948402580
 GameObject:
   m_ObjectHideFlags: 0
