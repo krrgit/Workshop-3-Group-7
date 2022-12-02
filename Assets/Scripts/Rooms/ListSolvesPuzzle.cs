@@ -7,6 +7,7 @@ public class ListSolvesPuzzle : MonoBehaviour {
     [SerializeField] private Room roomToSolve;
     private void OnTriggerEnter2D(Collider2D col)
     {
+        SoundManager.Instance.PlaypuzzleSolved();
         ProgressTracker.Instance.SolvePuzzle(roomToSolve);
         Destroy(gameObject);
     }
