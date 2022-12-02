@@ -24,7 +24,7 @@ public class FishingPoleAnimator : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        fish.gameObject.SetActive(false);
+        if (fish) fish.gameObject.SetActive(false);
     }
     
     public void UpdateSprite(Vector2 direction)
