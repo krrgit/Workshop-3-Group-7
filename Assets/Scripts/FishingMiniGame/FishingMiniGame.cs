@@ -87,7 +87,7 @@ public class FishingMiniGame : MonoBehaviour
 
     private void MoveHook()
     {
-        if(Input.GetKey(KeyCode.Z))
+        if(Input.GetMouseButton(0))
         {
             //increase our pull velocity
             hookPullVelocity += hookSpeed * Time.deltaTime; //raise hook
@@ -146,13 +146,13 @@ public class FishingMiniGame : MonoBehaviour
 
     void reset()
     {
-        catchProgress = 0.5f;
+        catchProgress = 0;
         progressBarContainer.localScale = new Vector3(1, 0.5f, 1);
         pause = false;
-        fishPosition = Random.value;
+        fishPosition = 0;
         hookPosition = 0; 
-        fishTimer = Random.value * fishTimeRandomizer;
-        fishTargetPosition = Random.value;
+        fishTimer = 0; 
+        fishTargetPosition = 0;
         failTimer = 10;
     }
 }

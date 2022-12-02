@@ -20,6 +20,7 @@ public class FishingPoleTool : Tool
 
         PlayerMovement.Instance.ToggleMove(false);
         print("Use FishingPole!");
+        SoundManager.Instance.PlaycastHook();
         anim.UpdateSprite(PlayerMovement.Instance.FacingDir);
         StartCoroutine(StartFishing());
         return true;
@@ -27,8 +28,6 @@ public class FishingPoleTool : Tool
     
     public override bool Stop()
     {
-        if (anim.AnimActive) return true;
-        StopAllCoroutines();
         PlayerMovement.Instance.ToggleMove(true);
         print("Stop using FishingPole");
         anim.UpdateSprite(Vector2.zero);
@@ -39,19 +38,18 @@ public class FishingPoleTool : Tool
     {
         float waitTime = Random.Range(min, max);
 
-        yield return new WaitForSeconds(waitTime); 
-        
-        // "Catch!" animation
-        
+        yield return new WaitForSeconds(waitTime);
+        SoundManager.Instance.PlaywaterSplash();
         // Start FishingMiniGame animation
         StartMiniGame();
     }
 
     void StartMiniGame()
     {
-        UpdateExitStatus(false);
         miniGame.SetActive(true);
         miniGame.transform.position = transform.position + Vector3.right * 5;
+
+        UpdateExitStatus(false);
     }
 
     public void UpdateExitStatus(bool state)
@@ -59,18 +57,19 @@ public class FishingPoleTool : Tool
         canExit = state;
     }
 
-    public override bool CanUnequip()
+    public override bool CanUnequip()        
     {
         return canExit;
     }
 
     public void CatchFish()
     {
-        anim.playCatchAnim(correctSpot);
+        anim.playCatchAnim();
         if(correctSpot)
         {
             if(FishingSpotManager.Instance)
             {
+                SoundManager.Instance.PlaypullHook();
                 FishingSpotManager.Instance.SpotFished(true);
             }
             ProgressTracker.Instance.UpdateFishCaught();
