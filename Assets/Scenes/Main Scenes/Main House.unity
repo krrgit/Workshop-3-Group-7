@@ -9019,6 +9019,7 @@ MonoBehaviour:
   actors:
   - {fileID: 1468270396}
   - {fileID: 1480818691}
+  mariahCarey: {fileID: 0}
 --- !u!114 &1480818693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9238,6 +9239,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1119209581795465192, guid: 16c871f81744c3d43b0a97355f9e8b49, type: 3}
   m_PrefabInstance: {fileID: 1496052828}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1516291022 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2176875802587080782, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1921682394}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1517260842
 GameObject:
@@ -12153,6 +12159,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 6.11
       objectReference: {fileID: 0}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: hehe
+      value: 
+      objectReference: {fileID: 1516291022}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: castHook
       value: 
