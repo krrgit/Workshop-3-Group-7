@@ -135,8 +135,10 @@ public class FishingMiniGame : MonoBehaviour
 
     void stopMiniGame()
     {
+        
         gameObject.SetActive(false);
         pole.UpdateExitStatus(true);
+        SoundManager.Instance.StoppullHook();
     }
 
     void OnEnable()

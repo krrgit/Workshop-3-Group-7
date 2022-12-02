@@ -141,4 +141,9 @@ public class SoundManager : MonoBehaviour {
     {
         movingCart.Play();
     }
+
+    public void StoppullHook()
+    {
+        pullHook.Stop();
+    }
 }
