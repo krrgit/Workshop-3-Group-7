@@ -96,8 +96,10 @@ public class FishingPoleAnimator : MonoBehaviour
         if (hasPiece)
         {
             // List Piece Coming Out of Fish
+            listPiece.up = Vector3.up;
             listPiece.gameObject.SetActive(true);
             listPiece.position = catHead.position - catHead.up * 1.2f;
+            
             distance = Vector3.Distance(listPiece.position, PlayerMovement.Instance.transform.position);
             yield return new WaitForSeconds(0.1f);
 

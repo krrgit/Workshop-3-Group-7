@@ -9025,7 +9025,6 @@ MonoBehaviour:
   actors:
   - {fileID: 1468270396}
   - {fileID: 1480818691}
-  mariahCarey: {fileID: 0}
 --- !u!114 &1480818693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12085,7 +12084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_Volume
-      value: 0.022
+      value: 0.15
       objectReference: {fileID: 0}
     - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_PlayOnAwake
@@ -12311,6 +12310,10 @@ PrefabInstance:
       propertyPath: animalCrossing
       value: 
       objectReference: {fileID: 1144624463}
+    - target: {fileID: 5037970277189828826, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.15
+      objectReference: {fileID: 0}
     - target: {fileID: 5054854855522970064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: animalCrossing
       value: 

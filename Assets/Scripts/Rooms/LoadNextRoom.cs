@@ -21,6 +21,10 @@ public class LoadNextRoom : MonoBehaviour {
         if (ProgressTracker.Instance.LastRoom == nextRoom)
         {
             stencilAnim.UpdateStencil(Stencil);
+            if (ProgressTracker.Instance.SolvedAllPuzzles)
+            {
+                stencilAnim.UpdateStencil(0);
+            }
         }
         
     }
