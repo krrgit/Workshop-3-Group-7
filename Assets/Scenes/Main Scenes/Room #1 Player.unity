@@ -770,6 +770,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.25}
   m_EdgeRadius: 0
+--- !u!82 &280549303 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6555366494158979430, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 377569403}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &289365297
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -872,6 +877,18 @@ PrefabInstance:
     - target: {fileID: 717550899424129636, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1345271437217513789, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_PlayOnAwake
@@ -997,6 +1014,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.03
       objectReference: {fileID: 0}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: meow
+      value: 
+      objectReference: {fileID: 280549303}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: castHook
       value: 

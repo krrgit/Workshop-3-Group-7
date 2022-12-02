@@ -1808,6 +1808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36b3c52572be3fb47a43e6df8a26e269, type: 3}
+--- !u!82 &535252981 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6555366494158979430, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &560615724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8365,6 +8370,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: meow
+      value: 
+      objectReference: {fileID: 535252981}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: castHook
       value: 
       objectReference: {fileID: 838967090}
@@ -8493,8 +8502,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1232094498}
     - target: {fileID: 9189912355129703718, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9189912355129703718, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_Volume
-      value: 0.125
+      value: 0.054
       objectReference: {fileID: 0}
     - target: {fileID: 9189912355129703718, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_audioClip

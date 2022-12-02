@@ -23,7 +23,8 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource dialogue1;
     [SerializeField] private AudioSource dialogue2;
     [SerializeField] private AudioSource dialogue3;
-    
+    [SerializeField] private AudioSource meow;
+    [SerializeField] private AudioSource catEat;
     void Awake()
     {
         // This only allows one instance of GameStateManager to exist in any scene
@@ -168,5 +169,15 @@ public class SoundManager : MonoBehaviour {
     public void Playdialogue3()
     {
         dialogue3.Play();
+    }
+
+    public void Playmeow()
+    {
+        meow.Play();
+    }
+
+    public void PlaycatEat()
+    {
+        catEat.Play();
     }
 }

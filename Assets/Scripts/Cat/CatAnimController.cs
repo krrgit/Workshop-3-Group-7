@@ -186,6 +186,7 @@ public class CatAnimController : MonoBehaviour {
          if (!isMeowing)
          {
             StartCoroutine(PlayMeow());
+            SoundManager.Instance.Playmeow();
          }
       }
    }

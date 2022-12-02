@@ -131,6 +131,7 @@ public class FishingMiniGame : MonoBehaviour
     void loseCondition()
     {
         stopMiniGame();
+        SoundManager.Instance.PlaywrongPuzzle();
     }
 
     void stopMiniGame()

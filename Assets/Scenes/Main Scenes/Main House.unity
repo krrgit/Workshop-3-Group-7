@@ -2256,7 +2256,7 @@ MonoBehaviour:
   endTitle: {fileID: 310145139}
   load: {fileID: 310145138}
   camSpeed: 0.5
-  play: 1
+  play: 0
   finalObjects: {fileID: 1274270124}
   objects:
   - {fileID: 328281767}
@@ -7222,7 +7222,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1274270125
 Transform:
   m_ObjectHideFlags: 0
