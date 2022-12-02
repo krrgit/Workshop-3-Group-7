@@ -2493,17 +2493,17 @@ GameObject:
   - component: {fileID: 2765726214658304844}
   - component: {fileID: 2765726214658304843}
   - component: {fileID: 2765726214658304842}
-  - component: {fileID: 1121770474279078594}
   - component: {fileID: 2422528971972956408}
   - component: {fileID: 2201953186409475977}
   - component: {fileID: 5893270776260131084}
+  - component: {fileID: 5616496792410734852}
   m_Layer: 10
   m_Name: FishingPole
   m_TagString: Untagged
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2765726214658304844
 Transform:
   m_ObjectHideFlags: 0
@@ -2580,7 +2580,7 @@ SpriteRenderer:
   m_SortingLayerID: -1728574011
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 21300000, guid: c5f0e7b728258fc45b40dcb9c9c0238b, type: 3}
+  m_Sprite: {fileID: 1661488393, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2591,22 +2591,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &1121770474279078594
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2765726214658304845}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.33142185, y: 2}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &2422528971972956408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2663,6 +2647,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pole: {fileID: 2765726214658304843}
+--- !u!61 &5616496792410734852
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2765726214658304845}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.15}
+    oldSize: {x: 0.3125, y: 4}
+    newSize: {x: 0.1875, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.25, y: 3}
+  m_EdgeRadius: 0
 --- !u!1 &2765726214752928538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4392,6 +4402,7 @@ MonoBehaviour:
   dialogue3: {fileID: 2269125597940871665}
   meow: {fileID: 6555366494158979430}
   catEat: {fileID: 1402737690021299615}
+  hehe: {fileID: 0}
 --- !u!1 &2765726215467912556
 GameObject:
   m_ObjectHideFlags: 0
@@ -12801,11 +12812,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.092289
+      value: 1.0922891
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.335732
+      value: 1.3357321
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425731267683, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Name
