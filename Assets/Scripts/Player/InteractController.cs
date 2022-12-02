@@ -73,7 +73,7 @@ public class InteractController : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (currInteractable.gameObject == other.gameObject)
+        if (currInteractable && currInteractable.gameObject == other.gameObject)
         {
             currInteractable = null;
             interactableExists = false;
