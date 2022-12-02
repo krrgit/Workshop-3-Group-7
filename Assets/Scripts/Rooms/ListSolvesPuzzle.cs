@@ -9,5 +9,6 @@ public class ListSolvesPuzzle : MonoBehaviour {
     {
         SoundManager.Instance.PlaypuzzleSolved();
         ProgressTracker.Instance.SolvePuzzle(roomToSolve);
+        Destroy(gameObject);
     }
 }
