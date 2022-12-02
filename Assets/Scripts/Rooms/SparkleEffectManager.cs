@@ -9,6 +9,7 @@ public class SparkleEffectManager : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D col)
     {
         sparkles.Play();
+        SoundManager.Instance.PlaySparkling();
     }
 
     private void OnTriggerExit2D(Collider2D other)
