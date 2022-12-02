@@ -2256,7 +2256,7 @@ MonoBehaviour:
   endTitle: {fileID: 310145139}
   load: {fileID: 310145138}
   camSpeed: 0.5
-  play: 0
+  play: 1
   finalObjects: {fileID: 1274270124}
   objects:
   - {fileID: 328281767}
@@ -7235,8 +7235,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 310145137}
   - {fileID: 2129849892}
+  - {fileID: 310145137}
   - {fileID: 1459175777}
   - {fileID: 1858745428}
   - {fileID: 1203227157}
@@ -12661,7 +12661,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1274270125}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2129849893
 MonoBehaviour:
