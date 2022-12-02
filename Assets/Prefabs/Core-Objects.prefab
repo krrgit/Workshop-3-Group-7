@@ -2503,7 +2503,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2765726214658304844
 Transform:
   m_ObjectHideFlags: 0
@@ -2580,7 +2580,7 @@ SpriteRenderer:
   m_SortingLayerID: -1728574011
   m_SortingLayer: 3
   m_SortingOrder: 4
-  m_Sprite: {fileID: 1661488393, guid: a714206dffc2b4a779e852fd7cbf8493, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c5f0e7b728258fc45b40dcb9c9c0238b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2663,8 +2663,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 1.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.15}
-    oldSize: {x: 0.3125, y: 4}
+    pivot: {x: 0.5, y: 0.45}
+    oldSize: {x: 0.25, y: 1.75}
     newSize: {x: 0.1875, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -12804,7 +12804,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.18035173
+      value: -0.1803546
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -12812,7 +12812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.0922891
+      value: 1.0922881
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.y
