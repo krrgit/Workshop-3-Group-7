@@ -43,12 +43,13 @@ public class Minecart : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Move();
+        Move();    
     }
 
     void Move()
     {
         if (!isMoving) return;
+        SoundManager.Instance.PlaymovingCart();
         transform.position += transform.up * speed * Time.deltaTime;
     }
 

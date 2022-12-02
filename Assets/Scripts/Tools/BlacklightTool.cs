@@ -29,6 +29,7 @@ public class BlacklightTool : Tool
         GetComponent<SpriteRenderer>().material.SetColor("_Glow", Color.HSVToRGB(0.75f, 1, .8f));
         beam.SetActive(true);
         circle.SetActive(true);
+        SoundManager.Instance.PlaytoggleBlacklight();
         return true;
     }
     
@@ -37,6 +38,7 @@ public class BlacklightTool : Tool
         GetComponent<SpriteRenderer>().material.SetColor("_Glow", Color.HSVToRGB(0.75f, 1, 0));
         beam.SetActive(false);
         circle.SetActive(false);
+        SoundManager.Instance.PlaytoggleBlacklight();
         return false;
     }
 }
