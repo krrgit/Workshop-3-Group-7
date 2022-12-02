@@ -8,6 +8,7 @@ public class FishingPoleTool : Tool
     [SerializeField] float min = 1;
     [SerializeField] float max = 8;
     [SerializeField] GameObject miniGame;
+    [SerializeField] ListPieceCounter list;
 
     bool canExit;
     bool correctSpot;
@@ -74,6 +75,7 @@ public class FishingPoleTool : Tool
                 FishingSpotManager.Instance.SpotFished(true);
             }
             ProgressTracker.Instance.UpdateFishCaught();
+            list.UpdateListCount();
         }
 
     }
