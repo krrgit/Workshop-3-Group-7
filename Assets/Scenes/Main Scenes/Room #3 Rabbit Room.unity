@@ -8071,6 +8071,10 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 717550899424129636, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2765726213794351403, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_audioClip
       value: 

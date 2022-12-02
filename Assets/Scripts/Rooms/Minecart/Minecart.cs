@@ -20,6 +20,8 @@ public class Minecart : MonoBehaviour {
         startInteractor.SetActive(true);
         anim.AnimateReset();
         anim.CatExit();
+        SoundManager.Instance.StopmovingCart();
+        SoundManager.Instance.PlaywrongPuzzle();
     }
 
     public void StartCart()
@@ -28,16 +30,20 @@ public class Minecart : MonoBehaviour {
         isMoving = true;
         startInteractor.SetActive(false);
         anim.CatEnter();
+        SoundManager.Instance.PlaymovingCart();
     }
 
     public void StopCart()
     {
         if(!isMoving) return;
+        
         isMoving = false;
         startInteractor.SetActive(true);
         transform.position = resetPos.position;
         transform.up = resetPos.up;
         anim.CatExit();
+        SoundManager.Instance.StopmovingCart();
+        
     }
 
     // Update is called once per frame
@@ -49,8 +55,8 @@ public class Minecart : MonoBehaviour {
     void Move()
     {
         if (!isMoving) return;
-        SoundManager.Instance.PlaymovingCart();
         transform.position += transform.up * speed * Time.deltaTime;
+        
     }
 
 
