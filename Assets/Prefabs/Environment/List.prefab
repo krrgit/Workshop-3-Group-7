@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6531285039122853198}
   - component: {fileID: 6531285039122853199}
   - component: {fileID: 3802340255741211105}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 6531285040887946191}
   - component: {fileID: 6531285040887946190}
   - component: {fileID: 1626993117530058909}
-  m_Layer: 7
+  m_Layer: 12
   m_Name: List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.25}
   m_EdgeRadius: 0
 --- !u!114 &1626993117530058909
 MonoBehaviour:
@@ -177,4 +177,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc657bdfce3354bbab3dc860ebd96270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomToSolve: 0
+  roomToSolve: 4
