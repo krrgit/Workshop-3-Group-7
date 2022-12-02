@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class FinalScene : MonoBehaviour {
     [SerializeField] private Transform cineCam;
+    [SerializeField] private GameObject endTitle;
+    [SerializeField] private LoadNextRoom load;
     [SerializeField] private float camSpeed = 0.5f;
     [SerializeField] private bool play;
     [SerializeField] private GameObject finalObjects;
@@ -57,7 +59,10 @@ public class FinalScene : MonoBehaviour {
         }
         cineCam.localPosition = new Vector3(0, 0, -10);
         
-        canExit = true;
+        endTitle.SetActive(true);
+        yield return new WaitForSeconds(4);
+        
+        load.LoadMainMenu();
     }
     
 }

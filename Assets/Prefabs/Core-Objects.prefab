@@ -4387,10 +4387,10 @@ MonoBehaviour:
   foundSomething: {fileID: 8044860093636332659}
   waterSplash: {fileID: 2765726214887415103}
   movingCart: {fileID: 8322596288248803236}
-  dialogue1: {fileID: 0}
-  dialogue2: {fileID: 0}
-  dialogue3: {fileID: 0}
-  meow: {fileID: 0}
+  dialogue1: {fileID: 4758425923240658945}
+  dialogue2: {fileID: 8697636042092784465}
+  dialogue3: {fileID: 2269125597940871665}
+  meow: {fileID: 6555366494158979430}
   catEat: {fileID: 1402737690021299615}
 --- !u!1 &2765726215467912556
 GameObject:
@@ -12623,6 +12623,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+--- !u!82 &2538847215582210751 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4115261892539627015, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 1884638746536762552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2765726213886457803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12788,7 +12793,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Center.x
-      value: -0.1803546
+      value: -0.18035173
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Center.y
@@ -12796,11 +12801,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.x
-      value: 1.0922881
+      value: 1.092289
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425523280359, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Bounds.m_Extent.y
-      value: 1.3357321
+      value: 1.335732
       objectReference: {fileID: 0}
     - target: {fileID: 8218186425731267683, guid: f36d5598b55ac43f79bd20e4d62e6fcf, type: 3}
       propertyPath: m_Name
@@ -12915,6 +12920,10 @@ PrefabInstance:
       propertyPath: letterPerSec
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6937697245548424742, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 4758425923240658945}
     - target: {fileID: 6937697245548424744, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Name
       value: TextBubble
@@ -13025,6 +13034,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+--- !u!82 &2269125597940871665 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4115261892539627015, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 2765726214722439158}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &4758425923240658945 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7235180671763828727, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 2765726214722439158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2765726215030472314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13330,6 +13349,10 @@ PrefabInstance:
       propertyPath: letterPerSec
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6937697245548424742, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 2538847215582210751}
     - target: {fileID: 6937697245548424744, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Name
       value: TextBubble (1)
@@ -13436,3 +13459,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+--- !u!82 &8697636042092784465 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2863228081587605794, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 6847739867210775155}
+  m_PrefabAsset: {fileID: 0}
