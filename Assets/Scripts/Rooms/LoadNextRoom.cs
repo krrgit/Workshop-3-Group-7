@@ -50,4 +50,10 @@ public class LoadNextRoom : MonoBehaviour {
         SceneManager.LoadScene((int)nextRoom);
         loading = false;
     }
+
+    public void LoadScene()
+    {
+        float dur = AnimateTransitionStencil.Instance.AnimateExit();
+        StartCoroutine(LoadNextScene(dur));
+    }
 }

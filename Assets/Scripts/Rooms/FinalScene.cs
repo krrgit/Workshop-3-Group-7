@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,15 +11,19 @@ public class FinalScene : MonoBehaviour {
 
     [SerializeField] private GameObject[] objects;
 
-    private bool isPlaying;
+    private bool canExit;
 
     void Start()
     {
         if (play || ProgressTracker.Instance.SolvedAllPuzzles)
         {
             PlayFinalScene();
-            isPlaying = true;
         }
+    }
+
+    private void Update()
+    {
+        
     }
 
     void PlayFinalScene()
@@ -51,6 +56,8 @@ public class FinalScene : MonoBehaviour {
             yield return new WaitForEndOfFrame();
         }
         cineCam.localPosition = new Vector3(0, 0, -10);
+        
+        canExit = true;
     }
     
 }
