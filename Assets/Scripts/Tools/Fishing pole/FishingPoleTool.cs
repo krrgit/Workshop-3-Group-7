@@ -27,6 +27,8 @@ public class FishingPoleTool : Tool
     
     public override bool Stop()
     {
+        if (anim.AnimActive) return true;
+        StopAllCoroutines();
         PlayerMovement.Instance.ToggleMove(true);
         print("Stop using FishingPole");
         anim.UpdateSprite(Vector2.zero);
@@ -39,16 +41,17 @@ public class FishingPoleTool : Tool
 
         yield return new WaitForSeconds(waitTime); 
         
+        // "Catch!" animation
+        
         // Start FishingMiniGame animation
         StartMiniGame();
     }
 
     void StartMiniGame()
     {
+        UpdateExitStatus(false);
         miniGame.SetActive(true);
         miniGame.transform.position = transform.position + Vector3.right * 5;
-
-        UpdateExitStatus(false);
     }
 
     public void UpdateExitStatus(bool state)
@@ -63,7 +66,7 @@ public class FishingPoleTool : Tool
 
     public void CatchFish()
     {
-        anim.playCatchAnim();
+        anim.playCatchAnim(correctSpot);
         if(correctSpot)
         {
             if(FishingSpotManager.Instance)
