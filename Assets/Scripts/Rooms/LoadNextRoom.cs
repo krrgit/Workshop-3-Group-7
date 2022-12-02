@@ -47,7 +47,13 @@ public class LoadNextRoom : MonoBehaviour {
         loading = true;
         ProgressTracker.Instance.SetLastRoom(thisRoom);
         yield return new WaitForSecondsRealtime(delay);
-        SceneManager.LoadScene((int)nextRoom);
+        SceneManager.LoadScene((int)nextRoom+1);
         loading = false;
+    }
+
+    public void LoadScene()
+    {
+        float dur = AnimateTransitionStencil.Instance.AnimateExit();
+        StartCoroutine(LoadNextScene(dur));
     }
 }
