@@ -29,6 +29,8 @@ public class CatAnimController : MonoBehaviour {
 
    public static CatAnimController Instance;
 
+   private bool isMeowing;
+
    public void SetDefaultFollowValues()
    {
       anim.Play("Cat_Idle");
@@ -177,7 +179,26 @@ public class CatAnimController : MonoBehaviour {
       {
          SwitchPlayerController.Instance.Switch(true);
       }
+
+      if (Input.GetButtonDown("Interact"))
+      {
+         
+         if (!isMeowing)
+         {
+            StartCoroutine(PlayMeow());
+         }
+      }
    }
+
+   IEnumerator PlayMeow()
+   {
+      isMeowing = true;
+      // INSERT PLAY FUNCTION CALL HERE
+      yield return new WaitForSeconds(1);
+      isMeowing = false;
+   }
+   
+   
 
    void GetInput()
    {
