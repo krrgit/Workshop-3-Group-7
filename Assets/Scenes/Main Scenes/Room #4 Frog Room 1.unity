@@ -385,6 +385,16 @@ PrefabInstance:
       objectReference: {fileID: 470081029}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8452a85f4d17734096dc02711249ee0, type: 3}
+--- !u!82 &47886304 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 6555366494158979430, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 470081025}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &63689807 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2538847215582210751, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 470081025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &91995007
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,6 +684,11 @@ SpriteRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6115485863055971707, guid: 068f80b70d7cd4b4abb444a73ee5c658, type: 3}
   m_PrefabInstance: {fileID: 643086123}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &189155386 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7355600590290177140, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 470081025}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &237930171
 GameObject:
@@ -1943,8 +1958,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 717550899424129636, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.121
+      objectReference: {fileID: 0}
+    - target: {fileID: 717550899424129636, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.103
+      objectReference: {fileID: 0}
+    - target: {fileID: 868793524416482289, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2482954230743059064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: targetPadding
@@ -2030,6 +2061,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2765726214989526957, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.432
+      objectReference: {fileID: 0}
+    - target: {fileID: 2765726214989526957, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a8dd6afe8553494196596a785288a59, type: 3}
     - target: {fileID: 2765726215286382632, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.37
@@ -2050,6 +2089,10 @@ PrefabInstance:
       propertyPath: startFacingDir.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: meow
+      value: 
+      objectReference: {fileID: 47886304}
     - target: {fileID: 2765726215445209692, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: castHook
       value: 
@@ -2162,6 +2205,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4562051606618461269, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 189155386}
     - target: {fileID: 4790033027706627338, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2178,6 +2225,10 @@ PrefabInstance:
       propertyPath: padding.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5054854855522970064, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 1649922043}
     - target: {fileID: 5054854855590145698, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0.5
@@ -2230,6 +2281,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7002317692549581113, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Name
+      value: room3Song
+      objectReference: {fileID: 0}
     - target: {fileID: 8376838017918459234, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: startPos
       value: 
@@ -2238,6 +2293,10 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8818103145853645470, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 63689807}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
 --- !u!114 &470081026 stripped
@@ -14406,6 +14465,11 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 8393978255050716359, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
   m_PrefabInstance: {fileID: 470081025}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1187179988 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2863228081587605794, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 2063551734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1212467704
 GameObject:
   m_ObjectHideFlags: 0
@@ -15590,6 +15654,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12, y: 3.5}
   m_EdgeRadius: 0
+--- !u!82 &1649922043 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4758425923240658945, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 470081025}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1670063909
 GameObject:
   m_ObjectHideFlags: 0
@@ -17110,6 +17179,10 @@ PrefabInstance:
       propertyPath: letterPerSec
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6937697245548424742, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 1187179988}
     - target: {fileID: 6937697245548424744, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Name
       value: TextBubble (2)

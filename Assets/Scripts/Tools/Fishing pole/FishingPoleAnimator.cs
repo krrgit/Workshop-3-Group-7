@@ -67,6 +67,8 @@ public class FishingPoleAnimator : MonoBehaviour
     {
         UpdateSprite(Vector2.zero);
         StartCoroutine(animateCatch(hasPiece));
+        SoundManager.Instance.Playmeow();
+        SoundManager.Instance.PlaycatEat();
 
     }
 
