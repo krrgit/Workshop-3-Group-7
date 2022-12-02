@@ -8,5 +8,6 @@ public class ListSolvesPuzzle : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D col)
     {
         ProgressTracker.Instance.SolvePuzzle(roomToSolve);
+        Destroy(gameObject);
     }
 }
