@@ -28,8 +28,8 @@ public class FinalScene : MonoBehaviour {
 
     void PlayFinalScene()
     {
-        AnimateTransitionStencil.Instance.UpdateStencil(0);
         DisableObjects();
+        AnimateTransitionStencil.Instance.UpdateStencil(0);
         StartCoroutine(FinalSequence());
     }
 

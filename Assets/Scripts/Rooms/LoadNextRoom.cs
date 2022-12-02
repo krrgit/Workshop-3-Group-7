@@ -47,7 +47,7 @@ public class LoadNextRoom : MonoBehaviour {
         loading = true;
         ProgressTracker.Instance.SetLastRoom(thisRoom);
         yield return new WaitForSecondsRealtime(delay);
-        SceneManager.LoadScene((int)nextRoom);
+        SceneManager.LoadScene((int)nextRoom+1);
         loading = false;
     }
 
