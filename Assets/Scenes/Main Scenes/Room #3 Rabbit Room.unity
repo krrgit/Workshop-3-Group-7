@@ -7704,6 +7704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: List
       objectReference: {fileID: 0}
+    - target: {fileID: 6531285040887946189, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 6531285040887946191, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
       propertyPath: m_RootOrder
       value: 2
