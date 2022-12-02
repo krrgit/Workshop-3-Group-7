@@ -4384,9 +4384,9 @@ MonoBehaviour:
   foundSomething: {fileID: 8044860093636332659}
   waterSplash: {fileID: 2765726214887415103}
   movingCart: {fileID: 8322596288248803236}
-  dialogue1: {fileID: 0}
-  dialogue2: {fileID: 0}
-  dialogue3: {fileID: 0}
+  dialogue1: {fileID: 2446282273406449623}
+  dialogue2: {fileID: 8697636042092784465}
+  dialogue3: {fileID: 2538847215582210751}
 --- !u!1 &2765726215467912556
 GameObject:
   m_ObjectHideFlags: 0
@@ -12088,6 +12088,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4746742765527226625}
     m_Modifications:
+    - target: {fileID: 2863228081587605794, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115261892539627015, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6937697244929612184, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Material
       value: 
@@ -12124,6 +12132,10 @@ PrefabInstance:
       propertyPath: letterPerSec
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6937697245548424742, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 2538847215582210751}
     - target: {fileID: 6937697245548424744, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Name
       value: TextBubble (2)
@@ -12232,8 +12244,17 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7235180671763828727, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+--- !u!82 &2538847215582210751 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4115261892539627015, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 1884638746536762552}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2765726213886457803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12490,6 +12511,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4746742765527226625}
     m_Modifications:
+    - target: {fileID: 2863228081587605794, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115261892539627015, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6937697244929612184, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Material
       value: 
@@ -12526,6 +12555,10 @@ PrefabInstance:
       propertyPath: letterPerSec
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6937697245548424742, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 4758425923240658945}
     - target: {fileID: 6937697245548424744, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Name
       value: TextBubble
@@ -12634,8 +12667,17 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7235180671763828727, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+--- !u!82 &4758425923240658945 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7235180671763828727, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 2765726214722439158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2765726215030472314
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12905,6 +12947,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4746742765527226625}
     m_Modifications:
+    - target: {fileID: 2863228081587605794, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115261892539627015, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6937697244929612184, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Material
       value: 
@@ -12941,6 +12991,10 @@ PrefabInstance:
       propertyPath: letterPerSec
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6937697245548424742, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: animalCrossing
+      value: 
+      objectReference: {fileID: 8697636042092784465}
     - target: {fileID: 6937697245548424744, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
       propertyPath: m_Name
       value: TextBubble (1)
@@ -13045,5 +13099,14 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 7235180671763828727, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+--- !u!82 &8697636042092784465 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2863228081587605794, guid: 3507f4c062fde4ed58d87420fbdf7eaf, type: 3}
+  m_PrefabInstance: {fileID: 6847739867210775155}
+  m_PrefabAsset: {fileID: 0}
