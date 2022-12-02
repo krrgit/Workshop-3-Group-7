@@ -9231,6 +9231,10 @@ PrefabInstance:
       propertyPath: bubble
       value: 
       objectReference: {fileID: 942044969}
+    - target: {fileID: 1614733875640153899, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1143068438}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
 --- !u!1 &1292640425

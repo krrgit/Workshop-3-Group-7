@@ -772,6 +772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1104186520}
     m_Modifications:
+    - target: {fileID: 1626993117530058909, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
+      propertyPath: roomToSolve
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6531285040887946189, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
       propertyPath: m_Name
       value: List
