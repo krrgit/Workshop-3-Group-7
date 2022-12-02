@@ -10419,6 +10419,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 717550899424129636, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 717550899424129636, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
@@ -10572,7 +10576,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8322596288248803236, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
       propertyPath: m_Volume
-      value: 0.238
+      value: 0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 8393978255050716359, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+      propertyPath: m_Volume
+      value: 0.075
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
@@ -22182,6 +22190,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 691398181}
     m_Modifications:
+    - target: {fileID: 1626993117530058909, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
+      propertyPath: roomToSolve
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6531285040887946189, guid: 9fdfd465918ae4688847531fb18e4510, type: 3}
       propertyPath: m_Name
       value: List
