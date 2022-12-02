@@ -20,7 +20,6 @@ public class FishingPoleTool : Tool
 
         PlayerMovement.Instance.ToggleMove(false);
         print("Use FishingPole!");
-        SoundManager.Instance.PlaycastHook();
         anim.UpdateSprite(PlayerMovement.Instance.FacingDir);
         StartCoroutine(StartFishing());
         return true;
@@ -39,9 +38,9 @@ public class FishingPoleTool : Tool
     IEnumerator StartFishing()
     {
         float waitTime = Random.Range(min, max);
-        
+
         yield return new WaitForSeconds(waitTime); 
-        SoundManager.Instance.PlaywaterSplash();
+        
         // "Catch!" animation
         
         // Start FishingMiniGame animation
@@ -72,7 +71,6 @@ public class FishingPoleTool : Tool
         {
             if(FishingSpotManager.Instance)
             {
-                SoundManager.Instance.PlaypullHook();
                 FishingSpotManager.Instance.SpotFished(true);
             }
             ProgressTracker.Instance.UpdateFishCaught();
