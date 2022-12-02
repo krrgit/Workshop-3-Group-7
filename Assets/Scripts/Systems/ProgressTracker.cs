@@ -71,6 +71,7 @@ public class ProgressTracker : MonoBehaviour {
         ++so.listPieces;
         if (so.listPieces == 4)
         {
+            SoundManager.Instance.PlaypuzzleSolved();
             SolvePuzzle(Room.Aquarium);
         }
     }
