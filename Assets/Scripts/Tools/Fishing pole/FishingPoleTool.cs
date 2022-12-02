@@ -22,6 +22,8 @@ public class FishingPoleTool : Tool
         print("Use FishingPole!");
         anim.UpdateSprite(PlayerMovement.Instance.FacingDir);
         StartCoroutine(StartFishing());
+        SoundManager.Instance.PlaycastHook();
+        SoundManager.Instance.PlaywaterSplash();
         return true;
     }
     
@@ -45,6 +47,7 @@ public class FishingPoleTool : Tool
         
         // Start FishingMiniGame animation
         StartMiniGame();
+        SoundManager.Instance.PlaypullHook();
     }
 
     void StartMiniGame()
