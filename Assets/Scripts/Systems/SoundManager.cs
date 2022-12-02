@@ -20,6 +20,9 @@ public class SoundManager : MonoBehaviour {
     [SerializeField] private AudioSource foundSomething;
     [SerializeField] private AudioSource waterSplash;
     [SerializeField] private AudioSource movingCart;
+    [SerializeField] private AudioSource dialogue1;
+    [SerializeField] private AudioSource dialogue2;
+    [SerializeField] private AudioSource dialogue3;
     
     void Awake()
     {
@@ -150,5 +153,20 @@ public class SoundManager : MonoBehaviour {
     public void StopmovingCart()
     {
         movingCart.Stop();
+    }
+
+    public void Playdialogue1()
+    {
+        dialogue1.Play();
+    }
+
+    public void Playdialogue2()
+    {
+        dialogue2.Play();
+    }
+
+    public void Playdialogue3()
+    {
+        dialogue3.Play();
     }
 }

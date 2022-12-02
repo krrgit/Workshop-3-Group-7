@@ -22,6 +22,7 @@ public class TextBubbleAnimator : MonoBehaviour {
     [Header("Bubble")]
     [SerializeField] private Vector2 padding = new Vector2(10,15);
 
+    [SerializeField] private AudioSource animalCrossing;
     [SerializeField] private float tailPadding = 1;
     [SerializeField] private AnimationCurve enterCurve;
     [SerializeField] private float bubbleAnimDur;
@@ -76,6 +77,7 @@ public class TextBubbleAnimator : MonoBehaviour {
         {
             AnimateRefresh();
         }
+        animalCrossing.Play();
     }
 
     public void Hide()
