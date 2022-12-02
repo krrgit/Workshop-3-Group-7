@@ -11,7 +11,7 @@ public class FishingPoleTool : Tool
     [SerializeField] ListPieceCounter list;
 
     bool canExit;
-    bool correctSpot;
+    [SerializeField]bool correctSpot;
     bool isFishingSpot;
 
 
@@ -54,6 +54,7 @@ public class FishingPoleTool : Tool
     void StartMiniGame()
     {
         UpdateExitStatus(false);
+        UpdateButtonLabels.Instance.UpdateLabels("FishGame");
         miniGame.SetActive(true);
         miniGame.transform.position = transform.position + Vector3.right * 5;
     }
@@ -80,12 +81,17 @@ public class FishingPoleTool : Tool
             ProgressTracker.Instance.UpdateFishCaught();
             list.UpdateListCount();
         }
-
+        UpdateButtonLabels.Instance.UpdateLabels("Default");
     }
     
     public void SetCorrectSpot(bool state)
     {
         correctSpot = state;
+    }
+
+    public bool GetIsCorrectSpot()
+    {
+        return correctSpot;
     }
 
     public void SetInFishingSpot(bool state)

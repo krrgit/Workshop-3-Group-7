@@ -156,6 +156,6 @@ public class FishingMiniGame : MonoBehaviour
         hookPosition = 0; 
         fishTimer = Random.value * fishTimeRandomizer;
         fishTargetPosition = Random.value;
-        failTimer = 10;
+        failTimer = 5;
     }
 }

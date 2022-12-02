@@ -135,6 +135,7 @@ public class FluteTool : Tool {
         musicUI.Animate(false);
         player.Reset();
         print("Stop using Flute");
+        UpdateButtonLabels.Instance.UpdateLabels("Default");
         isPlayable = false;
         return false;
     }
