@@ -41,6 +41,8 @@ public class FishingPoleTool : Tool
         float waitTime = Random.Range(min, max);
 
         yield return new WaitForSeconds(waitTime); 
+        
+        
         SoundManager.Instance.PlaywaterSplash();
         // Start FishingMiniGame animation
         StartMiniGame();
