@@ -58,6 +58,11 @@ public class ProgressTracker : MonoBehaviour {
         so.listPieces = 0;
     }
 
+    public void ResetFishCount()
+    {
+        so.listPieces = 0;
+    }
+
     public void SetLastRoom(Room room)
     {
         so.lastRoom = room;
