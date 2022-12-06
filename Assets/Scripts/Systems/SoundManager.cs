@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Video;
 
 public class SoundManager : MonoBehaviour {
-    [SerializeField] private AudioSource[] sources;
+    private AudioSource[] sources;
     public static SoundManager Instance;
     [SerializeField] private AudioSource doorOpen;
     [SerializeField] private AudioSource correctSong;
