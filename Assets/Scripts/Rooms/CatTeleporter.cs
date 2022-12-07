@@ -7,6 +7,7 @@ public class CatTeleporter : MonoBehaviour {
     [SerializeField] private Transform exit;
     [SerializeField] private float enterDur = 0.1f;
     [SerializeField] private float exitDur = 0.1f;
+    [SerializeField] private CamAimAtTarget cam;
 
     private void OnTriggerEnter2D(Collider2D col)
     {
@@ -24,6 +25,8 @@ public class CatTeleporter : MonoBehaviour {
         cat.ScriptMove(Vector2.up, enterDur);
         yield return new WaitForSeconds(enterDur+0.2f);
         col.enabled = false;
+        cam.ToggleRoomCam(false, null);
+        cam.SetTarget(cat.transform);
         cat.transform.position = exit.position;
         cat.ScriptMove(Vector2.left, exitDur);
         yield return new WaitForSeconds(exitDur);

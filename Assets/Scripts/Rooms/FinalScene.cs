@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FinalScene : MonoBehaviour {
     [SerializeField] private Transform cineCam;
@@ -10,6 +12,7 @@ public class FinalScene : MonoBehaviour {
     [SerializeField] private float camSpeed = 0.5f;
     [SerializeField] private bool play;
     [SerializeField] private GameObject finalObjects;
+    [SerializeField] private Image finText;
 
     [SerializeField] private GameObject[] objects;
 
@@ -60,7 +63,18 @@ public class FinalScene : MonoBehaviour {
         cineCam.localPosition = new Vector3(0, 0, -10);
         
         endTitle.SetActive(true);
-        yield return new WaitForSeconds(4);
+
+        Color alpha = Color.white;
+        alpha.a = 0;
+
+        while (alpha.a < 1)
+        {
+            finText.color = alpha;
+            alpha.a += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        
+        yield return new WaitForSeconds(3);
         
         load.LoadMainMenu();
     }
