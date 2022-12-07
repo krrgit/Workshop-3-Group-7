@@ -4055,7 +4055,7 @@ MonoBehaviour:
   isControlling: 1
   startPos: {fileID: 0}
   startFacingDir: {x: 0, y: 1}
-  speed: 6
+  speed: 4.5
   rb: {fileID: 2765726215286382636}
   animator: {fileID: 2765726215467912554}
 --- !u!1 &2765726215386088970
@@ -5320,7 +5320,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a12e70e61cb9c1e4c9568698b25ec885, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.9
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0

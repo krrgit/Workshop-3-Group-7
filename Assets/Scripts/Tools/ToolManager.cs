@@ -4,9 +4,9 @@ using UnityEngine;
 
 public enum ToolInUse {
     None,
-    FishingPole,
-    Flute,
     Blacklight,
+    Flute,
+    FishingPole,
     Wrench
 }
 

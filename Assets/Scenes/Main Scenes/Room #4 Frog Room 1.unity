@@ -17644,7 +17644,7 @@ PrefabInstance:
       objectReference: {fileID: 470081030}
     - target: {fileID: 925461842647481280, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: interactAmount
-      value: 7
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 925461842647481281, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
@@ -17654,6 +17654,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -734897607, guid: 6c9b128d44bb37a4dad2e80ef1b376eb, type: 3}
+    - target: {fileID: 925461842647481282, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 925461842647481282, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -17672,7 +17676,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 925461842647481284, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.645
+      value: 6.645
       objectReference: {fileID: 0}
     - target: {fileID: 925461842647481284, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: m_LocalPosition.z

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -19,6 +20,23 @@ public class FluteTool : Tool {
     private bool isPlayable;
 
     private bool playSong;
+
+    private AudioSource bgm;
+
+    private bool isWaiting;
+
+    void ChangeBGMVolume(bool isLower)
+    {
+        if (!bgm)
+        {
+            bgm = GameObject.Find("BGM").GetComponent<AudioSource>();
+        }
+
+        if (bgm)
+        {
+            bgm.volume = isLower ? 0.15f : 1;
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -114,9 +132,11 @@ public class FluteTool : Tool {
 
     IEnumerator StartWait()
     {
+        isWaiting = true;
         yield return new WaitForSeconds(1);
         currentNote = 0;
         isPlayable = true;
+        isWaiting = false;
     }
     public override bool Use()
     {
@@ -126,17 +146,20 @@ public class FluteTool : Tool {
         Reset();
         UpdateButtonLabels.Instance.UpdateLabels("Flute");
         print("Use Flute!");
+        ChangeBGMVolume(true);
         return true;
     }
 
     public override bool Stop()
     {
+        if (isWaiting) return true;
         PlayerMovement.Instance.ToggleMove(true);
         musicUI.Animate(false);
         player.Reset();
         print("Stop using Flute");
         UpdateButtonLabels.Instance.UpdateLabels("Default");
         isPlayable = false;
+        ChangeBGMVolume(false);
         return false;
     }
 }
