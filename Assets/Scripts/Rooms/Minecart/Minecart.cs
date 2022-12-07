@@ -20,7 +20,7 @@ public class Minecart : MonoBehaviour {
         isMoving = false;
         startInteractor.SetActive(true);
         anim.AnimateReset();
-        anim.CatExit();
+        if (!list) anim.CatExit();
         SoundManager.Instance.StopmovingCart();
         SoundManager.Instance.PlaywrongPuzzle();
     }
