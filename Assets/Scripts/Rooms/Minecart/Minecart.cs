@@ -42,7 +42,7 @@ public class Minecart : MonoBehaviour {
         startInteractor.SetActive(true);
         transform.position = resetPos.position;
         transform.up = resetPos.up;
-        anim.CatExit();
+        if (!list) anim.CatExit();
         SoundManager.Instance.StopmovingCart();
         
     }
