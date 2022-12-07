@@ -1303,6 +1303,17 @@ Transform:
   m_Father: {fileID: 562487523}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &421123203 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8818103145853645470, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3a001e7cdc44715a247e78e7c53169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &423759715 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7589537040973509849, guid: bead105923774264eb9faf7a7d3ca150, type: 3}
@@ -1821,7 +1832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2187535947363736920, guid: ee8e67c3ccf354bb1a35c28e2adec71e, type: 3}
       propertyPath: m_Size.y
-      value: 2.3
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2187535947363736920, guid: ee8e67c3ccf354bb1a35c28e2adec71e, type: 3}
       propertyPath: m_Offset.x
@@ -9235,9 +9246,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: eaec62684406d4a4a8752e98fb2582e9, type: 2}
     - target: {fileID: -5068971899837234385, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
+      propertyPath: actors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5068971899837234385, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
+      propertyPath: bubbles.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5068971899837234385, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: actors.Array.data[0]
       value: 
       objectReference: {fileID: 1143068438}
+    - target: {fileID: -5068971899837234385, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
+      propertyPath: actors.Array.data[2]
+      value: 
+      objectReference: {fileID: 1837919374}
     - target: {fileID: -5068971899837234385, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: bubbles.Array.data[0]
       value: 
@@ -9246,9 +9269,13 @@ PrefabInstance:
       propertyPath: bubbles.Array.data[1]
       value: 
       objectReference: {fileID: 1062088867}
+    - target: {fileID: -5068971899837234385, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
+      propertyPath: bubbles.Array.data[2]
+      value: 
+      objectReference: {fileID: 421123203}
     - target: {fileID: 925461842647481280, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: interactAmount
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 925461842647481282, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: m_Size.x
@@ -12687,6 +12714,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9201514604676096899, guid: fec17ab3bdbfe4ad8a67b3746bbb3358, type: 3}
   m_PrefabInstance: {fileID: 1824079923}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1837919374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6083527835399811173, guid: 3f59ef562db7a401683b7f86766eae0c, type: 3}
+  m_PrefabInstance: {fileID: 1062088865}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1845325942
 GameObject:
   m_ObjectHideFlags: 0
@@ -13271,7 +13303,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

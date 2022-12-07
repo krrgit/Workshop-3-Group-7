@@ -13545,7 +13545,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -17644,7 +17644,7 @@ PrefabInstance:
       objectReference: {fileID: 470081030}
     - target: {fileID: 925461842647481280, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: interactAmount
-      value: 11
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 925461842647481281, guid: 28a7055a1c1ef7245bc4fe2937fcaff8, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y

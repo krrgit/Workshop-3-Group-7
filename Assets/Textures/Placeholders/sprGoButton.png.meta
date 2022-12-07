@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c23072ba9a3e57744b52956f1525fbac
+guid: 572c9a30864b046a091039e095a252e6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,12 +42,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 24
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -103,49 +103,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Groundhog_(Klev)_1
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 0
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 89a169f418796f04a8d510b2f576beef
-      internalID: -1926362372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Groundhog_(Klev)_4
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 0
-        width: 31
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1e7b49291eea6ab4d97890b0c148eb22
-      internalID: -858749551
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -156,13 +114,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Groundhog_(Klev)_0: 922505201
-      Groundhog_(Klev)_5: 647915533
-      Groundhog_(Klev)_3: -2080161194
-      Groundhog_(Klev)_4: -858749551
-      Groundhog_(Klev)_1: -1926362372
-      Groundhog_(Klev)_2: 1165658077
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -7,7 +7,7 @@ public class TriggerRoomCamera : MonoBehaviour {
     [SerializeField] private CamAimAtTarget cam;
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Player" || col.gameObject.tag == "Railcart")
         {
             cam.ToggleRoomCam(true, transform);
         }
@@ -15,7 +15,7 @@ public class TriggerRoomCamera : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Railcart")
         {
             cam.ToggleRoomCam(false, null);
         }

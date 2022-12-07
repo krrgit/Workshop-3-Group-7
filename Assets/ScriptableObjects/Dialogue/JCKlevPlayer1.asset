@@ -21,7 +21,9 @@ MonoBehaviour:
   - {r: 0.20754719, g: 0.15915301, b: 0.14978641, a: 1}
   - {r: 0.20754719, g: 0.15915301, b: 0.14978641, a: 1}
   lines:
-  - 05 Do you need help|with something?
-  - 15 Yes, we are getting|ready for Christmas...
-  - 25 Can you get |everyone's lists for us?
-  - 05 Yes. Of course!
+  - 05 howdy
+  - 15 hey sweetie
+  - 15 we're getting|ready for Christmas
+  - 25 can you get|everyone's lists for us?
+  - 05 alright...
+  - 15 thanks[1 sweetie
