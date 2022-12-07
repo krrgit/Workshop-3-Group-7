@@ -5,6 +5,7 @@ using Unity.Mathematics;
 using UnityEngine;
 
 public class CatAnimController : MonoBehaviour {
+   [SerializeField] private Rigidbody2D rb;
    [SerializeField] private Animator anim;
    [SerializeField] private CatFollowPlayer follow;
    [SerializeField] private bool canMove;
@@ -237,7 +238,7 @@ public class CatAnimController : MonoBehaviour {
 
    void Move()
    {
-      transform.position += (Vector3)dir * moveSpeed * Time.deltaTime;
+      rb.position +=  moveSpeed * Time.deltaTime * dir;
    }
 
    void Rotate()
