@@ -513,7 +513,7 @@ MonoBehaviour:
   canMove: 1
   isControlled: 0
   followPlayer: 1
-  moveSpeed: 6
+  moveSpeed: 4.75
   turnSpeed: 10
   isSleeping: 0
   spawnPoint: {fileID: 0}
